@@ -1,0 +1,409 @@
+\hypertarget{classflow_1_1_captor_interface}{}\section{flow\+:\+:Captor\+Interface$<$ CaptorT $>$ Class Template Reference}
+\label{classflow_1_1_captor_interface}\index{flow\+::\+Captor\+Interface$<$ Captor\+T $>$@{flow\+::\+Captor\+Interface$<$ Captor\+T $>$}}
+
+
+C\+R\+T\+P-\/base which defines basic captor interface.  
+
+
+
+
+{\ttfamily \#include $<$captor.\+h$>$}
+
+
+
+Collaboration diagram for flow\+:\+:Captor\+Interface$<$ CaptorT $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classflow_1_1_captor_interface__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classflow_1_1_captor_interface_ae1eafeb6cd50f4a50843b963c232720a}\label{classflow_1_1_captor_interface_ae1eafeb6cd50f4a50843b963c232720a}} 
+using \hyperlink{classflow_1_1_captor_interface_ae1eafeb6cd50f4a50843b963c232720a}{Dispatch\+Type} = typename \hyperlink{structflow_1_1_captor_traits}{Captor\+Traits}$<$ CaptorT $>$\+::\hyperlink{classflow_1_1_captor_interface_ae1eafeb6cd50f4a50843b963c232720a}{Dispatch\+Type}
+\begin{DoxyCompactList}\small\item\em Data dispatch type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_captor_interface_a887171bf3b12d8232922a81844ea9a7d}\label{classflow_1_1_captor_interface_a887171bf3b12d8232922a81844ea9a7d}} 
+using \hyperlink{classflow_1_1_captor_interface_a887171bf3b12d8232922a81844ea9a7d}{Dispatch\+Container\+Type} = typename \hyperlink{structflow_1_1_captor_traits}{Captor\+Traits}$<$ CaptorT $>$\+::\hyperlink{classflow_1_1_captor_interface_a887171bf3b12d8232922a81844ea9a7d}{Dispatch\+Container\+Type}
+\begin{DoxyCompactList}\small\item\em Data dispatch container type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_captor_interface_a6624ec49c575e3a4c2730be405afe179}\label{classflow_1_1_captor_interface_a6624ec49c575e3a4c2730be405afe179}} 
+using \hyperlink{classflow_1_1_captor_interface_a6624ec49c575e3a4c2730be405afe179}{Dispatch\+Queue\+Monitor\+Type} = typename \hyperlink{structflow_1_1_captor_traits}{Captor\+Traits}$<$ CaptorT $>$\+::\hyperlink{classflow_1_1_captor_interface_a6624ec49c575e3a4c2730be405afe179}{Dispatch\+Queue\+Monitor\+Type}
+\begin{DoxyCompactList}\small\item\em Queue monitor/capture preconditioning type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_captor_interface_a2b87d20d17e8d1437941bd98fe514bc8}\label{classflow_1_1_captor_interface_a2b87d20d17e8d1437941bd98fe514bc8}} 
+using \hyperlink{classflow_1_1_captor_interface_a2b87d20d17e8d1437941bd98fe514bc8}{stamp\+\_\+type} = typename \hyperlink{structflow_1_1_captor_traits}{Captor\+Traits}$<$ CaptorT $>$\+::\hyperlink{classflow_1_1_captor_interface_a2b87d20d17e8d1437941bd98fe514bc8}{stamp\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Data stamp type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_captor_interface_a62db6a158eebcb377e63ede6a1f1a8c6}\label{classflow_1_1_captor_interface_a62db6a158eebcb377e63ede6a1f1a8c6}} 
+using \hyperlink{classflow_1_1_captor_interface_a62db6a158eebcb377e63ede6a1f1a8c6}{size\+\_\+type} = typename \hyperlink{structflow_1_1_captor_traits}{Captor\+Traits}$<$ CaptorT $>$\+::\hyperlink{classflow_1_1_captor_interface_a62db6a158eebcb377e63ede6a1f1a8c6}{size\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Integer size type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classflow_1_1_captor_interface_adf956268fd1859bf44c886dc76dadb0b}{Captor\+Interface} (const \hyperlink{classflow_1_1_captor_interface_a62db6a158eebcb377e63ede6a1f1a8c6}{size\+\_\+type} capacity, const \hyperlink{classflow_1_1_captor_interface_a887171bf3b12d8232922a81844ea9a7d}{Dispatch\+Container\+Type} \&container, const \hyperlink{classflow_1_1_captor_interface_a6624ec49c575e3a4c2730be405afe179}{Dispatch\+Queue\+Monitor\+Type} \&queue\+\_\+monitor)
+\begin{DoxyCompactList}\small\item\em Full setup constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_captor_interface_a78be2f5226c40ef04347d095548b8607}\label{classflow_1_1_captor_interface_a78be2f5226c40ef04347d095548b8607}} 
+void \hyperlink{classflow_1_1_captor_interface_a78be2f5226c40ef04347d095548b8607}{reset} ()
+\begin{DoxyCompactList}\small\item\em Clears all captor data and resets all states. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_captor_interface_a1a4b3f7f6c1bd16a2cb672d90a1cbbc0}\label{classflow_1_1_captor_interface_a1a4b3f7f6c1bd16a2cb672d90a1cbbc0}} 
+\hyperlink{classflow_1_1_captor_interface_a62db6a158eebcb377e63ede6a1f1a8c6}{size\+\_\+type} \hyperlink{classflow_1_1_captor_interface_a1a4b3f7f6c1bd16a2cb672d90a1cbbc0}{size} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of buffered elements. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Dispatch\+Constructor\+Arg\+Ts$>$ }\\void \hyperlink{classflow_1_1_captor_interface_a2a7e884dff7564478a6ae060b37351f0}{inject} (Dispatch\+Constructor\+Arg\+Ts \&\&... dispatch\+\_\+args)
+\begin{DoxyCompactList}\small\item\em Injects new data into \hyperlink{classflow_1_1_captor}{Captor} queue. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename First\+Forward\+Dispatch\+IteratorT , typename Last\+Forward\+Dispatch\+IteratorT $>$ }\\void \hyperlink{classflow_1_1_captor_interface_a545a4d188f6069261854c9753893fa98}{insert} (First\+Forward\+Dispatch\+IteratorT \&\&first, Last\+Forward\+Dispatch\+IteratorT \&\&last)
+\begin{DoxyCompactList}\small\item\em Injects a range of new data into \hyperlink{classflow_1_1_captor}{Captor} queue. \end{DoxyCompactList}\item 
+void \hyperlink{classflow_1_1_captor_interface_a492c00041af4fe2cb92342482b0b59fe}{remove} (const \hyperlink{classflow_1_1_captor_interface_a2b87d20d17e8d1437941bd98fe514bc8}{stamp\+\_\+type} \&t\+\_\+remove)
+\begin{DoxyCompactList}\small\item\em Removal before {\ttfamily t\+\_\+remove}. \end{DoxyCompactList}\item 
+void \hyperlink{classflow_1_1_captor_interface_a313e147c9159cf2faf7b131bac8f4b54}{abort} (const \hyperlink{classflow_1_1_captor_interface_a2b87d20d17e8d1437941bd98fe514bc8}{stamp\+\_\+type} \&t\+\_\+abort)
+\begin{DoxyCompactList}\small\item\em Defines \hyperlink{classflow_1_1_captor}{Captor} behavior during an external abort. \end{DoxyCompactList}\item 
+void \hyperlink{classflow_1_1_captor_interface_a8068310b1ece5c53a11252919a62355a}{set\+\_\+capacity} (const \hyperlink{classflow_1_1_captor_interface_a62db6a158eebcb377e63ede6a1f1a8c6}{size\+\_\+type} capacity)
+\begin{DoxyCompactList}\small\item\em Sets the maximum number of elements. \end{DoxyCompactList}\item 
+\hyperlink{classflow_1_1_captor_interface_a62db6a158eebcb377e63ede6a1f1a8c6}{size\+\_\+type} \hyperlink{classflow_1_1_captor_interface_a84ee393ca53d595bb20057445334eb78}{get\+\_\+capacity} () const
+\begin{DoxyCompactList}\small\item\em Gets the maximum number of elements. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_captor_interface_aaa637f69db2258f19c516d7e42c94bb4}\label{classflow_1_1_captor_interface_aaa637f69db2258f19c516d7e42c94bb4}} 
+\hyperlink{structflow_1_1_capture_range}{Capture\+Range}$<$ \hyperlink{classflow_1_1_captor_interface_a2b87d20d17e8d1437941bd98fe514bc8}{stamp\+\_\+type} $>$ \hyperlink{classflow_1_1_captor_interface_aaa637f69db2258f19c516d7e42c94bb4}{get\+\_\+available\+\_\+stamp\+\_\+range} () const
+\begin{DoxyCompactList}\small\item\em Gets the time range between oldest/newest buffered messages. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Output\+Dispatch\+IteratorT , typename Capture\+RangeT , typename ClockT , typename DurationT $>$ }\\\hyperlink{namespaceflow_adefe9726e597eb50c46f0f6a202018e9}{State} \hyperlink{classflow_1_1_captor_interface_ae95095d924214605bfeac70d0bd5ad35}{capture} (Output\+Dispatch\+IteratorT \&\&output, Capture\+RangeT \&\&range, const std\+::chrono\+::time\+\_\+point$<$ ClockT, DurationT $>$ timeout=std\+::chrono\+::time\+\_\+point$<$ ClockT, DurationT $>$\+::max())
+\begin{DoxyCompactList}\small\item\em Waits for ready state and captures inputs. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Output\+Dispatch\+IteratorT , typename Capture\+RangeT $>$ }\\\hyperlink{namespaceflow_adefe9726e597eb50c46f0f6a202018e9}{State} \hyperlink{classflow_1_1_captor_interface_ab645172a3401cc978fd4618a64a83e3d}{capture} (Output\+Dispatch\+IteratorT \&\&output, Capture\+RangeT \&\&range)
+\begin{DoxyCompactList}\small\item\em Waits for ready state and captures inputs. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Capture\+RangeT $>$ }\\\hyperlink{namespaceflow_adefe9726e597eb50c46f0f6a202018e9}{State} \hyperlink{classflow_1_1_captor_interface_a2cd64d7a401f7ee1bfd63ddea2c49f4a}{dry\+\_\+capture} (Capture\+RangeT \&\&range)
+\begin{DoxyCompactList}\small\item\em Queries state that {\ttfamily capture} would return without data modification. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Inpect\+CallbackT $>$ }\\void \hyperlink{classflow_1_1_captor_interface_a4648d1a3ec30a603e24e9ba0a667159d}{inspect} (Inpect\+CallbackT \&\&inspect\+\_\+dispatch\+\_\+cb) const
+\begin{DoxyCompactList}\small\item\em Runs inspection callback all messages available in the current queue. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Capture\+RangeT $>$ }\\void \hyperlink{classflow_1_1_captor_interface_aed9ad6819bfbcdda915febb57274842e}{update\+\_\+queue\+\_\+monitor} (Capture\+RangeT \&\&range, const \hyperlink{namespaceflow_adefe9726e597eb50c46f0f6a202018e9}{State} sync\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Updates any monitoring facilities with global synchronization state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_captor_interface_a54c7551c6796e2b8d0ea500eab2c2af2}\label{classflow_1_1_captor_interface_a54c7551c6796e2b8d0ea500eab2c2af2}} 
+{\bfseries F\+L\+O\+W\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT} (std\+::is\+\_\+copy\+\_\+constructible$<$ \hyperlink{classflow_1_1_captor_interface_ae1eafeb6cd50f4a50843b963c232720a}{Dispatch\+Type} $>$(), \char`\"{}\textquotesingle{}Dispatch\+Type\textquotesingle{} must be a copyable type\char`\"{})
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Insert\+Arg\+Ts$>$ }\\void \hyperlink{classflow_1_1_captor_interface_ab1add272b1b90192edb6c567847140e7}{insert\+\_\+and\+\_\+limit} (Insert\+Arg\+Ts \&\&... args)
+\begin{DoxyCompactList}\small\item\em Inserts data into queue and limit queue size to capacity, if applicable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_captor_interface_ab7fafe6cdc7d20696c6751e507a252a9}\label{classflow_1_1_captor_interface_ab7fafe6cdc7d20696c6751e507a252a9}} 
+{\bfseries F\+L\+O\+W\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+C\+R\+T\+P\+\_\+\+B\+A\+SE} (CaptorT)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classflow_1_1_captor_interface_a3675a127538e71404b53f7b1c36923d4}\label{classflow_1_1_captor_interface_a3675a127538e71404b53f7b1c36923d4}} 
+\hyperlink{classflow_1_1_captor_interface_a62db6a158eebcb377e63ede6a1f1a8c6}{size\+\_\+type} \hyperlink{classflow_1_1_captor_interface_a3675a127538e71404b53f7b1c36923d4}{capacity\+\_\+}
+\begin{DoxyCompactList}\small\item\em Buffered data capacity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_captor_interface_a79b57c2c5af6220ec0342d75a654661c}\label{classflow_1_1_captor_interface_a79b57c2c5af6220ec0342d75a654661c}} 
+\hyperlink{classflow_1_1_dispatch_queue}{Dispatch\+Queue}$<$ \hyperlink{classflow_1_1_captor_interface_ae1eafeb6cd50f4a50843b963c232720a}{Dispatch\+Type}, \hyperlink{classflow_1_1_captor_interface_a887171bf3b12d8232922a81844ea9a7d}{Dispatch\+Container\+Type} $>$ \hyperlink{classflow_1_1_captor_interface_a79b57c2c5af6220ec0342d75a654661c}{queue\+\_\+}
+\begin{DoxyCompactList}\small\item\em Data dispatch queue. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_captor_interface_af8223b74249ca989f05b34ea776e8345}\label{classflow_1_1_captor_interface_af8223b74249ca989f05b34ea776e8345}} 
+\hyperlink{classflow_1_1_captor_interface_a6624ec49c575e3a4c2730be405afe179}{Dispatch\+Queue\+Monitor\+Type} \hyperlink{classflow_1_1_captor_interface_af8223b74249ca989f05b34ea776e8345}{queue\+\_\+monitor\+\_\+}
+\begin{DoxyCompactList}\small\item\em Data dispatch queue capture monitor check. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename CaptorT$>$\newline
+class flow\+::\+Captor\+Interface$<$ Captor\+T $>$}
+
+C\+R\+T\+P-\/base which defines basic captor interface. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classflow_1_1_captor_interface_adf956268fd1859bf44c886dc76dadb0b}\label{classflow_1_1_captor_interface_adf956268fd1859bf44c886dc76dadb0b}} 
+\index{flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}!Captor\+Interface@{Captor\+Interface}}
+\index{Captor\+Interface@{Captor\+Interface}!flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}}
+\subsubsection{\texorpdfstring{Captor\+Interface()}{CaptorInterface()}}
+{\footnotesize\ttfamily template$<$typename CaptorT$>$ \\
+\hyperlink{classflow_1_1_captor_interface}{flow\+::\+Captor\+Interface}$<$ CaptorT $>$\+::\hyperlink{classflow_1_1_captor_interface}{Captor\+Interface} (\begin{DoxyParamCaption}\item[{const \hyperlink{classflow_1_1_captor_interface_a62db6a158eebcb377e63ede6a1f1a8c6}{size\+\_\+type}}]{capacity,  }\item[{const \hyperlink{classflow_1_1_captor_interface_a887171bf3b12d8232922a81844ea9a7d}{Dispatch\+Container\+Type} \&}]{container,  }\item[{const \hyperlink{classflow_1_1_captor_interface_a6624ec49c575e3a4c2730be405afe179}{Dispatch\+Queue\+Monitor\+Type} \&}]{queue\+\_\+monitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Full setup constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & maximum buffer capacity \\
+\hline
+{\em container} & dispatch container type for underlying queue \\
+\hline
+{\em queue\+\_\+monitor} & custom implementation for checking the state of the queue and preconditioning capture \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classflow_1_1_captor_interface_a313e147c9159cf2faf7b131bac8f4b54}\label{classflow_1_1_captor_interface_a313e147c9159cf2faf7b131bac8f4b54}} 
+\index{flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}!abort@{abort}}
+\index{abort@{abort}!flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}}
+\subsubsection{\texorpdfstring{abort()}{abort()}}
+{\footnotesize\ttfamily template$<$typename CaptorT$>$ \\
+void \hyperlink{classflow_1_1_captor_interface}{flow\+::\+Captor\+Interface}$<$ CaptorT $>$\+::abort (\begin{DoxyParamCaption}\item[{const \hyperlink{classflow_1_1_captor_interface_a2b87d20d17e8d1437941bd98fe514bc8}{stamp\+\_\+type} \&}]{t\+\_\+abort }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Defines \hyperlink{classflow_1_1_captor}{Captor} behavior during an external abort. 
+
+Triggers data removal before {\ttfamily t\+\_\+abort} Notifies any data waits for capture under a lock
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+\_\+abort} & time at which abort was signaled \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classflow_1_1_captor_interface_ae95095d924214605bfeac70d0bd5ad35}\label{classflow_1_1_captor_interface_ae95095d924214605bfeac70d0bd5ad35}} 
+\index{flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}!capture@{capture}}
+\index{capture@{capture}!flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}}
+\subsubsection{\texorpdfstring{capture()}{capture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename CaptorT$>$ \\
+template$<$typename Output\+Dispatch\+IteratorT , typename Capture\+RangeT , typename ClockT , typename DurationT $>$ \\
+\hyperlink{namespaceflow_adefe9726e597eb50c46f0f6a202018e9}{State} \hyperlink{classflow_1_1_captor_interface}{flow\+::\+Captor\+Interface}$<$ CaptorT $>$\+::capture (\begin{DoxyParamCaption}\item[{Output\+Dispatch\+IteratorT \&\&}]{output,  }\item[{Capture\+RangeT \&\&}]{range,  }\item[{const std\+::chrono\+::time\+\_\+point$<$ ClockT, DurationT $>$}]{timeout = {\ttfamily std\+:\+:chrono\+:\+:time\+\_\+point$<$ClockT,~DurationT$>$\+:\+:max()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Waits for ready state and captures inputs. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Output\+Dispatch\+IteratorT} & output iterator type for a value type which supports assignment with {\ttfamily Dispatch\+Type} \\
+\hline
+{\em Capture\+RangeT} & message capture stamp range type \\
+\hline
+{\em ClockT} & clock type associated with time-\/point representation \\
+\hline
+{\em DurationT} & duration type associated with time-\/point representation\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em output} & output data iterator \\
+\hline
+\mbox{\tt in,out}  & {\em range} & data capture/sequencing range \\
+\hline
+ & {\em timeout} & time to stop waiting for data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+capture directive code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflow_1_1_captor_interface_ab645172a3401cc978fd4618a64a83e3d}\label{classflow_1_1_captor_interface_ab645172a3401cc978fd4618a64a83e3d}} 
+\index{flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}!capture@{capture}}
+\index{capture@{capture}!flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}}
+\subsubsection{\texorpdfstring{capture()}{capture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename CaptorT$>$ \\
+template$<$typename Output\+Dispatch\+IteratorT , typename Capture\+RangeT $>$ \\
+\hyperlink{namespaceflow_adefe9726e597eb50c46f0f6a202018e9}{State} \hyperlink{classflow_1_1_captor_interface}{flow\+::\+Captor\+Interface}$<$ CaptorT $>$\+::capture (\begin{DoxyParamCaption}\item[{Output\+Dispatch\+IteratorT \&\&}]{output,  }\item[{Capture\+RangeT \&\&}]{range }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Waits for ready state and captures inputs. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Output\+Dispatch\+IteratorT} & output iterator type for a value type which supports assignment with {\ttfamily Dispatch\+Type} \\
+\hline
+{\em Capture\+RangeT} & message capture stamp range type\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em output} & output data iterator \\
+\hline
+\mbox{\tt in,out}  & {\em range} & data capture/sequencing range\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+capture directive code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflow_1_1_captor_interface_a2cd64d7a401f7ee1bfd63ddea2c49f4a}\label{classflow_1_1_captor_interface_a2cd64d7a401f7ee1bfd63ddea2c49f4a}} 
+\index{flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}!dry\+\_\+capture@{dry\+\_\+capture}}
+\index{dry\+\_\+capture@{dry\+\_\+capture}!flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}}
+\subsubsection{\texorpdfstring{dry\+\_\+capture()}{dry\_capture()}}
+{\footnotesize\ttfamily template$<$typename CaptorT$>$ \\
+template$<$typename Capture\+RangeT $>$ \\
+\hyperlink{namespaceflow_adefe9726e597eb50c46f0f6a202018e9}{State} \hyperlink{classflow_1_1_captor_interface}{flow\+::\+Captor\+Interface}$<$ CaptorT $>$\+::dry\+\_\+capture (\begin{DoxyParamCaption}\item[{Capture\+RangeT \&\&}]{range }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Queries state that {\ttfamily capture} would return without data modification. 
+
+May remove data to prepare next possible capture
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Capture\+RangeT} & message capture stamp range type\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em range} & data capture/sequencing range\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+capture directive code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflow_1_1_captor_interface_a84ee393ca53d595bb20057445334eb78}\label{classflow_1_1_captor_interface_a84ee393ca53d595bb20057445334eb78}} 
+\index{flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}!get\+\_\+capacity@{get\+\_\+capacity}}
+\index{get\+\_\+capacity@{get\+\_\+capacity}!flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}}
+\subsubsection{\texorpdfstring{get\+\_\+capacity()}{get\_capacity()}}
+{\footnotesize\ttfamily template$<$typename CaptorT$>$ \\
+\hyperlink{classflow_1_1_captor_interface_a62db6a158eebcb377e63ede6a1f1a8c6}{size\+\_\+type} \hyperlink{classflow_1_1_captor_interface}{flow\+::\+Captor\+Interface}$<$ CaptorT $>$\+::get\+\_\+capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the maximum number of elements. 
+
+This is the number of data elements which can be buffered in the capture queue before being discarded
+
+\begin{DoxySeeAlso}{See also}
+{\ttfamily \hyperlink{classflow_1_1_captor_interface_a8068310b1ece5c53a11252919a62355a}{set\+\_\+capacity}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classflow_1_1_captor_interface_a2a7e884dff7564478a6ae060b37351f0}\label{classflow_1_1_captor_interface_a2a7e884dff7564478a6ae060b37351f0}} 
+\index{flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}!inject@{inject}}
+\index{inject@{inject}!flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}}
+\subsubsection{\texorpdfstring{inject()}{inject()}}
+{\footnotesize\ttfamily template$<$typename CaptorT$>$ \\
+template$<$typename... Dispatch\+Constructor\+Arg\+Ts$>$ \\
+void \hyperlink{classflow_1_1_captor_interface}{flow\+::\+Captor\+Interface}$<$ CaptorT $>$\+::inject (\begin{DoxyParamCaption}\item[{Dispatch\+Constructor\+Arg\+Ts \&\&...}]{dispatch\+\_\+args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Injects new data into \hyperlink{classflow_1_1_captor}{Captor} queue. 
+
+Data is automatically removed from {\ttfamily queue\+\_\+} when its size is in excess of the size specified by {\ttfamily capacity\+\_\+}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Dispatch\+Constructor\+Arg\+Ts...} & dispatch constructor argument types\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em dispatch\+\_\+args} & dispatch constructor arguments \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classflow_1_1_captor_interface_a545a4d188f6069261854c9753893fa98}\label{classflow_1_1_captor_interface_a545a4d188f6069261854c9753893fa98}} 
+\index{flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}!insert@{insert}}
+\index{insert@{insert}!flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename CaptorT$>$ \\
+template$<$typename First\+Forward\+Dispatch\+IteratorT , typename Last\+Forward\+Dispatch\+IteratorT $>$ \\
+void \hyperlink{classflow_1_1_captor_interface}{flow\+::\+Captor\+Interface}$<$ CaptorT $>$\+::insert (\begin{DoxyParamCaption}\item[{First\+Forward\+Dispatch\+IteratorT \&\&}]{first,  }\item[{Last\+Forward\+Dispatch\+IteratorT \&\&}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Injects a range of new data into \hyperlink{classflow_1_1_captor}{Captor} queue. 
+
+Data is automatically removed from {\ttfamily queue\+\_\+} when its size is in excess of the size specified by {\ttfamily capacity\+\_\+}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em First\+Forward\+Dispatch\+IteratorT} & forward iterator type for {\ttfamily Dispatch\+Type} elements \\
+\hline
+{\em Last\+Forward\+Dispatch\+IteratorT} & forward iterator type for {\ttfamily Dispatch\+Type} elements\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em dispatch\+\_\+args} & dispatch constructor arguments \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classflow_1_1_captor_interface_ab1add272b1b90192edb6c567847140e7}\label{classflow_1_1_captor_interface_ab1add272b1b90192edb6c567847140e7}} 
+\index{flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}!insert\+\_\+and\+\_\+limit@{insert\+\_\+and\+\_\+limit}}
+\index{insert\+\_\+and\+\_\+limit@{insert\+\_\+and\+\_\+limit}!flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}}
+\subsubsection{\texorpdfstring{insert\+\_\+and\+\_\+limit()}{insert\_and\_limit()}}
+{\footnotesize\ttfamily template$<$typename CaptorT$>$ \\
+template$<$typename... Insert\+Arg\+Ts$>$ \\
+void \hyperlink{classflow_1_1_captor_interface}{flow\+::\+Captor\+Interface}$<$ CaptorT $>$\+::insert\+\_\+and\+\_\+limit (\begin{DoxyParamCaption}\item[{Insert\+Arg\+Ts \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Inserts data into queue and limit queue size to capacity, if applicable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & args forward to {\ttfamily \hyperlink{classflow_1_1_dispatch_queue_a5221c73d3790e6795c48229a2bcd7c0e}{Dispatch\+Queue\+::insert}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+capture directive code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflow_1_1_captor_interface_a4648d1a3ec30a603e24e9ba0a667159d}\label{classflow_1_1_captor_interface_a4648d1a3ec30a603e24e9ba0a667159d}} 
+\index{flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}!inspect@{inspect}}
+\index{inspect@{inspect}!flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}}
+\subsubsection{\texorpdfstring{inspect()}{inspect()}}
+{\footnotesize\ttfamily template$<$typename CaptorT$>$ \\
+template$<$typename Inpect\+CallbackT $>$ \\
+void \hyperlink{classflow_1_1_captor_interface}{flow\+::\+Captor\+Interface}$<$ CaptorT $>$\+::inspect (\begin{DoxyParamCaption}\item[{Inpect\+CallbackT \&\&}]{inspect\+\_\+dispatch\+\_\+cb }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Runs inspection callback all messages available in the current queue. 
+
+The queue and its contents will be immutable during inspection
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Inpect\+CallbackT} & queue inspection callback type which can be called as {\ttfamily cb(const Dispatch\+Type\& dispatch)}\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em inspect\+\_\+dispatch\+\_\+cb} & callback invoked for each available dispatch \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classflow_1_1_captor_interface_a492c00041af4fe2cb92342482b0b59fe}\label{classflow_1_1_captor_interface_a492c00041af4fe2cb92342482b0b59fe}} 
+\index{flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}!remove@{remove}}
+\index{remove@{remove}!flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename CaptorT$>$ \\
+void \hyperlink{classflow_1_1_captor_interface}{flow\+::\+Captor\+Interface}$<$ CaptorT $>$\+::remove (\begin{DoxyParamCaption}\item[{const \hyperlink{classflow_1_1_captor_interface_a2b87d20d17e8d1437941bd98fe514bc8}{stamp\+\_\+type} \&}]{t\+\_\+remove }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removal before {\ttfamily t\+\_\+remove}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+\_\+abort} & time before which data should be removed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classflow_1_1_captor_interface_a8068310b1ece5c53a11252919a62355a}\label{classflow_1_1_captor_interface_a8068310b1ece5c53a11252919a62355a}} 
+\index{flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}!set\+\_\+capacity@{set\+\_\+capacity}}
+\index{set\+\_\+capacity@{set\+\_\+capacity}!flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}}
+\subsubsection{\texorpdfstring{set\+\_\+capacity()}{set\_capacity()}}
+{\footnotesize\ttfamily template$<$typename CaptorT$>$ \\
+void \hyperlink{classflow_1_1_captor_interface}{flow\+::\+Captor\+Interface}$<$ CaptorT $>$\+::set\+\_\+capacity (\begin{DoxyParamCaption}\item[{const \hyperlink{classflow_1_1_captor_interface_a62db6a158eebcb377e63ede6a1f1a8c6}{size\+\_\+type}}]{capacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the maximum number of elements. 
+
+This is the number of data elements which can be buffered in the capture queue before being discarded
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & maximum number of buffered elements; {\ttfamily capacity == 0} signifies that there will be no limit on buffer capacity \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classflow_1_1_captor_interface_aed9ad6819bfbcdda915febb57274842e}\label{classflow_1_1_captor_interface_aed9ad6819bfbcdda915febb57274842e}} 
+\index{flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}!update\+\_\+queue\+\_\+monitor@{update\+\_\+queue\+\_\+monitor}}
+\index{update\+\_\+queue\+\_\+monitor@{update\+\_\+queue\+\_\+monitor}!flow\+::\+Captor\+Interface@{flow\+::\+Captor\+Interface}}
+\subsubsection{\texorpdfstring{update\+\_\+queue\+\_\+monitor()}{update\_queue\_monitor()}}
+{\footnotesize\ttfamily template$<$typename CaptorT$>$ \\
+template$<$typename Capture\+RangeT $>$ \\
+void \hyperlink{classflow_1_1_captor_interface}{flow\+::\+Captor\+Interface}$<$ CaptorT $>$\+::update\+\_\+queue\+\_\+monitor (\begin{DoxyParamCaption}\item[{Capture\+RangeT \&\&}]{range,  }\item[{const \hyperlink{namespaceflow_adefe9726e597eb50c46f0f6a202018e9}{State}}]{sync\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates any monitoring facilities with global synchronization state. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Capture\+RangeT} & message capture stamp range type\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em range} & data capture/sequencing range, from Sychronizer sync\+\_\+state global synchronization state, from Sychronizer \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+flow/include/\hyperlink{captor_8h}{captor.\+h}\end{DoxyCompactItemize}

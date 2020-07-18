@@ -1,0 +1,60 @@
+\hypertarget{structflow_1_1_stamp_traits}{}\section{flow\+:\+:Stamp\+Traits$<$ StampT $>$ Struct Template Reference}
+\label{structflow_1_1_stamp_traits}\index{flow\+::\+Stamp\+Traits$<$ Stamp\+T $>$@{flow\+::\+Stamp\+Traits$<$ Stamp\+T $>$}}
+
+
+Helper struct used to specify stamp attributes.  
+
+
+
+
+{\ttfamily \#include $<$dispatch.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structflow_1_1_stamp_traits_a69cb61df629f8f0ae9bb483e233b5174}\label{structflow_1_1_stamp_traits_a69cb61df629f8f0ae9bb483e233b5174}} 
+using \hyperlink{structflow_1_1_stamp_traits_a69cb61df629f8f0ae9bb483e233b5174}{stamp\+\_\+type} = StampT
+\begin{DoxyCompactList}\small\item\em Stamp type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structflow_1_1_stamp_traits_a82a66329de799814f0ae8eb96749ff80}\label{structflow_1_1_stamp_traits_a82a66329de799814f0ae8eb96749ff80}} 
+using \hyperlink{structflow_1_1_stamp_traits_a82a66329de799814f0ae8eb96749ff80}{offset\+\_\+type} = typename std\+::make\+\_\+signed$<$ StampT $>$\+::type
+\begin{DoxyCompactList}\small\item\em Associated duration/offset type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structflow_1_1_stamp_traits_ad0ed216887c84a85ed4a9d7f05cbb4c7}\label{structflow_1_1_stamp_traits_ad0ed216887c84a85ed4a9d7f05cbb4c7}} 
+{\bfseries F\+L\+O\+W\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT} ((std\+::is\+\_\+integral$<$ StampT $>$() and !std\+::is\+\_\+same$<$ StampT, bool $>$()), \char`\"{}\textquotesingle{}StampT\textquotesingle{} must be integral type (except `bool`)\char`\"{})
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structflow_1_1_stamp_traits_a43b8cf3f34878e6d1d410c54a7ad6c4b}\label{structflow_1_1_stamp_traits_a43b8cf3f34878e6d1d410c54a7ad6c4b}} 
+static constexpr StampT \hyperlink{structflow_1_1_stamp_traits_a43b8cf3f34878e6d1d410c54a7ad6c4b}{min} ()
+\begin{DoxyCompactList}\small\item\em Returns minimum stamp value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structflow_1_1_stamp_traits_ae0a0d2011371f185fc5f568ea0b549f4}\label{structflow_1_1_stamp_traits_ae0a0d2011371f185fc5f568ea0b549f4}} 
+static constexpr StampT \hyperlink{structflow_1_1_stamp_traits_ae0a0d2011371f185fc5f568ea0b549f4}{max} ()
+\begin{DoxyCompactList}\small\item\em Returns maximum stamp value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename StampT$>$\newline
+struct flow\+::\+Stamp\+Traits$<$ Stamp\+T $>$}
+
+Helper struct used to specify stamp attributes. 
+
+Must be specialized for non-\/integral sequence stamp types with the same fields\+:
+\begin{DoxyItemize}
+\item {\ttfamily min} \+: the minimum value of {\ttfamily StampT} 
+\item {\ttfamily max} \+: the maximum value of {\ttfamily StampT} 
+\item {\ttfamily offset\+\_\+type} \+: associated offset/duration type
+\end{DoxyItemize}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em StampT} & sequence stamp type \\
+\hline
+\end{DoxyTemplParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+flow/include/\hyperlink{dispatch_8h}{dispatch.\+h}\end{DoxyCompactItemize}

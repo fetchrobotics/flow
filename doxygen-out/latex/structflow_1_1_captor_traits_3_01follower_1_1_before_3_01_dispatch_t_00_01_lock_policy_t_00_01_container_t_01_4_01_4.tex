@@ -1,0 +1,75 @@
+\hypertarget{structflow_1_1_captor_traits_3_01follower_1_1_before_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4}{}\section{flow\+:\+:Captor\+Traits$<$ follower\+:\+:Before$<$ DispatchT, Lock\+PolicyT, ContainerT $>$ $>$ Struct Template Reference}
+\label{structflow_1_1_captor_traits_3_01follower_1_1_before_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4}\index{flow\+::\+Captor\+Traits$<$ follower\+::\+Before$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T $>$ $>$@{flow\+::\+Captor\+Traits$<$ follower\+::\+Before$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T $>$ $>$}}
+
+
+Traits struct for captor types.  
+
+
+
+
+{\ttfamily \#include $<$before.\+h$>$}
+
+
+
+Inheritance diagram for flow\+:\+:Captor\+Traits$<$ follower\+:\+:Before$<$ DispatchT, Lock\+PolicyT, ContainerT $>$ $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{structflow_1_1_captor_traits_3_01follower_1_1_before_3_01_dispatch_t_00_01_lock_policy_t_00_01_c5b20bbb34db06a6d5352d7cf896a6c3e}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for flow\+:\+:Captor\+Traits$<$ follower\+:\+:Before$<$ DispatchT, Lock\+PolicyT, ContainerT $>$ $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{structflow_1_1_captor_traits_3_01follower_1_1_before_3_01_dispatch_t_00_01_lock_policy_t_00_01_c8abc3cfc8771d56fd0e17e883ddf3ce0}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structflow_1_1_captor_traits_3_01follower_1_1_before_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4_ac31ecf45e08d5d7b6e50a2b9861760f5}\label{structflow_1_1_captor_traits_3_01follower_1_1_before_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4_ac31ecf45e08d5d7b6e50a2b9861760f5}} 
+using \hyperlink{structflow_1_1_captor_traits_3_01follower_1_1_before_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4_ac31ecf45e08d5d7b6e50a2b9861760f5}{Dispatch\+Container\+Type} = ContainerT
+\begin{DoxyCompactList}\small\item\em Underlying dispatch container type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structflow_1_1_captor_traits_3_01follower_1_1_before_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4_acc5d152634c4895901033df409cfbdb1}\label{structflow_1_1_captor_traits_3_01follower_1_1_before_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4_acc5d152634c4895901033df409cfbdb1}} 
+using \hyperlink{structflow_1_1_captor_traits_3_01follower_1_1_before_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4_acc5d152634c4895901033df409cfbdb1}{Lock\+Policy\+Type} = Lock\+PolicyT
+\begin{DoxyCompactList}\small\item\em Thread locking policy type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename DispatchT, typename Lock\+PolicyT, typename ContainerT$>$\newline
+struct flow\+::\+Captor\+Traits$<$ follower\+::\+Before$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T $>$ $>$}
+
+Traits struct for captor types. 
+
+Requires\+:
+\begin{DoxyItemize}
+\item {\ttfamily Dispatch\+Type} \+: data dispatch object type
+\item {\ttfamily Dispatch\+Container\+Type} \+: container for {\ttfamily Dispatch\+Type}
+\item {\ttfamily value\+\_\+type} \+: data value type
+\item {\ttfamily stamp\+\_\+type} \+: sequence stamp type
+\item {\ttfamily size\+\_\+type} \+: integer sizing type
+\end{DoxyItemize}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em CaptorT} & captor type with C\+R\+TP base {\ttfamily \hyperlink{classflow_1_1_captor}{Captor}}\\
+\hline
+{\em DispatchT} & data dispatch type \\
+\hline
+{\em Lock\+PolicyT} & a Basic\+Lockable (\href{https://en.cppreference.com/w/cpp/named_req/BasicLockable}{\tt https\+://en.\+cppreference.\+com/w/cpp/named\+\_\+req/\+Basic\+Lockable}) object or \hyperlink{structflow_1_1_no_lock}{No\+Lock} or \hyperlink{structflow_1_1_polling_lock}{Polling\+Lock} \\
+\hline
+{\em ContainerT} & underlying {\ttfamily DispatchT} container type \\
+\hline
+{\em Capture\+OutputT} & output capture container type \\
+\hline
+\end{DoxyTemplParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+flow/include/follower/\hyperlink{before_8h}{before.\+h}\end{DoxyCompactItemize}

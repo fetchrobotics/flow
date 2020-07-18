@@ -1,0 +1,49 @@
+\hypertarget{classflow_1_1_dispatch}{}\section{flow\+:\+:Dispatch$<$ StampT, ValueT $>$ Class Template Reference}
+\label{classflow_1_1_dispatch}\index{flow\+::\+Dispatch$<$ Stamp\+T, Value\+T $>$@{flow\+::\+Dispatch$<$ Stamp\+T, Value\+T $>$}}
+
+
+\hyperlink{classflow_1_1_dispatch}{Dispatch} data wrapper.  
+
+
+
+
+{\ttfamily \#include $<$dispatch.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classflow_1_1_dispatch_a1131f6fb814e7f4ac55108c9971f19cf}\label{classflow_1_1_dispatch_a1131f6fb814e7f4ac55108c9971f19cf}} 
+{\footnotesize template$<$typename... Value\+Args\+Ts$>$ }\\\hyperlink{classflow_1_1_dispatch_a1131f6fb814e7f4ac55108c9971f19cf}{Dispatch} (const StampT \&\+\_\+stamp, Value\+Args\+Ts \&\&... \+\_\+value\+\_\+args)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classflow_1_1_dispatch}{Dispatch} value constructor (move enabled) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classflow_1_1_dispatch_aba36922397c417ba5da2858327463732}\label{classflow_1_1_dispatch_aba36922397c417ba5da2858327463732}} 
+StampT \hyperlink{classflow_1_1_dispatch_aba36922397c417ba5da2858327463732}{stamp}
+\begin{DoxyCompactList}\small\item\em Sequencing stamp associated with data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_dispatch_ae4a044a9ec7c77362bfac2319faa0652}\label{classflow_1_1_dispatch_ae4a044a9ec7c77362bfac2319faa0652}} 
+ValueT \hyperlink{classflow_1_1_dispatch_ae4a044a9ec7c77362bfac2319faa0652}{value}
+\begin{DoxyCompactList}\small\item\em Data element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename StampT, typename ValueT$>$\newline
+class flow\+::\+Dispatch$<$ Stamp\+T, Value\+T $>$}
+
+\hyperlink{classflow_1_1_dispatch}{Dispatch} data wrapper. 
+
+Custom \char`\"{}dispatching\char`\"{} objects may be used with this library in lieu of the standard {\ttfamily \hyperlink{classflow_1_1_dispatch}{Dispatch}} template provided in this file ~\newline
+ Custom dispatch types must also specialize the {\ttfamily \hyperlink{structflow_1_1_dispatch_traits}{Dispatch\+Traits}} helper struct, which is used to provide core {\ttfamily stamp\+\_\+type} and {\ttfamily value\+\_\+type} to other dependent objects throughout the library.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em StampT} & sequencing stamp type; used for data ordering (e.\+g. time, sequence number, etc.) \\
+\hline
+{\em ValueT} & data value type; must be copyable \\
+\hline
+\end{DoxyTemplParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+flow/include/\hyperlink{dispatch_8h}{dispatch.\+h}\end{DoxyCompactItemize}

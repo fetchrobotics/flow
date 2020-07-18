@@ -1,0 +1,10 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$structflow_1_1is__capture__range.html" title="Checks if object type is an instance of CaptureRange. " alt="" coords="198,5,351,47"/>
+<area shape="rect" id="node3" href="$structflow_1_1is__capture__range_3_01_capture_range_3_01_stamp_t_01_4_01_4.html" title="Checks if object type is an instance of CaptureRange. " alt="" coords="175,71,375,112"/>
+<area shape="rect" id="node4" href="$structflow_1_1is__driver.html" title="Checks if captor object derived from a Driver base. " alt="" coords="187,137,362,163"/>
+<area shape="rect" id="node5" href="$structflow_1_1is__follower.html" title="Checks if captor object derived from a Follower base. " alt="" coords="213,188,337,229"/>
+<area shape="rect" id="node6" href="$structflow_1_1is__no__lock.html" title="Checks if LockableT is of type NoLock. " alt="" coords="175,254,375,281"/>
+<area shape="rect" id="node7" href="$structflow_1_1is__polling.html" title="Checks if captor is serviced by polling capture. " alt="" coords="185,305,364,331"/>
+<area shape="rect" id="node8" href="$structflow_1_1is__polling__lock.html" title="Checks if LockableT is instance of PollingLock. " alt="" coords="205,356,344,397"/>
+<area shape="rect" id="node9" href="$structflow_1_1is__polling__lock_3_01_polling_lock_3_01_lockable_t_01_4_01_4.html" title="Checks if LockableT is instance of PollingLock. " alt="" coords="176,421,373,463"/>
+</map>

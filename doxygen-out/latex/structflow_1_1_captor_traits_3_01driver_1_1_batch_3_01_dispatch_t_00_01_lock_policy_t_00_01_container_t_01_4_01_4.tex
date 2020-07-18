@@ -1,0 +1,75 @@
+\hypertarget{structflow_1_1_captor_traits_3_01driver_1_1_batch_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4}{}\section{flow\+:\+:Captor\+Traits$<$ driver\+:\+:Batch$<$ DispatchT, Lock\+PolicyT, ContainerT $>$ $>$ Struct Template Reference}
+\label{structflow_1_1_captor_traits_3_01driver_1_1_batch_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4}\index{flow\+::\+Captor\+Traits$<$ driver\+::\+Batch$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T $>$ $>$@{flow\+::\+Captor\+Traits$<$ driver\+::\+Batch$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T $>$ $>$}}
+
+
+Traits struct for captor types.  
+
+
+
+
+{\ttfamily \#include $<$batch.\+h$>$}
+
+
+
+Inheritance diagram for flow\+:\+:Captor\+Traits$<$ driver\+:\+:Batch$<$ DispatchT, Lock\+PolicyT, ContainerT $>$ $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{structflow_1_1_captor_traits_3_01driver_1_1_batch_3_01_dispatch_t_00_01_lock_policy_t_00_01_conta2660d5fdeed71557319522ab1bb531c}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for flow\+:\+:Captor\+Traits$<$ driver\+:\+:Batch$<$ DispatchT, Lock\+PolicyT, ContainerT $>$ $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{structflow_1_1_captor_traits_3_01driver_1_1_batch_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structflow_1_1_captor_traits_3_01driver_1_1_batch_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4_a64c8347894a5fe9cf684958b3f9ae508}\label{structflow_1_1_captor_traits_3_01driver_1_1_batch_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4_a64c8347894a5fe9cf684958b3f9ae508}} 
+using \hyperlink{structflow_1_1_captor_traits_3_01driver_1_1_batch_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4_a64c8347894a5fe9cf684958b3f9ae508}{Dispatch\+Container\+Type} = ContainerT
+\begin{DoxyCompactList}\small\item\em Underlying dispatch container type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structflow_1_1_captor_traits_3_01driver_1_1_batch_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4_acee413b37ecf2d580e007973a6bed6a5}\label{structflow_1_1_captor_traits_3_01driver_1_1_batch_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4_acee413b37ecf2d580e007973a6bed6a5}} 
+using \hyperlink{structflow_1_1_captor_traits_3_01driver_1_1_batch_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4_acee413b37ecf2d580e007973a6bed6a5}{Lock\+Policy\+Type} = Lock\+PolicyT
+\begin{DoxyCompactList}\small\item\em Thread locking policy type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename DispatchT, typename Lock\+PolicyT, typename ContainerT$>$\newline
+struct flow\+::\+Captor\+Traits$<$ driver\+::\+Batch$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T $>$ $>$}
+
+Traits struct for captor types. 
+
+Requires\+:
+\begin{DoxyItemize}
+\item {\ttfamily Dispatch\+Type} \+: data dispatch object type
+\item {\ttfamily Dispatch\+Container\+Type} \+: container for {\ttfamily Dispatch\+Type}
+\item {\ttfamily value\+\_\+type} \+: data value type
+\item {\ttfamily stamp\+\_\+type} \+: sequence stamp type
+\item {\ttfamily size\+\_\+type} \+: integer sizing type
+\end{DoxyItemize}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em CaptorT} & captor type with C\+R\+TP base {\ttfamily \hyperlink{classflow_1_1_captor}{Captor}}\\
+\hline
+{\em DispatchT} & data dispatch type \\
+\hline
+{\em Lock\+PolicyT} & a Basic\+Lockable (\href{https://en.cppreference.com/w/cpp/named_req/BasicLockable}{\tt https\+://en.\+cppreference.\+com/w/cpp/named\+\_\+req/\+Basic\+Lockable}) object or \hyperlink{structflow_1_1_no_lock}{No\+Lock} or \hyperlink{structflow_1_1_polling_lock}{Polling\+Lock} \\
+\hline
+{\em ContainerT} & underlying {\ttfamily DispatchT} container type \\
+\hline
+{\em Capture\+OutputT} & output capture container type \\
+\hline
+\end{DoxyTemplParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+flow/include/driver/\hyperlink{batch_8h}{batch.\+h}\end{DoxyCompactItemize}

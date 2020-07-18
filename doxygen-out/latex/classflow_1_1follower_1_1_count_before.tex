@@ -1,0 +1,105 @@
+\hypertarget{classflow_1_1follower_1_1_count_before}{}\section{flow\+:\+:follower\+:\+:Count\+Before$<$ DispatchT, Lock\+PolicyT, ContainerT, Queue\+MonitorT $>$ Class Template Reference}
+\label{classflow_1_1follower_1_1_count_before}\index{flow\+::follower\+::\+Count\+Before$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$@{flow\+::follower\+::\+Count\+Before$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$}}
+
+
+Captures N-\/elements before the capture range lower bound, minus a delay period.  
+
+
+
+
+{\ttfamily \#include $<$count\+\_\+before.\+h$>$}
+
+
+
+Inheritance diagram for flow\+:\+:follower\+:\+:Count\+Before$<$ DispatchT, Lock\+PolicyT, ContainerT, Queue\+MonitorT $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflow_1_1follower_1_1_count_before__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for flow\+:\+:follower\+:\+:Count\+Before$<$ DispatchT, Lock\+PolicyT, ContainerT, Queue\+MonitorT $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflow_1_1follower_1_1_count_before__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classflow_1_1follower_1_1_count_before_a097b09f3a4af8a2a2772bfaddb00fdcc}\label{classflow_1_1follower_1_1_count_before_a097b09f3a4af8a2a2772bfaddb00fdcc}} 
+using \hyperlink{classflow_1_1follower_1_1_count_before_a097b09f3a4af8a2a2772bfaddb00fdcc}{size\+\_\+type} = typename \hyperlink{structflow_1_1_captor_traits}{Captor\+Traits}$<$ \hyperlink{classflow_1_1follower_1_1_count_before}{Count\+Before} $>$\+::\hyperlink{classflow_1_1follower_1_1_count_before_a097b09f3a4af8a2a2772bfaddb00fdcc}{size\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Integer size type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1follower_1_1_count_before_a9d39e5e485167849767fc463986525a6}\label{classflow_1_1follower_1_1_count_before_a9d39e5e485167849767fc463986525a6}} 
+using \hyperlink{classflow_1_1follower_1_1_count_before_a9d39e5e485167849767fc463986525a6}{stamp\+\_\+type} = typename \hyperlink{structflow_1_1_captor_traits}{Captor\+Traits}$<$ \hyperlink{classflow_1_1follower_1_1_count_before}{Count\+Before} $>$\+::\hyperlink{classflow_1_1follower_1_1_count_before_a9d39e5e485167849767fc463986525a6}{stamp\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Data stamp type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1follower_1_1_count_before_a99a0abf1a1d75aad7a5b1958f527f0a8}\label{classflow_1_1follower_1_1_count_before_a99a0abf1a1d75aad7a5b1958f527f0a8}} 
+using \hyperlink{classflow_1_1follower_1_1_count_before_a99a0abf1a1d75aad7a5b1958f527f0a8}{offset\+\_\+type} = typename \hyperlink{structflow_1_1_captor_traits}{Captor\+Traits}$<$ \hyperlink{classflow_1_1follower_1_1_count_before}{Count\+Before} $>$\+::\hyperlink{classflow_1_1follower_1_1_count_before_a99a0abf1a1d75aad7a5b1958f527f0a8}{offset\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Data stamp duration type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classflow_1_1follower_1_1_count_before_a0fdc19c152e8fc8f5ad9dc3fd23af265}{Count\+Before} (const \hyperlink{classflow_1_1follower_1_1_count_before_a097b09f3a4af8a2a2772bfaddb00fdcc}{size\+\_\+type} count, const \hyperlink{classflow_1_1follower_1_1_count_before_a99a0abf1a1d75aad7a5b1958f527f0a8}{offset\+\_\+type} \&delay, const ContainerT \&container=ContainerT\{\}, const Queue\+MonitorT \&queue\+\_\+monitor=Queue\+MonitorT\{\})
+\begin{DoxyCompactList}\small\item\em Setup constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename DispatchT, typename Lock\+PolicyT = No\+Lock, typename ContainerT = Default\+Container$<$\+Dispatch\+T$>$, typename Queue\+MonitorT = Default\+Dispatch\+Queue\+Monitor$>$\newline
+class flow\+::follower\+::\+Count\+Before$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$}
+
+Captures N-\/elements before the capture range lower bound, minus a delay period. 
+
+All older elements are removed.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em DispatchT} & data dispatch type \\
+\hline
+{\em Lock\+PolicyT} & a Basic\+Lockable (\href{https://en.cppreference.com/w/cpp/named_req/BasicLockable}{\tt https\+://en.\+cppreference.\+com/w/cpp/named\+\_\+req/\+Basic\+Lockable}) object or \hyperlink{structflow_1_1_no_lock}{No\+Lock} or \hyperlink{structflow_1_1_polling_lock}{Polling\+Lock} \\
+\hline
+{\em ContainerT} & underlying {\ttfamily DispatchT} container type \\
+\hline
+{\em Queue\+MonitorT} & object used to monitor queue state on each insertion; used to precondition capture \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classflow_1_1follower_1_1_count_before_a0fdc19c152e8fc8f5ad9dc3fd23af265}\label{classflow_1_1follower_1_1_count_before_a0fdc19c152e8fc8f5ad9dc3fd23af265}} 
+\index{flow\+::follower\+::\+Count\+Before@{flow\+::follower\+::\+Count\+Before}!Count\+Before@{Count\+Before}}
+\index{Count\+Before@{Count\+Before}!flow\+::follower\+::\+Count\+Before@{flow\+::follower\+::\+Count\+Before}}
+\subsubsection{\texorpdfstring{Count\+Before()}{CountBefore()}}
+{\footnotesize\ttfamily template$<$typename DispatchT , typename Lock\+PolicyT  = No\+Lock, typename ContainerT  = Default\+Container$<$\+Dispatch\+T$>$, typename Queue\+MonitorT  = Default\+Dispatch\+Queue\+Monitor$>$ \\
+\hyperlink{classflow_1_1follower_1_1_count_before}{flow\+::follower\+::\+Count\+Before}$<$ DispatchT, Lock\+PolicyT, ContainerT, Queue\+MonitorT $>$\+::\hyperlink{classflow_1_1follower_1_1_count_before}{Count\+Before} (\begin{DoxyParamCaption}\item[{const \hyperlink{classflow_1_1follower_1_1_count_before_a097b09f3a4af8a2a2772bfaddb00fdcc}{size\+\_\+type}}]{count,  }\item[{const \hyperlink{classflow_1_1follower_1_1_count_before_a99a0abf1a1d75aad7a5b1958f527f0a8}{offset\+\_\+type} \&}]{delay,  }\item[{const ContainerT \&}]{container = {\ttfamily ContainerT\{\}},  }\item[{const Queue\+MonitorT \&}]{queue\+\_\+monitor = {\ttfamily QueueMonitorT\{\}} }\end{DoxyParamCaption})}
+
+
+
+Setup constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & number of elements before to capture \\
+\hline
+{\em delay} & the delay with which to capture \\
+\hline
+{\em container} & container object with some initial state \\
+\hline
+{\em queue\+\_\+monitor} & queue monitor with some initial state\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$code$>$std\+::invalid\+\_\+argument$<$/code$>$} & if {\ttfamily count == 0} \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+flow/include/follower/\hyperlink{count__before_8h}{count\+\_\+before.\+h}\end{DoxyCompactItemize}

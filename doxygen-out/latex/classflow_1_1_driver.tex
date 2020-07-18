@@ -1,0 +1,90 @@
+\hypertarget{classflow_1_1_driver}{}\section{flow\+:\+:Driver$<$ PolicyT $>$ Class Template Reference}
+\label{classflow_1_1_driver}\index{flow\+::\+Driver$<$ Policy\+T $>$@{flow\+::\+Driver$<$ Policy\+T $>$}}
+
+
+C\+R\+T\+P-\/base for \hyperlink{classflow_1_1_driver}{Driver} input-\/capture policies.  
+
+
+
+
+{\ttfamily \#include $<$driver.\+h$>$}
+
+
+
+Inheritance diagram for flow\+:\+:Driver$<$ PolicyT $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflow_1_1_driver__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for flow\+:\+:Driver$<$ PolicyT $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflow_1_1_driver__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classflow_1_1_driver_a422446d9a2d8ae99613e3c5728956921}\label{classflow_1_1_driver_a422446d9a2d8ae99613e3c5728956921}} 
+using \hyperlink{classflow_1_1_driver_a422446d9a2d8ae99613e3c5728956921}{Dispatch\+Container\+Type} = typename \hyperlink{structflow_1_1_captor_traits}{Captor\+Traits}$<$ PolicyT $>$\+::\hyperlink{classflow_1_1_driver_a422446d9a2d8ae99613e3c5728956921}{Dispatch\+Container\+Type}
+\begin{DoxyCompactList}\small\item\em Underlying dispatch container type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_driver_ab20e67754359b2e562ef594672ee8855}\label{classflow_1_1_driver_ab20e67754359b2e562ef594672ee8855}} 
+using \hyperlink{classflow_1_1_driver_ab20e67754359b2e562ef594672ee8855}{Dispatch\+Queue\+Monitor\+Type} = typename \hyperlink{structflow_1_1_captor_traits}{Captor\+Traits}$<$ PolicyT $>$\+::\hyperlink{classflow_1_1_driver_ab20e67754359b2e562ef594672ee8855}{Dispatch\+Queue\+Monitor\+Type}
+\begin{DoxyCompactList}\small\item\em Queue monitor type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_driver_a29830caddd19fac6828c5f3eb8df5e65}\label{classflow_1_1_driver_a29830caddd19fac6828c5f3eb8df5e65}} 
+using \hyperlink{classflow_1_1_driver_a29830caddd19fac6828c5f3eb8df5e65}{stamp\+\_\+type} = typename \hyperlink{structflow_1_1_captor_traits}{Captor\+Traits}$<$ PolicyT $>$\+::\hyperlink{classflow_1_1_driver_a29830caddd19fac6828c5f3eb8df5e65}{stamp\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Data stamp type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classflow_1_1_driver_a195110b2344944c9154290e3aa0e6684}{Driver} (const \hyperlink{classflow_1_1_driver_a422446d9a2d8ae99613e3c5728956921}{Dispatch\+Container\+Type} \&container, const \hyperlink{classflow_1_1_driver_ab20e67754359b2e562ef594672ee8855}{Dispatch\+Queue\+Monitor\+Type} \&queue\+\_\+monitor)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classflow_1_1_dispatch}{Dispatch} container constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename PolicyT$>$\newline
+class flow\+::\+Driver$<$ Policy\+T $>$}
+
+C\+R\+T\+P-\/base for \hyperlink{classflow_1_1_driver}{Driver} input-\/capture policies. 
+
+Captures data produces a synchronization sequencing range used to synchronize data produced by \hyperlink{classflow_1_1_follower}{Follower} buffers
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em PolicyT} & C\+R\+T\+P-\/derived captor with specialized capture policy \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classflow_1_1_driver_a195110b2344944c9154290e3aa0e6684}\label{classflow_1_1_driver_a195110b2344944c9154290e3aa0e6684}} 
+\index{flow\+::\+Driver@{flow\+::\+Driver}!Driver@{Driver}}
+\index{Driver@{Driver}!flow\+::\+Driver@{flow\+::\+Driver}}
+\subsubsection{\texorpdfstring{Driver()}{Driver()}}
+{\footnotesize\ttfamily template$<$typename PolicyT$>$ \\
+\hyperlink{classflow_1_1_driver}{flow\+::\+Driver}$<$ PolicyT $>$\+::\hyperlink{classflow_1_1_driver}{Driver} (\begin{DoxyParamCaption}\item[{const \hyperlink{classflow_1_1_driver_a422446d9a2d8ae99613e3c5728956921}{Dispatch\+Container\+Type} \&}]{container,  }\item[{const \hyperlink{classflow_1_1_driver_ab20e67754359b2e562ef594672ee8855}{Dispatch\+Queue\+Monitor\+Type} \&}]{queue\+\_\+monitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\hyperlink{classflow_1_1_dispatch}{Dispatch} container constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em container} & container object with some initial state \\
+\hline
+{\em queue\+\_\+monitor} & queue monitor with some initial state \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+flow/include/driver/\hyperlink{driver_8h}{driver.\+h}\end{DoxyCompactItemize}

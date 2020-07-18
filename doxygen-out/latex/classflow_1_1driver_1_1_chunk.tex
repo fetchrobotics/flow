@@ -1,0 +1,100 @@
+\hypertarget{classflow_1_1driver_1_1_chunk}{}\section{flow\+:\+:driver\+:\+:Chunk$<$ DispatchT, Lock\+PolicyT, ContainerT, Queue\+MonitorT $>$ Class Template Reference}
+\label{classflow_1_1driver_1_1_chunk}\index{flow\+::driver\+::\+Chunk$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$@{flow\+::driver\+::\+Chunk$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$}}
+
+
+Captures the next oldest data element.  
+
+
+
+
+{\ttfamily \#include $<$chunk.\+h$>$}
+
+
+
+Inheritance diagram for flow\+:\+:driver\+:\+:Chunk$<$ DispatchT, Lock\+PolicyT, ContainerT, Queue\+MonitorT $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflow_1_1driver_1_1_chunk__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for flow\+:\+:driver\+:\+:Chunk$<$ DispatchT, Lock\+PolicyT, ContainerT, Queue\+MonitorT $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflow_1_1driver_1_1_chunk__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classflow_1_1driver_1_1_chunk_ae04fbc608b52a2d35165e2ef95d742c3}\label{classflow_1_1driver_1_1_chunk_ae04fbc608b52a2d35165e2ef95d742c3}} 
+using \hyperlink{classflow_1_1driver_1_1_chunk_ae04fbc608b52a2d35165e2ef95d742c3}{size\+\_\+type} = typename \hyperlink{structflow_1_1_captor_traits}{Captor\+Traits}$<$ \hyperlink{classflow_1_1driver_1_1_chunk}{Chunk} $>$\+::\hyperlink{classflow_1_1driver_1_1_chunk_ae04fbc608b52a2d35165e2ef95d742c3}{size\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Integer size type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1driver_1_1_chunk_a6d8458f79fba18833a4893b09dd2937d}\label{classflow_1_1driver_1_1_chunk_a6d8458f79fba18833a4893b09dd2937d}} 
+using \hyperlink{classflow_1_1driver_1_1_chunk_a6d8458f79fba18833a4893b09dd2937d}{stamp\+\_\+type} = typename \hyperlink{structflow_1_1_captor_traits}{Captor\+Traits}$<$ \hyperlink{classflow_1_1driver_1_1_chunk}{Chunk} $>$\+::\hyperlink{classflow_1_1driver_1_1_chunk_a6d8458f79fba18833a4893b09dd2937d}{stamp\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Data stamp type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classflow_1_1driver_1_1_chunk_a19ef6ce723c1b2922b931471b835b627}{Chunk} (const \hyperlink{classflow_1_1driver_1_1_chunk_ae04fbc608b52a2d35165e2ef95d742c3}{size\+\_\+type} \hyperlink{classflow_1_1_captor_interface_a1a4b3f7f6c1bd16a2cb672d90a1cbbc0}{size}, const ContainerT \&container=ContainerT\{\}, const Queue\+MonitorT \&queue\+\_\+monitor=Queue\+MonitorT\{\}) noexcept(false)
+\begin{DoxyCompactList}\small\item\em Configuration constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename DispatchT, typename Lock\+PolicyT = No\+Lock, typename ContainerT = Default\+Container$<$\+Dispatch\+T$>$, typename Queue\+MonitorT = Default\+Dispatch\+Queue\+Monitor$>$\newline
+class flow\+::driver\+::\+Chunk$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$}
+
+Captures the next oldest data element. 
+
+Establishes a sequencing range with where {\ttfamily range.\+lower\+\_\+stamp} is the stamp of the oldest captured element, and {\ttfamily range.\+upper\+\_\+stamp} is the stamp of the newest. Removes all captured elements from buffer.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em DispatchT} & data dispatch type \\
+\hline
+{\em Lock\+PolicyT} & a Basic\+Lockable (\href{https://en.cppreference.com/w/cpp/named_req/BasicLockable}{\tt https\+://en.\+cppreference.\+com/w/cpp/named\+\_\+req/\+Basic\+Lockable}) object or \hyperlink{structflow_1_1_no_lock}{No\+Lock} or \hyperlink{structflow_1_1_polling_lock}{Polling\+Lock} \\
+\hline
+{\em ContainerT} & underlying {\ttfamily DispatchT} container type \\
+\hline
+{\em Queue\+MonitorT} & object used to monitor queue state on each insertion \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classflow_1_1driver_1_1_chunk_a19ef6ce723c1b2922b931471b835b627}\label{classflow_1_1driver_1_1_chunk_a19ef6ce723c1b2922b931471b835b627}} 
+\index{flow\+::driver\+::\+Chunk@{flow\+::driver\+::\+Chunk}!Chunk@{Chunk}}
+\index{Chunk@{Chunk}!flow\+::driver\+::\+Chunk@{flow\+::driver\+::\+Chunk}}
+\subsubsection{\texorpdfstring{Chunk()}{Chunk()}}
+{\footnotesize\ttfamily template$<$typename DispatchT , typename Lock\+PolicyT  = No\+Lock, typename ContainerT  = Default\+Container$<$\+Dispatch\+T$>$, typename Queue\+MonitorT  = Default\+Dispatch\+Queue\+Monitor$>$ \\
+\hyperlink{classflow_1_1driver_1_1_chunk}{flow\+::driver\+::\+Chunk}$<$ DispatchT, Lock\+PolicyT, ContainerT, Queue\+MonitorT $>$\+::\hyperlink{classflow_1_1driver_1_1_chunk}{Chunk} (\begin{DoxyParamCaption}\item[{const \hyperlink{classflow_1_1driver_1_1_chunk_ae04fbc608b52a2d35165e2ef95d742c3}{size\+\_\+type}}]{size,  }\item[{const ContainerT \&}]{container = {\ttfamily ContainerT\{\}},  }\item[{const Queue\+MonitorT \&}]{queue\+\_\+monitor = {\ttfamily QueueMonitorT\{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+
+
+Configuration constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & number of elements to batch before becoming ready \\
+\hline
+{\em container} & container object with some initial state\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$code$>$std\+::invalid\+\_\+argument$<$/code$>$} & if {\ttfamily size == 0} \\
+\hline
+{\em $<$code$>$std\+::invalid\+\_\+argument$<$/code$>$} & if {\ttfamily Capture\+OutputT} cannot hold {\ttfamily size} \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+flow/include/driver/chunk.\+h\end{DoxyCompactItemize}

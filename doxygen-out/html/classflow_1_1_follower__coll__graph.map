@@ -1,0 +1,6 @@
+<map id="flow::Follower&lt; PolicyT &gt;" name="flow::Follower&lt; PolicyT &gt;">
+<area shape="rect" id="node2" href="$classflow_1_1_captor.html" title="flow::Captor\&lt; Follower\l\&lt; PolicyT \&gt;, CaptorTraits\l\&lt; PolicyT \&gt;::LockPolicyType,\l CaptorTraits\&lt; PolicyT \&gt;::DispatchQueue\lMonitorType \&gt;" alt="" coords="748,65,1012,150"/>
+<area shape="rect" id="node3" href="$classflow_1_1_captor_interface.html" title="flow::CaptorInterface\l\&lt; Captor\&lt; Follower\&lt; PolicyT\l \&gt;, CaptorTraits\&lt; PolicyT\l \&gt;::LockPolicyType, CaptorTraits\l\&lt; PolicyT \&gt;::DispatchQueueMonitorType \&gt; \&gt;" alt="" coords="415,65,699,150"/>
+<area shape="rect" id="node4" href="$structflow_1_1_captor_traits.html" title="flow::CaptorTraits\l\&lt; Captor\&lt; Follower\&lt;\l PolicyT \&gt;, CaptorTraits\l\&lt; PolicyT \&gt;::LockPolicyType,\l CaptorTraits\&lt; PolicyT \&gt;::DispatchQueue\lMonitorType \&gt; \&gt;" alt="" coords="5,5,269,105"/>
+<area shape="rect" id="node5" href="$classflow_1_1_dispatch_queue.html" title="flow::DispatchQueue\l\&lt; DispatchType, DispatchContainer\lType \&gt;" alt="" coords="22,130,253,186"/>
+</map>

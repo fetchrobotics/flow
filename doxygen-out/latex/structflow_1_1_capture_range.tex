@@ -1,0 +1,107 @@
+\hypertarget{structflow_1_1_capture_range}{}\section{flow\+:\+:Capture\+Range$<$ StampT $>$ Struct Template Reference}
+\label{structflow_1_1_capture_range}\index{flow\+::\+Capture\+Range$<$ Stamp\+T $>$@{flow\+::\+Capture\+Range$<$ Stamp\+T $>$}}
+
+
+Data capture/sequencing information.  
+
+
+
+
+{\ttfamily \#include $<$dispatch.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structflow_1_1_capture_range_a525dd2f7119611ebdf7d02f2a5a15af9}{Capture\+Range} (const StampT \+\_\+lower\+\_\+stamp=\hyperlink{structflow_1_1_stamp_traits}{Stamp\+Traits}$<$ StampT $>$\+::max(), const StampT \+\_\+upper\+\_\+stamp=\hyperlink{structflow_1_1_stamp_traits}{Stamp\+Traits}$<$ StampT $>$\+::min())
+\begin{DoxyCompactList}\small\item\em Sequencing range constructor. \end{DoxyCompactList}\item 
+bool \hyperlink{structflow_1_1_capture_range_accdfed5d9a2410aed2a5e242b7d1335b}{valid} () const
+\begin{DoxyCompactList}\small\item\em Checks if capture stamp range is valid. \end{DoxyCompactList}\item 
+\hyperlink{structflow_1_1_capture_range_a9e48db61b83970a676a34c8af7bae594}{operator bool} () const
+\begin{DoxyCompactList}\small\item\em Checks if capture stamp range is valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structflow_1_1_capture_range_ab0f90a505b277b3ca9b1f72bd8097859}\label{structflow_1_1_capture_range_ab0f90a505b277b3ca9b1f72bd8097859}} 
+StampT \hyperlink{structflow_1_1_capture_range_ab0f90a505b277b3ca9b1f72bd8097859}{lower\+\_\+stamp}
+\begin{DoxyCompactList}\small\item\em Target sequence stamp produced from captured data associated with oldest captured element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structflow_1_1_capture_range_a08e561c0c45af5a2890f00971a20b7f4}\label{structflow_1_1_capture_range_a08e561c0c45af5a2890f00971a20b7f4}} 
+StampT \hyperlink{structflow_1_1_capture_range_a08e561c0c45af5a2890f00971a20b7f4}{upper\+\_\+stamp}
+\begin{DoxyCompactList}\small\item\em Target sequence stamp produced from captured data associated with newest captured element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename StampT$>$\newline
+struct flow\+::\+Capture\+Range$<$ Stamp\+T $>$}
+
+Data capture/sequencing information. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em StampT} & sequence stamp type \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structflow_1_1_capture_range_a525dd2f7119611ebdf7d02f2a5a15af9}\label{structflow_1_1_capture_range_a525dd2f7119611ebdf7d02f2a5a15af9}} 
+\index{flow\+::\+Capture\+Range@{flow\+::\+Capture\+Range}!Capture\+Range@{Capture\+Range}}
+\index{Capture\+Range@{Capture\+Range}!flow\+::\+Capture\+Range@{flow\+::\+Capture\+Range}}
+\subsubsection{\texorpdfstring{Capture\+Range()}{CaptureRange()}}
+{\footnotesize\ttfamily template$<$typename StampT$>$ \\
+\hyperlink{structflow_1_1_capture_range}{flow\+::\+Capture\+Range}$<$ StampT $>$\+::\hyperlink{structflow_1_1_capture_range}{Capture\+Range} (\begin{DoxyParamCaption}\item[{const StampT}]{\+\_\+lower\+\_\+stamp = {\ttfamily \hyperlink{structflow_1_1_stamp_traits}{Stamp\+Traits}$<$StampT$>$\+:\+:max()},  }\item[{const StampT}]{\+\_\+upper\+\_\+stamp = {\ttfamily \hyperlink{structflow_1_1_stamp_traits}{Stamp\+Traits}$<$StampT$>$\+:\+:min()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sequencing range constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+lower\+\_\+stamp} & lower sequencing stamp bound \\
+\hline
+{\em \+\_\+upper\+\_\+stamp} & upper sequencing stamp bound \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structflow_1_1_capture_range_a9e48db61b83970a676a34c8af7bae594}\label{structflow_1_1_capture_range_a9e48db61b83970a676a34c8af7bae594}} 
+\index{flow\+::\+Capture\+Range@{flow\+::\+Capture\+Range}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!flow\+::\+Capture\+Range@{flow\+::\+Capture\+Range}}
+\subsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily template$<$typename StampT$>$ \\
+\hyperlink{structflow_1_1_capture_range}{flow\+::\+Capture\+Range}$<$ StampT $>$\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if capture stamp range is valid. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & if upper\+\_\+stamp $>$= lower\+\_\+stamp \\
+\hline
+{\em false} & otherwise \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{structflow_1_1_capture_range_accdfed5d9a2410aed2a5e242b7d1335b}\label{structflow_1_1_capture_range_accdfed5d9a2410aed2a5e242b7d1335b}} 
+\index{flow\+::\+Capture\+Range@{flow\+::\+Capture\+Range}!valid@{valid}}
+\index{valid@{valid}!flow\+::\+Capture\+Range@{flow\+::\+Capture\+Range}}
+\subsubsection{\texorpdfstring{valid()}{valid()}}
+{\footnotesize\ttfamily template$<$typename StampT$>$ \\
+bool \hyperlink{structflow_1_1_capture_range}{flow\+::\+Capture\+Range}$<$ StampT $>$\+::valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if capture stamp range is valid. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & if upper\+\_\+stamp $>$= lower\+\_\+stamp \\
+\hline
+{\em false} & otherwise \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+flow/include/\hyperlink{dispatch_8h}{dispatch.\+h}\end{DoxyCompactItemize}

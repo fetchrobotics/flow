@@ -1,0 +1,18 @@
+C++14, header-\/only library for multi-\/stream data synchronization.
+
+\subsection*{What is this used for?}
+
+This library is meant for generating groups of data from separate series. The core problems it is meant to address are\+:
+
+
+\begin{DoxyItemize}
+\item How do we know what elements of data across multiple input streams relate to one other?
+\item How do we know when this data is ready to be retrieved (\char`\"{}captured\char`\"{}) for further use?
+\item How do we capture different types of data uniformly and with minimal overhead?
+\end{DoxyItemize}
+
+In addressing these problems, this library enables data-\/driven event execution using data collected from distinct streaming series.
+
+\subsubsection*{Example use case}
+
+At Fetch Robotics Inc., this library is used in tandem with R\+OS. R\+OS subscribers are used to feed data into {\ttfamily Flow} capture buffers with light message feeding callbacks. The callbacks transfer R\+OS messages into the appropriate {\ttfamily Flow} capture buffer. {\ttfamily Flow} entities are serviced separately to compute events from these messages. The resulting data frames from synchronization contain all messages needed to run a particular task. In this way, messages are also used as a pace-\/setting mechanism for core execution blocks. 

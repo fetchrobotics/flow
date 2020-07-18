@@ -1,0 +1,94 @@
+\hypertarget{classflow_1_1driver_1_1_throttled}{}\section{flow\+:\+:driver\+:\+:Throttled$<$ DispatchT, Lock\+PolicyT, ContainerT, Queue\+MonitorT $>$ Class Template Reference}
+\label{classflow_1_1driver_1_1_throttled}\index{flow\+::driver\+::\+Throttled$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$@{flow\+::driver\+::\+Throttled$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$}}
+
+
+\hyperlink{classflow_1_1driver_1_1_throttled}{Throttled} next element driving capture object.  
+
+
+
+
+{\ttfamily \#include $<$throttled.\+h$>$}
+
+
+
+Inheritance diagram for flow\+:\+:driver\+:\+:Throttled$<$ DispatchT, Lock\+PolicyT, ContainerT, Queue\+MonitorT $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflow_1_1driver_1_1_throttled__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for flow\+:\+:driver\+:\+:Throttled$<$ DispatchT, Lock\+PolicyT, ContainerT, Queue\+MonitorT $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflow_1_1driver_1_1_throttled__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classflow_1_1driver_1_1_throttled_ad85cd0e20eecbab225d7304da6152c0d}\label{classflow_1_1driver_1_1_throttled_ad85cd0e20eecbab225d7304da6152c0d}} 
+using \hyperlink{classflow_1_1driver_1_1_throttled_ad85cd0e20eecbab225d7304da6152c0d}{stamp\+\_\+type} = typename \hyperlink{structflow_1_1_captor_traits}{Captor\+Traits}$<$ \hyperlink{classflow_1_1driver_1_1_throttled}{Throttled} $>$\+::\hyperlink{classflow_1_1driver_1_1_throttled_ad85cd0e20eecbab225d7304da6152c0d}{stamp\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Data stamp type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1driver_1_1_throttled_abceda047ac43fa03ddfe00b68317ae3d}\label{classflow_1_1driver_1_1_throttled_abceda047ac43fa03ddfe00b68317ae3d}} 
+using \hyperlink{classflow_1_1driver_1_1_throttled_abceda047ac43fa03ddfe00b68317ae3d}{offset\+\_\+type} = typename \hyperlink{structflow_1_1_captor_traits}{Captor\+Traits}$<$ \hyperlink{classflow_1_1driver_1_1_throttled}{Throttled} $>$\+::\hyperlink{classflow_1_1driver_1_1_throttled_abceda047ac43fa03ddfe00b68317ae3d}{offset\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Data stamp duration type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classflow_1_1driver_1_1_throttled_a745fa3afaa8aa8ffdf6f5b6efa49a4e2}{Throttled} (const \hyperlink{classflow_1_1driver_1_1_throttled_abceda047ac43fa03ddfe00b68317ae3d}{offset\+\_\+type} throttle\+\_\+period, const ContainerT \&container=ContainerT\{\}, const Queue\+MonitorT \&queue\+\_\+monitor=Queue\+MonitorT\{\})
+\begin{DoxyCompactList}\small\item\em Configuration constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename DispatchT, typename Lock\+PolicyT = No\+Lock, typename ContainerT = Default\+Container$<$\+Dispatch\+T$>$, typename Queue\+MonitorT = Default\+Dispatch\+Queue\+Monitor$>$\newline
+class flow\+::driver\+::\+Throttled$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$}
+
+\hyperlink{classflow_1_1driver_1_1_throttled}{Throttled} next element driving capture object. 
+
+Captures the next oldest data element, limited to a max expected period. This means that some elements are skipped if the input rate indicated by data sequence stamps is higher than the throttled rate. ~\newline
+ Establishes a sequencing range with {\ttfamily range.\+lower\+\_\+stamp == range.\+upper\+\_\+stamp} equal to the captured element stamp. Removes captured element from buffer.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em DispatchT} & data dispatch type \\
+\hline
+{\em Lock\+PolicyT} & a Basic\+Lockable (\href{https://en.cppreference.com/w/cpp/named_req/BasicLockable}{\tt https\+://en.\+cppreference.\+com/w/cpp/named\+\_\+req/\+Basic\+Lockable}) object or \hyperlink{structflow_1_1_no_lock}{No\+Lock} or \hyperlink{structflow_1_1_polling_lock}{Polling\+Lock} \\
+\hline
+{\em ContainerT} & underlying {\ttfamily DispatchT} container type \\
+\hline
+{\em Queue\+MonitorT} & object used to monitor queue state on each insertion \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classflow_1_1driver_1_1_throttled_a745fa3afaa8aa8ffdf6f5b6efa49a4e2}\label{classflow_1_1driver_1_1_throttled_a745fa3afaa8aa8ffdf6f5b6efa49a4e2}} 
+\index{flow\+::driver\+::\+Throttled@{flow\+::driver\+::\+Throttled}!Throttled@{Throttled}}
+\index{Throttled@{Throttled}!flow\+::driver\+::\+Throttled@{flow\+::driver\+::\+Throttled}}
+\subsubsection{\texorpdfstring{Throttled()}{Throttled()}}
+{\footnotesize\ttfamily template$<$typename DispatchT , typename Lock\+PolicyT  = No\+Lock, typename ContainerT  = Default\+Container$<$\+Dispatch\+T$>$, typename Queue\+MonitorT  = Default\+Dispatch\+Queue\+Monitor$>$ \\
+\hyperlink{classflow_1_1driver_1_1_throttled}{flow\+::driver\+::\+Throttled}$<$ DispatchT, Lock\+PolicyT, ContainerT, Queue\+MonitorT $>$\+::\hyperlink{classflow_1_1driver_1_1_throttled}{Throttled} (\begin{DoxyParamCaption}\item[{const \hyperlink{classflow_1_1driver_1_1_throttled_abceda047ac43fa03ddfe00b68317ae3d}{offset\+\_\+type}}]{throttle\+\_\+period,  }\item[{const ContainerT \&}]{container = {\ttfamily ContainerT\{\}},  }\item[{const Queue\+MonitorT \&}]{queue\+\_\+monitor = {\ttfamily QueueMonitorT\{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Configuration constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em throttle\+\_\+period} & capture throttling period \\
+\hline
+{\em container} & container object with some initial state \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+flow/include/driver/throttled.\+h\end{DoxyCompactItemize}

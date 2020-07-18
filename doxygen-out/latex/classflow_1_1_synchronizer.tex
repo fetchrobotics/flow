@@ -1,0 +1,267 @@
+\hypertarget{classflow_1_1_synchronizer}{}\section{flow\+:\+:Synchronizer Class Reference}
+\label{classflow_1_1_synchronizer}\index{flow\+::\+Synchronizer@{flow\+::\+Synchronizer}}
+
+
+Provides facilities to synchronize data across several Captors.  
+
+
+
+
+{\ttfamily \#include $<$synchronizer.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classflow_1_1_synchronizer_a70d66cab3e69f69931cbaee6dbd5bdfb}\label{classflow_1_1_synchronizer_a70d66cab3e69f69931cbaee6dbd5bdfb}} 
+{\footnotesize template$<$typename T $>$ }\\using \hyperlink{classflow_1_1_synchronizer_a70d66cab3e69f69931cbaee6dbd5bdfb}{arg\+\_\+t} = std\+::conditional\+\_\+t$<$(sizeof(T)$<$=sizeof(T \&)), T, T \& $>$
+\begin{DoxyCompactList}\small\item\em Selects type of lesser size to use when passing arguments. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Captor\+TupleT $>$ }\\using \hyperlink{classflow_1_1_synchronizer_a2a443abb40ad2413e6d5f7a7f3cfe4a7}{stamp\+\_\+t} = typename \hyperlink{structflow_1_1_sequence_stamp_type}{Sequence\+Stamp\+Type}$<$ std\+::remove\+\_\+reference\+\_\+t$<$ std\+::tuple\+\_\+element\+\_\+t$<$ 0\+U\+L, Captor\+Tuple\+T $>$ $>$$>$\+::type
+\begin{DoxyCompactList}\small\item\em Stamp type from capture sequence alias. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Captor\+TupleT $>$ }\\using \hyperlink{classflow_1_1_synchronizer_a0f1e7062475c9492191e29b26d09106c}{stamp\+\_\+arg\+\_\+t} = \hyperlink{classflow_1_1_synchronizer_a70d66cab3e69f69931cbaee6dbd5bdfb}{arg\+\_\+t}$<$ \hyperlink{classflow_1_1_synchronizer_a2a443abb40ad2413e6d5f7a7f3cfe4a7}{stamp\+\_\+t}$<$ Captor\+TupleT $>$ $>$
+\begin{DoxyCompactList}\small\item\em Stamp argument type from capture sequence alias. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Captor\+TupleT $>$ }\\using \hyperlink{classflow_1_1_synchronizer_a4f9693650274ae93f5b9a11cb41a2d80}{result\+\_\+t} = \hyperlink{structflow_1_1_result}{Result}$<$ \hyperlink{classflow_1_1_synchronizer_a2a443abb40ad2413e6d5f7a7f3cfe4a7}{stamp\+\_\+t}$<$ Captor\+TupleT $>$ $>$
+\begin{DoxyCompactList}\small\item\em \hyperlink{structflow_1_1_result}{Result} type from captor sequence alias. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Captor\+TupleT $>$ }\\static void \hyperlink{classflow_1_1_synchronizer_a268ae5410af9df6887bd99cb954a214d}{remove} (Captor\+TupleT \&\&captors, const \hyperlink{classflow_1_1_synchronizer_a0f1e7062475c9492191e29b26d09106c}{stamp\+\_\+arg\+\_\+t}$<$ Captor\+TupleT $>$ t\+\_\+remove)
+\begin{DoxyCompactList}\small\item\em Removes all possible synchronization frames at and before {\ttfamily t\+\_\+remove}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Captor\+TupleT $>$ }\\static void \hyperlink{classflow_1_1_synchronizer_a065371da9acc09e3459ca2c6096db1b7}{abort} (Captor\+TupleT \&\&captors, const \hyperlink{classflow_1_1_synchronizer_a0f1e7062475c9492191e29b26d09106c}{stamp\+\_\+arg\+\_\+t}$<$ Captor\+TupleT $>$ t\+\_\+abort)
+\begin{DoxyCompactList}\small\item\em Abort active capture at and before {\ttfamily t\+\_\+abort}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Captor\+TupleT $>$ }\\static void \hyperlink{classflow_1_1_synchronizer_aa598f6976190683afff9c6e45b2e5884}{reset} (Captor\+TupleT \&\&captors)
+\begin{DoxyCompactList}\small\item\em Resets internal captors states and removes all buffered data. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Captor\+TupleT , typename Output\+Iterator\+TupleT , typename ClockT , typename DurationT $>$ }\\static \hyperlink{classflow_1_1_synchronizer_a4f9693650274ae93f5b9a11cb41a2d80}{result\+\_\+t}$<$ Captor\+TupleT $>$ \hyperlink{classflow_1_1_synchronizer_af8bda24c2e5ea24037d8fcaceda96885}{capture} (Captor\+TupleT \&\&captors, Output\+Iterator\+TupleT \&\&outputs, const \hyperlink{classflow_1_1_synchronizer_a0f1e7062475c9492191e29b26d09106c}{stamp\+\_\+arg\+\_\+t}$<$ Captor\+TupleT $>$ lower\+\_\+bound, const std\+::chrono\+::time\+\_\+point$<$ ClockT, DurationT $>$ \&timeout)
+\begin{DoxyCompactList}\small\item\em Runs synchronization and data capture across all captors. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Captor\+TupleT , typename Output\+Iterator\+TupleT $>$ }\\static \hyperlink{classflow_1_1_synchronizer_a4f9693650274ae93f5b9a11cb41a2d80}{result\+\_\+t}$<$ Captor\+TupleT $>$ \hyperlink{classflow_1_1_synchronizer_a802f1ac95c23442da70b0ed45669c1d5}{capture} (Captor\+TupleT \&\&captors, Output\+Iterator\+TupleT \&\&outputs, const \hyperlink{classflow_1_1_synchronizer_a0f1e7062475c9492191e29b26d09106c}{stamp\+\_\+arg\+\_\+t}$<$ Captor\+TupleT $>$ lower\+\_\+bound=\hyperlink{structflow_1_1_stamp_traits}{Stamp\+Traits}$<$ \hyperlink{classflow_1_1_synchronizer_a2a443abb40ad2413e6d5f7a7f3cfe4a7}{stamp\+\_\+t}$<$ Captor\+TupleT $>$$>$\+::min())
+\begin{DoxyCompactList}\small\item\em Runs synchronization and data capture across all captors. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Captor\+TupleT $>$ }\\static \hyperlink{classflow_1_1_synchronizer_a4f9693650274ae93f5b9a11cb41a2d80}{result\+\_\+t}$<$ Captor\+TupleT $>$ \hyperlink{classflow_1_1_synchronizer_a2778cc70ecd419dd7a6171f71bf37b20}{dry\+\_\+capture} (Captor\+TupleT \&\&captors, const \hyperlink{classflow_1_1_synchronizer_a0f1e7062475c9492191e29b26d09106c}{stamp\+\_\+arg\+\_\+t}$<$ Captor\+TupleT $>$ lower\+\_\+bound=\hyperlink{structflow_1_1_stamp_traits}{Stamp\+Traits}$<$ \hyperlink{classflow_1_1_synchronizer_a2a443abb40ad2413e6d5f7a7f3cfe4a7}{stamp\+\_\+t}$<$ Captor\+TupleT $>$$>$\+::min())
+\begin{DoxyCompactList}\small\item\em Runs synchronization dry-\/run across all captors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides facilities to synchronize data across several Captors. 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classflow_1_1_synchronizer_a4f9693650274ae93f5b9a11cb41a2d80}\label{classflow_1_1_synchronizer_a4f9693650274ae93f5b9a11cb41a2d80}} 
+\index{flow\+::\+Synchronizer@{flow\+::\+Synchronizer}!result\+\_\+t@{result\+\_\+t}}
+\index{result\+\_\+t@{result\+\_\+t}!flow\+::\+Synchronizer@{flow\+::\+Synchronizer}}
+\subsubsection{\texorpdfstring{result\+\_\+t}{result\_t}}
+{\footnotesize\ttfamily template$<$typename Captor\+TupleT $>$ \\
+using \hyperlink{classflow_1_1_synchronizer_a4f9693650274ae93f5b9a11cb41a2d80}{flow\+::\+Synchronizer\+::result\+\_\+t} =  \hyperlink{structflow_1_1_result}{Result}$<$\hyperlink{classflow_1_1_synchronizer_a2a443abb40ad2413e6d5f7a7f3cfe4a7}{stamp\+\_\+t}$<$Captor\+TupleT$>$ $>$}
+
+
+
+\hyperlink{structflow_1_1_result}{Result} type from captor sequence alias. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Captor\+TupleT} & tuple-\/like type of captors which supports access with {\ttfamily std\+::get} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{classflow_1_1_synchronizer_a0f1e7062475c9492191e29b26d09106c}\label{classflow_1_1_synchronizer_a0f1e7062475c9492191e29b26d09106c}} 
+\index{flow\+::\+Synchronizer@{flow\+::\+Synchronizer}!stamp\+\_\+arg\+\_\+t@{stamp\+\_\+arg\+\_\+t}}
+\index{stamp\+\_\+arg\+\_\+t@{stamp\+\_\+arg\+\_\+t}!flow\+::\+Synchronizer@{flow\+::\+Synchronizer}}
+\subsubsection{\texorpdfstring{stamp\+\_\+arg\+\_\+t}{stamp\_arg\_t}}
+{\footnotesize\ttfamily template$<$typename Captor\+TupleT $>$ \\
+using \hyperlink{classflow_1_1_synchronizer_a0f1e7062475c9492191e29b26d09106c}{flow\+::\+Synchronizer\+::stamp\+\_\+arg\+\_\+t} =  \hyperlink{classflow_1_1_synchronizer_a70d66cab3e69f69931cbaee6dbd5bdfb}{arg\+\_\+t}$<$\hyperlink{classflow_1_1_synchronizer_a2a443abb40ad2413e6d5f7a7f3cfe4a7}{stamp\+\_\+t}$<$Captor\+TupleT$>$ $>$}
+
+
+
+Stamp argument type from capture sequence alias. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Captor\+TupleT} & tuple-\/like type of captors which supports access with {\ttfamily std\+::get} \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{classflow_1_1_synchronizer_a2a443abb40ad2413e6d5f7a7f3cfe4a7}\label{classflow_1_1_synchronizer_a2a443abb40ad2413e6d5f7a7f3cfe4a7}} 
+\index{flow\+::\+Synchronizer@{flow\+::\+Synchronizer}!stamp\+\_\+t@{stamp\+\_\+t}}
+\index{stamp\+\_\+t@{stamp\+\_\+t}!flow\+::\+Synchronizer@{flow\+::\+Synchronizer}}
+\subsubsection{\texorpdfstring{stamp\+\_\+t}{stamp\_t}}
+{\footnotesize\ttfamily template$<$typename Captor\+TupleT $>$ \\
+using \hyperlink{classflow_1_1_synchronizer_a2a443abb40ad2413e6d5f7a7f3cfe4a7}{flow\+::\+Synchronizer\+::stamp\+\_\+t} =  typename \hyperlink{structflow_1_1_sequence_stamp_type}{Sequence\+Stamp\+Type}$<$std\+::remove\+\_\+reference\+\_\+t$<$std\+::tuple\+\_\+element\+\_\+t$<$0\+U\+L, Captor\+Tuple\+T$>$ $>$$>$\+::type}
+
+
+
+Stamp type from capture sequence alias. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Captor\+TupleT} & tuple-\/like type of captors which supports access with {\ttfamily std\+::get} \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classflow_1_1_synchronizer_a065371da9acc09e3459ca2c6096db1b7}\label{classflow_1_1_synchronizer_a065371da9acc09e3459ca2c6096db1b7}} 
+\index{flow\+::\+Synchronizer@{flow\+::\+Synchronizer}!abort@{abort}}
+\index{abort@{abort}!flow\+::\+Synchronizer@{flow\+::\+Synchronizer}}
+\subsubsection{\texorpdfstring{abort()}{abort()}}
+{\footnotesize\ttfamily template$<$typename Captor\+TupleT $>$ \\
+static void flow\+::\+Synchronizer\+::abort (\begin{DoxyParamCaption}\item[{Captor\+TupleT \&\&}]{captors,  }\item[{const \hyperlink{classflow_1_1_synchronizer_a0f1e7062475c9492191e29b26d09106c}{stamp\+\_\+arg\+\_\+t}$<$ Captor\+TupleT $>$}]{t\+\_\+abort }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Abort active capture at and before {\ttfamily t\+\_\+abort}. 
+
+If a capture uses a data wait, this will notify the wait Captors will removing buffered data according to their specific abort policy.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Captor\+TupleT} & tuple-\/like type of captors which supports access with {\ttfamily std\+::get}\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em captors} & tuple of captors used to perform synchronization \\
+\hline
+{\em t\+\_\+abort} & abort time point \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classflow_1_1_synchronizer_af8bda24c2e5ea24037d8fcaceda96885}\label{classflow_1_1_synchronizer_af8bda24c2e5ea24037d8fcaceda96885}} 
+\index{flow\+::\+Synchronizer@{flow\+::\+Synchronizer}!capture@{capture}}
+\index{capture@{capture}!flow\+::\+Synchronizer@{flow\+::\+Synchronizer}}
+\subsubsection{\texorpdfstring{capture()}{capture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Captor\+TupleT , typename Output\+Iterator\+TupleT , typename ClockT , typename DurationT $>$ \\
+static \hyperlink{classflow_1_1_synchronizer_a4f9693650274ae93f5b9a11cb41a2d80}{result\+\_\+t}$<$Captor\+TupleT$>$ flow\+::\+Synchronizer\+::capture (\begin{DoxyParamCaption}\item[{Captor\+TupleT \&\&}]{captors,  }\item[{Output\+Iterator\+TupleT \&\&}]{outputs,  }\item[{const \hyperlink{classflow_1_1_synchronizer_a0f1e7062475c9492191e29b26d09106c}{stamp\+\_\+arg\+\_\+t}$<$ Captor\+TupleT $>$}]{lower\+\_\+bound,  }\item[{const std\+::chrono\+::time\+\_\+point$<$ ClockT, DurationT $>$ \&}]{timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Runs synchronization and data capture across all captors. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Captor\+TupleT} & tuple-\/like type of captors which supports access with {\ttfamily std\+::get} \\
+\hline
+{\em Output\+Iterator\+TupleT} & tuple-\/like type of iterators which supports access with {\ttfamily std\+::get} \\
+\hline
+{\em ClockT} & clock type associated with {\ttfamily time\+\_\+point} \\
+\hline
+{\em DurationT} & duration type associated with {\ttfamily time\+\_\+point}\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em captors} & tuple of captors used to perform synchronization \\
+\hline
+{\em outputs} & tuple of dispatch output iterators, or \hyperlink{structflow_1_1_no_capture}{No\+Capture}, ordered w.\+r.\+t associated \hyperlink{classflow_1_1_captor}{Captor} \\
+\hline
+{\em lower\+\_\+bound} & synchronization stamp lower bound, forces all captured data to have associated stamps which are greater than {\ttfamily lower\+\_\+bound} \\
+\hline
+{\em timeout} & synchronization timeout for captors which require a data wait\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+capture/synchronization details 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflow_1_1_synchronizer_a802f1ac95c23442da70b0ed45669c1d5}\label{classflow_1_1_synchronizer_a802f1ac95c23442da70b0ed45669c1d5}} 
+\index{flow\+::\+Synchronizer@{flow\+::\+Synchronizer}!capture@{capture}}
+\index{capture@{capture}!flow\+::\+Synchronizer@{flow\+::\+Synchronizer}}
+\subsubsection{\texorpdfstring{capture()}{capture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Captor\+TupleT , typename Output\+Iterator\+TupleT $>$ \\
+static \hyperlink{classflow_1_1_synchronizer_a4f9693650274ae93f5b9a11cb41a2d80}{result\+\_\+t}$<$Captor\+TupleT$>$ flow\+::\+Synchronizer\+::capture (\begin{DoxyParamCaption}\item[{Captor\+TupleT \&\&}]{captors,  }\item[{Output\+Iterator\+TupleT \&\&}]{outputs,  }\item[{const \hyperlink{classflow_1_1_synchronizer_a0f1e7062475c9492191e29b26d09106c}{stamp\+\_\+arg\+\_\+t}$<$ Captor\+TupleT $>$}]{lower\+\_\+bound = {\ttfamily \hyperlink{structflow_1_1_stamp_traits}{Stamp\+Traits}$<$~\hyperlink{classflow_1_1_synchronizer_a2a443abb40ad2413e6d5f7a7f3cfe4a7}{stamp\+\_\+t}$<$~CaptorTupleT~$>$$>$\+:\+:min()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Runs synchronization and data capture across all captors. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Captor\+TupleT} & tuple-\/like type of captors which supports access with {\ttfamily std\+::get} \\
+\hline
+{\em Output\+Iterator\+TupleT} & tuple-\/like type of iterators which supports access with {\ttfamily std\+::get}\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em captors} & tuple of captors used to perform synchronization \\
+\hline
+{\em outputs} & tuple of dispatch output iterators, or \hyperlink{structflow_1_1_no_capture}{No\+Capture}, ordered w.\+r.\+t associated \hyperlink{classflow_1_1_captor}{Captor} \\
+\hline
+{\em lower\+\_\+bound} & synchronization stamp lower bound, forces all captured data to have associated stamps which are greater than {\ttfamily lower\+\_\+bound}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+capture/synchronization details 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflow_1_1_synchronizer_a2778cc70ecd419dd7a6171f71bf37b20}\label{classflow_1_1_synchronizer_a2778cc70ecd419dd7a6171f71bf37b20}} 
+\index{flow\+::\+Synchronizer@{flow\+::\+Synchronizer}!dry\+\_\+capture@{dry\+\_\+capture}}
+\index{dry\+\_\+capture@{dry\+\_\+capture}!flow\+::\+Synchronizer@{flow\+::\+Synchronizer}}
+\subsubsection{\texorpdfstring{dry\+\_\+capture()}{dry\_capture()}}
+{\footnotesize\ttfamily template$<$typename Captor\+TupleT $>$ \\
+static \hyperlink{classflow_1_1_synchronizer_a4f9693650274ae93f5b9a11cb41a2d80}{result\+\_\+t}$<$Captor\+TupleT$>$ flow\+::\+Synchronizer\+::dry\+\_\+capture (\begin{DoxyParamCaption}\item[{Captor\+TupleT \&\&}]{captors,  }\item[{const \hyperlink{classflow_1_1_synchronizer_a0f1e7062475c9492191e29b26d09106c}{stamp\+\_\+arg\+\_\+t}$<$ Captor\+TupleT $>$}]{lower\+\_\+bound = {\ttfamily \hyperlink{structflow_1_1_stamp_traits}{Stamp\+Traits}$<$~\hyperlink{classflow_1_1_synchronizer_a2a443abb40ad2413e6d5f7a7f3cfe4a7}{stamp\+\_\+t}$<$~CaptorTupleT~$>$$>$\+:\+:min()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Runs synchronization dry-\/run across all captors. 
+
+Tests active next capture state without actually capturing elements. Any data changes that occur are such that the next call to {\ttfamily \hyperlink{classflow_1_1_synchronizer_af8bda24c2e5ea24037d8fcaceda96885}{Synchronizer\+::capture}} will be valid, and will have the same capture result if no changes have been made to data in the capture queues.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Captor\+TupleT} & tuple-\/like type of captors which supports access with {\ttfamily std\+::get}\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em captors} & tuple of captors used to perform synchronization \\
+\hline
+{\em lower\+\_\+bound} & synchronization stamp lower bound; forces all captured data to have associated stamps which are greater than {\ttfamily lower\+\_\+bound}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dry capture/synchronization details 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflow_1_1_synchronizer_a268ae5410af9df6887bd99cb954a214d}\label{classflow_1_1_synchronizer_a268ae5410af9df6887bd99cb954a214d}} 
+\index{flow\+::\+Synchronizer@{flow\+::\+Synchronizer}!remove@{remove}}
+\index{remove@{remove}!flow\+::\+Synchronizer@{flow\+::\+Synchronizer}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename Captor\+TupleT $>$ \\
+static void flow\+::\+Synchronizer\+::remove (\begin{DoxyParamCaption}\item[{Captor\+TupleT \&\&}]{captors,  }\item[{const \hyperlink{classflow_1_1_synchronizer_a0f1e7062475c9492191e29b26d09106c}{stamp\+\_\+arg\+\_\+t}$<$ Captor\+TupleT $>$}]{t\+\_\+remove }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Removes all possible synchronization frames at and before {\ttfamily t\+\_\+remove}. 
+
+This does not necessarily remove data from all captors
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Captor\+TupleT} & tuple-\/like type of captors which supports access with {\ttfamily std\+::get}\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em captors} & tuple of captors used to perform synchronization \\
+\hline
+{\em t\+\_\+remove} & data removal time point \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classflow_1_1_synchronizer_aa598f6976190683afff9c6e45b2e5884}\label{classflow_1_1_synchronizer_aa598f6976190683afff9c6e45b2e5884}} 
+\index{flow\+::\+Synchronizer@{flow\+::\+Synchronizer}!reset@{reset}}
+\index{reset@{reset}!flow\+::\+Synchronizer@{flow\+::\+Synchronizer}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily template$<$typename Captor\+TupleT $>$ \\
+static void flow\+::\+Synchronizer\+::reset (\begin{DoxyParamCaption}\item[{Captor\+TupleT \&\&}]{captors }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Resets internal captors states and removes all buffered data. 
+
+If a capture uses a data wait, this will notify the wait
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Captor\+TupleT} & tuple-\/like type of captors which supports access with {\ttfamily std\+::get}\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em captors} & tuple of captors used to perform synchronization \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+flow/include/\hyperlink{synchronizer_8h}{synchronizer.\+h}\end{DoxyCompactItemize}

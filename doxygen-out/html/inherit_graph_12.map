@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classflow_1_1_captor_interface.html" title="flow::CaptorInterface\l\&lt; Captor\&lt; Follower\&lt; PolicyT\l \&gt;, CaptorTraits\&lt; PolicyT\l \&gt;::LockPolicyType, CaptorTraits\l\&lt; PolicyT \&gt;::DispatchQueueMonitorType \&gt; \&gt;" alt="" coords="5,5,289,91"/>
+<area shape="rect" id="node2" href="$classflow_1_1_captor.html" title="flow::Captor\&lt; Follower\l\&lt; PolicyT \&gt;, CaptorTraits\l\&lt; PolicyT \&gt;::LockPolicyType,\l CaptorTraits\&lt; PolicyT \&gt;::DispatchQueue\lMonitorType \&gt;" alt="" coords="337,5,601,91"/>
+<area shape="rect" id="node3" href="$classflow_1_1_follower.html" title="CRTP&#45;base for Follower input&#45;capture policies. " alt="" coords="649,35,820,61"/>
+</map>

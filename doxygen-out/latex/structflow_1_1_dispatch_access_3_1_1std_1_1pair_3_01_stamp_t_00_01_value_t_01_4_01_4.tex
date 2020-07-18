@@ -1,0 +1,42 @@
+\hypertarget{structflow_1_1_dispatch_access_3_1_1std_1_1pair_3_01_stamp_t_00_01_value_t_01_4_01_4}{}\section{flow\+:\+:Dispatch\+Access$<$\+:\+:std\+:\+:pair$<$ StampT, ValueT $>$ $>$ Struct Template Reference}
+\label{structflow_1_1_dispatch_access_3_1_1std_1_1pair_3_01_stamp_t_00_01_value_t_01_4_01_4}\index{flow\+::\+Dispatch\+Access$<$\+::std\+::pair$<$ Stamp\+T, Value\+T $>$ $>$@{flow\+::\+Dispatch\+Access$<$\+::std\+::pair$<$ Stamp\+T, Value\+T $>$ $>$}}
+
+
+\hyperlink{classflow_1_1_dispatch}{Dispatch} access helper.  
+
+
+
+
+{\ttfamily \#include $<$pair.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structflow_1_1_dispatch_access_3_1_1std_1_1pair_3_01_stamp_t_00_01_value_t_01_4_01_4_a4d69ceeba753574e80855ee3dc1ffbb4}\label{structflow_1_1_dispatch_access_3_1_1std_1_1pair_3_01_stamp_t_00_01_value_t_01_4_01_4_a4d69ceeba753574e80855ee3dc1ffbb4}} 
+{\footnotesize template$<$typename T $>$ }\\using \hyperlink{structflow_1_1_dispatch_access_3_1_1std_1_1pair_3_01_stamp_t_00_01_value_t_01_4_01_4_a4d69ceeba753574e80855ee3dc1ffbb4}{return\+\_\+t} = std\+::conditional\+\_\+t$<$(sizeof(T)$<$=sizeof(T \&)), T, const T \& $>$
+\begin{DoxyCompactList}\small\item\em Selects type of lesser size to use when returning values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structflow_1_1_dispatch_access_3_1_1std_1_1pair_3_01_stamp_t_00_01_value_t_01_4_01_4_a2065a3aba8aad9ea19bf85001f289adb}\label{structflow_1_1_dispatch_access_3_1_1std_1_1pair_3_01_stamp_t_00_01_value_t_01_4_01_4_a2065a3aba8aad9ea19bf85001f289adb}} 
+static constexpr \hyperlink{structflow_1_1_dispatch_access_3_1_1std_1_1pair_3_01_stamp_t_00_01_value_t_01_4_01_4_a4d69ceeba753574e80855ee3dc1ffbb4}{return\+\_\+t}$<$ StampT $>$ {\bfseries stamp} (const \+::std\+::pair$<$ StampT, ValueT $>$ \&dispatch)
+\item 
+\mbox{\Hypertarget{structflow_1_1_dispatch_access_3_1_1std_1_1pair_3_01_stamp_t_00_01_value_t_01_4_01_4_aefbb81619ec6bafdc65a94048e4ea37c}\label{structflow_1_1_dispatch_access_3_1_1std_1_1pair_3_01_stamp_t_00_01_value_t_01_4_01_4_aefbb81619ec6bafdc65a94048e4ea37c}} 
+static constexpr \hyperlink{structflow_1_1_dispatch_access_3_1_1std_1_1pair_3_01_stamp_t_00_01_value_t_01_4_01_4_a4d69ceeba753574e80855ee3dc1ffbb4}{return\+\_\+t}$<$ ValueT $>$ {\bfseries value} (const \+::std\+::pair$<$ StampT, ValueT $>$ \&dispatch)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename StampT, typename ValueT$>$\newline
+struct flow\+::\+Dispatch\+Access$<$\+::std\+::pair$<$ Stamp\+T, Value\+T $>$ $>$}
+
+\hyperlink{classflow_1_1_dispatch}{Dispatch} access helper. 
+
+\begin{DoxyNote}{Note}
+partial specialization for {\ttfamily \+::std\+::pair} 
+\end{DoxyNote}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+flow/include/dispatch/\hyperlink{pair_8h}{pair.\+h}\end{DoxyCompactItemize}

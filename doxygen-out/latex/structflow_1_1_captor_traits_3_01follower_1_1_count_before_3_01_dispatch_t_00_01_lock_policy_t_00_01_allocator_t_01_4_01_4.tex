@@ -1,0 +1,73 @@
+\hypertarget{structflow_1_1_captor_traits_3_01follower_1_1_count_before_3_01_dispatch_t_00_01_lock_policy_t_00_01_allocator_t_01_4_01_4}{}\section{flow\+:\+:Captor\+Traits$<$ follower\+:\+:Count\+Before$<$ DispatchT, Lock\+PolicyT, AllocatorT $>$ $>$ Struct Template Reference}
+\label{structflow_1_1_captor_traits_3_01follower_1_1_count_before_3_01_dispatch_t_00_01_lock_policy_t_00_01_allocator_t_01_4_01_4}\index{flow\+::\+Captor\+Traits$<$ follower\+::\+Count\+Before$<$ Dispatch\+T, Lock\+Policy\+T, Allocator\+T $>$ $>$@{flow\+::\+Captor\+Traits$<$ follower\+::\+Count\+Before$<$ Dispatch\+T, Lock\+Policy\+T, Allocator\+T $>$ $>$}}
+
+
+Traits struct for captor types.  
+
+
+
+
+{\ttfamily \#include $<$count\+\_\+before.\+h$>$}
+
+
+
+Inheritance diagram for flow\+:\+:Captor\+Traits$<$ follower\+:\+:Count\+Before$<$ DispatchT, Lock\+PolicyT, AllocatorT $>$ $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{structflow_1_1_captor_traits_3_01follower_1_1_count_before_3_01_dispatch_t_00_01_lock_policy_t_094710abd2145fba25f9537fb38754d27}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for flow\+:\+:Captor\+Traits$<$ follower\+:\+:Count\+Before$<$ DispatchT, Lock\+PolicyT, AllocatorT $>$ $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{structflow_1_1_captor_traits_3_01follower_1_1_count_before_3_01_dispatch_t_00_01_lock_policy_t_00411fc9673f8d978122242ebff5dfa20}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structflow_1_1_captor_traits_3_01follower_1_1_count_before_3_01_dispatch_t_00_01_lock_policy_t_00_01_allocator_t_01_4_01_4_a0256fd622c856b65e939e0f3ff5e2cbd}\label{structflow_1_1_captor_traits_3_01follower_1_1_count_before_3_01_dispatch_t_00_01_lock_policy_t_00_01_allocator_t_01_4_01_4_a0256fd622c856b65e939e0f3ff5e2cbd}} 
+using \hyperlink{structflow_1_1_captor_traits_3_01follower_1_1_count_before_3_01_dispatch_t_00_01_lock_policy_t_00_01_allocator_t_01_4_01_4_a0256fd622c856b65e939e0f3ff5e2cbd}{Dispatch\+Allocator\+Type} = AllocatorT
+\begin{DoxyCompactList}\small\item\em \hyperlink{classflow_1_1_dispatch}{Dispatch} object allocation type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structflow_1_1_captor_traits_3_01follower_1_1_count_before_3_01_dispatch_t_00_01_lock_policy_t_00_01_allocator_t_01_4_01_4_af325b004a4e6e21dda30e2474f5cb4a8}\label{structflow_1_1_captor_traits_3_01follower_1_1_count_before_3_01_dispatch_t_00_01_lock_policy_t_00_01_allocator_t_01_4_01_4_af325b004a4e6e21dda30e2474f5cb4a8}} 
+using \hyperlink{structflow_1_1_captor_traits_3_01follower_1_1_count_before_3_01_dispatch_t_00_01_lock_policy_t_00_01_allocator_t_01_4_01_4_af325b004a4e6e21dda30e2474f5cb4a8}{Lock\+Policy\+Type} = Lock\+PolicyT
+\begin{DoxyCompactList}\small\item\em Thread locking policy type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename DispatchT, typename Lock\+PolicyT, typename AllocatorT$>$\newline
+struct flow\+::\+Captor\+Traits$<$ follower\+::\+Count\+Before$<$ Dispatch\+T, Lock\+Policy\+T, Allocator\+T $>$ $>$}
+
+Traits struct for captor types. 
+
+Requires\+:
+\begin{DoxyItemize}
+\item {\ttfamily Dispatch\+Type} \+: data dispatch object type
+\item {\ttfamily Dispatch\+Allocator\+Type} \+: allocator for {\ttfamily Dispatch\+Type}
+\item {\ttfamily value\+\_\+type} \+: data value type
+\item {\ttfamily stamp\+\_\+type} \+: sequence stamp type
+\item {\ttfamily size\+\_\+type} \+: integer sizing type
+\end{DoxyItemize}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em CaptorT} & captor type with C\+R\+TP base {\ttfamily \hyperlink{classflow_1_1_captor}{Captor}}\\
+\hline
+{\em DispatchT} & data dispatch type \\
+\hline
+{\em Lock\+PolicyT} & a Basic\+Lockable (\href{https://en.cppreference.com/w/cpp/named_req/BasicLockable}{\tt https\+://en.\+cppreference.\+com/w/cpp/named\+\_\+req/\+Basic\+Lockable}) object or \hyperlink{structflow_1_1_no_lock}{No\+Lock} or \hyperlink{structflow_1_1_polling_lock}{Polling\+Lock} \\
+\hline
+{\em AllocatorT} & {\ttfamily DispatchT} allocator type \\
+\hline
+{\em Capture\+OutputT} & output capture container type \\
+\hline
+\end{DoxyTemplParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+flow/include/follower/\hyperlink{count__before_8h}{count\+\_\+before.\+h}\end{DoxyCompactItemize}

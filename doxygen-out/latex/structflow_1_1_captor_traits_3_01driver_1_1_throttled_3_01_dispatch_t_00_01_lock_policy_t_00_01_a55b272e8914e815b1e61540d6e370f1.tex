@@ -1,0 +1,93 @@
+\hypertarget{structflow_1_1_captor_traits_3_01driver_1_1_throttled_3_01_dispatch_t_00_01_lock_policy_t_00_01_a55b272e8914e815b1e61540d6e370f1}{}\section{flow\+:\+:Captor\+Traits$<$ driver\+:\+:Throttled$<$ DispatchT, Lock\+PolicyT, ContainerT, Queue\+MonitorT $>$ $>$ Struct Template Reference}
+\label{structflow_1_1_captor_traits_3_01driver_1_1_throttled_3_01_dispatch_t_00_01_lock_policy_t_00_01_a55b272e8914e815b1e61540d6e370f1}\index{flow\+::\+Captor\+Traits$<$ driver\+::\+Throttled$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$ $>$@{flow\+::\+Captor\+Traits$<$ driver\+::\+Throttled$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$ $>$}}
+
+
+Traits struct for captor types.  
+
+
+
+
+{\ttfamily \#include $<$throttled.\+h$>$}
+
+
+
+Inheritance diagram for flow\+:\+:Captor\+Traits$<$ driver\+:\+:Throttled$<$ DispatchT, Lock\+PolicyT, ContainerT, Queue\+MonitorT $>$ $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{structflow_1_1_captor_traits_3_01driver_1_1_throttled_3_01_dispatch_t_00_01_lock_policy_t_00_01_14c144804262ca375e62b50400bd9ca4}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for flow\+:\+:Captor\+Traits$<$ driver\+:\+:Throttled$<$ DispatchT, Lock\+PolicyT, ContainerT, Queue\+MonitorT $>$ $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{structflow_1_1_captor_traits_3_01driver_1_1_throttled_3_01_dispatch_t_00_01_lock_policy_t_00_01_85def682def35b36744c18cf6f6e3210}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structflow_1_1_captor_traits_3_01driver_1_1_throttled_3_01_dispatch_t_00_01_lock_policy_t_00_01_a55b272e8914e815b1e61540d6e370f1_a4ccbeb5b2a25d51a25a8489fd330a01b}\label{structflow_1_1_captor_traits_3_01driver_1_1_throttled_3_01_dispatch_t_00_01_lock_policy_t_00_01_a55b272e8914e815b1e61540d6e370f1_a4ccbeb5b2a25d51a25a8489fd330a01b}} 
+using \hyperlink{structflow_1_1_captor_traits_3_01driver_1_1_throttled_3_01_dispatch_t_00_01_lock_policy_t_00_01_a55b272e8914e815b1e61540d6e370f1_a4ccbeb5b2a25d51a25a8489fd330a01b}{Dispatch\+Container\+Type} = ContainerT
+\begin{DoxyCompactList}\small\item\em Underlying dispatch container type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structflow_1_1_captor_traits_3_01driver_1_1_throttled_3_01_dispatch_t_00_01_lock_policy_t_00_01_a55b272e8914e815b1e61540d6e370f1_a7386696d4d65327741854e6dd6f38ff0}\label{structflow_1_1_captor_traits_3_01driver_1_1_throttled_3_01_dispatch_t_00_01_lock_policy_t_00_01_a55b272e8914e815b1e61540d6e370f1_a7386696d4d65327741854e6dd6f38ff0}} 
+using \hyperlink{structflow_1_1_captor_traits_3_01driver_1_1_throttled_3_01_dispatch_t_00_01_lock_policy_t_00_01_a55b272e8914e815b1e61540d6e370f1_a7386696d4d65327741854e6dd6f38ff0}{Dispatch\+Queue\+Monitor\+Type} = Queue\+MonitorT
+\begin{DoxyCompactList}\small\item\em Queue monitor type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structflow_1_1_captor_traits_3_01driver_1_1_throttled_3_01_dispatch_t_00_01_lock_policy_t_00_01_a55b272e8914e815b1e61540d6e370f1_a2cb2dc4ee8e2cc118ca3bbea5df4462f}\label{structflow_1_1_captor_traits_3_01driver_1_1_throttled_3_01_dispatch_t_00_01_lock_policy_t_00_01_a55b272e8914e815b1e61540d6e370f1_a2cb2dc4ee8e2cc118ca3bbea5df4462f}} 
+using \hyperlink{structflow_1_1_captor_traits_3_01driver_1_1_throttled_3_01_dispatch_t_00_01_lock_policy_t_00_01_a55b272e8914e815b1e61540d6e370f1_a2cb2dc4ee8e2cc118ca3bbea5df4462f}{Lock\+Policy\+Type} = Lock\+PolicyT
+\begin{DoxyCompactList}\small\item\em Thread locking policy type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \hyperlink{structflow_1_1_captor_traits_3_01driver_1_1_throttled_3_01_dispatch_t_00_01_lock_policy_t_00_01_a55b272e8914e815b1e61540d6e370f1_a9f7dab8a0536fda23364cc6f86e8fc74}{is\+\_\+capture\+\_\+deterministic} = true
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename DispatchT, typename Lock\+PolicyT, typename ContainerT, typename Queue\+MonitorT$>$\newline
+struct flow\+::\+Captor\+Traits$<$ driver\+::\+Throttled$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$ $>$}
+
+Traits struct for captor types. 
+
+Requires\+:
+\begin{DoxyItemize}
+\item {\ttfamily Dispatch\+Type} \+: data dispatch object type
+\item {\ttfamily Dispatch\+Container\+Type} \+: container for {\ttfamily Dispatch\+Type} {\ttfamily Dispatch\+Queue\+Monitor\+Type} \+: optional monitoring/capture preconditioning object type
+\item {\ttfamily value\+\_\+type} \+: data value type
+\item {\ttfamily stamp\+\_\+type} \+: sequence stamp type
+\item {\ttfamily size\+\_\+type} \+: integer sizing type
+\end{DoxyItemize}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em CaptorT} & captor type with C\+R\+TP base {\ttfamily \hyperlink{classflow_1_1_captor}{Captor}}\\
+\hline
+{\em DispatchT} & data dispatch type \\
+\hline
+{\em Lock\+PolicyT} & a Basic\+Lockable (\href{https://en.cppreference.com/w/cpp/named_req/BasicLockable}{\tt https\+://en.\+cppreference.\+com/w/cpp/named\+\_\+req/\+Basic\+Lockable}) object or \hyperlink{structflow_1_1_no_lock}{No\+Lock} or \hyperlink{structflow_1_1_polling_lock}{Polling\+Lock} \\
+\hline
+{\em ContainerT} & underlying {\ttfamily DispatchT} container type \\
+\hline
+{\em Queue\+MonitorT} & object used to monitor queue state on each insertion \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structflow_1_1_captor_traits_3_01driver_1_1_throttled_3_01_dispatch_t_00_01_lock_policy_t_00_01_a55b272e8914e815b1e61540d6e370f1_a9f7dab8a0536fda23364cc6f86e8fc74}\label{structflow_1_1_captor_traits_3_01driver_1_1_throttled_3_01_dispatch_t_00_01_lock_policy_t_00_01_a55b272e8914e815b1e61540d6e370f1_a9f7dab8a0536fda23364cc6f86e8fc74}} 
+\index{flow\+::\+Captor\+Traits$<$ driver\+::\+Throttled$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$ $>$@{flow\+::\+Captor\+Traits$<$ driver\+::\+Throttled$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$ $>$}!is\+\_\+capture\+\_\+deterministic@{is\+\_\+capture\+\_\+deterministic}}
+\index{is\+\_\+capture\+\_\+deterministic@{is\+\_\+capture\+\_\+deterministic}!flow\+::\+Captor\+Traits$<$ driver\+::\+Throttled$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$ $>$@{flow\+::\+Captor\+Traits$<$ driver\+::\+Throttled$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$ $>$}}
+\subsubsection{\texorpdfstring{is\+\_\+capture\+\_\+deterministic}{is\_capture\_deterministic}}
+{\footnotesize\ttfamily template$<$typename DispatchT , typename Lock\+PolicyT , typename ContainerT , typename Queue\+MonitorT $>$ \\
+constexpr bool \hyperlink{structflow_1_1_captor_traits}{flow\+::\+Captor\+Traits}$<$ \hyperlink{classflow_1_1driver_1_1_throttled}{driver\+::\+Throttled}$<$ DispatchT, Lock\+PolicyT, ContainerT, Queue\+MonitorT $>$ $>$\+::is\+\_\+capture\+\_\+deterministic = true\hspace{0.3cm}{\ttfamily [static]}}
+
+Indicates that data from this captor will always be captured deterministically, so long as data injection is monotonically sequenced 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+flow/include/driver/throttled.\+h\end{DoxyCompactItemize}

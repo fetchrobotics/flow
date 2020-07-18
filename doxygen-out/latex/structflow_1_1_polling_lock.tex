@@ -1,0 +1,31 @@
+\hypertarget{structflow_1_1_polling_lock}{}\section{flow\+:\+:Polling\+Lock$<$ Basic\+LockableT $>$ Struct Template Reference}
+\label{structflow_1_1_polling_lock}\index{flow\+::\+Polling\+Lock$<$ Basic\+Lockable\+T $>$@{flow\+::\+Polling\+Lock$<$ Basic\+Lockable\+T $>$}}
+
+
+Stand-\/in type used to signify that captors will be used in a threaded context, but will not wait for data.  
+
+
+
+
+{\ttfamily \#include $<$captor.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structflow_1_1_polling_lock_a13f6fd935b4a81d59fba546fdfc9a70a}\label{structflow_1_1_polling_lock_a13f6fd935b4a81d59fba546fdfc9a70a}} 
+using {\bfseries type} = Basic\+LockableT
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Basic\+LockableT = std\+::lock\+\_\+guard$<$std\+::mutex$>$$>$\newline
+struct flow\+::\+Polling\+Lock$<$ Basic\+Lockable\+T $>$}
+
+Stand-\/in type used to signify that captors will be used in a threaded context, but will not wait for data. 
+
+Captors use {\ttfamily Basic\+LockableT} to protect data input/output from the capture queue, but do not wait on a condition variable for new inputs before attempting to run a synchronization policy. This allows for polling with the {\ttfamily \hyperlink{classflow_1_1_captor_interface_ae95095d924214605bfeac70d0bd5ad35}{Captor\+::capture}} method ~\newline
+ See \href{https://en.cppreference.com/w/cpp/named_req/TimedLockable}{\tt https\+://en.\+cppreference.\+com/w/cpp/named\+\_\+req/\+Timed\+Lockable} for more information on {\ttfamily Basic\+LockableT} criteria 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+flow/include/\hyperlink{captor_8h}{captor.\+h}\end{DoxyCompactItemize}

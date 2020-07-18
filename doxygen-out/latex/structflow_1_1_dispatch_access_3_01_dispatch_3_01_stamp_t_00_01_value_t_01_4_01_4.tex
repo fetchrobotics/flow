@@ -1,0 +1,42 @@
+\hypertarget{structflow_1_1_dispatch_access_3_01_dispatch_3_01_stamp_t_00_01_value_t_01_4_01_4}{}\section{flow\+:\+:Dispatch\+Access$<$ Dispatch$<$ StampT, ValueT $>$ $>$ Struct Template Reference}
+\label{structflow_1_1_dispatch_access_3_01_dispatch_3_01_stamp_t_00_01_value_t_01_4_01_4}\index{flow\+::\+Dispatch\+Access$<$ Dispatch$<$ Stamp\+T, Value\+T $>$ $>$@{flow\+::\+Dispatch\+Access$<$ Dispatch$<$ Stamp\+T, Value\+T $>$ $>$}}
+
+
+\hyperlink{classflow_1_1_dispatch}{Dispatch} access helper.  
+
+
+
+
+{\ttfamily \#include $<$dispatch.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structflow_1_1_dispatch_access_3_01_dispatch_3_01_stamp_t_00_01_value_t_01_4_01_4_a36d7ab14d5fde88b9d255944db634f47}\label{structflow_1_1_dispatch_access_3_01_dispatch_3_01_stamp_t_00_01_value_t_01_4_01_4_a36d7ab14d5fde88b9d255944db634f47}} 
+{\footnotesize template$<$typename T $>$ }\\using \hyperlink{structflow_1_1_dispatch_access_3_01_dispatch_3_01_stamp_t_00_01_value_t_01_4_01_4_a36d7ab14d5fde88b9d255944db634f47}{return\+\_\+t} = std\+::conditional\+\_\+t$<$(sizeof(T)$<$=sizeof(T \&)), T, const T \& $>$
+\begin{DoxyCompactList}\small\item\em Selects type of lesser size to use when returning values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structflow_1_1_dispatch_access_3_01_dispatch_3_01_stamp_t_00_01_value_t_01_4_01_4_a80c6dd49fb16b22039e0eb9c31940d4a}\label{structflow_1_1_dispatch_access_3_01_dispatch_3_01_stamp_t_00_01_value_t_01_4_01_4_a80c6dd49fb16b22039e0eb9c31940d4a}} 
+static constexpr \hyperlink{structflow_1_1_dispatch_access_3_01_dispatch_3_01_stamp_t_00_01_value_t_01_4_01_4_a36d7ab14d5fde88b9d255944db634f47}{return\+\_\+t}$<$ StampT $>$ {\bfseries stamp} (const \hyperlink{classflow_1_1_dispatch}{Dispatch}$<$ StampT, ValueT $>$ \&dispatch)
+\item 
+\mbox{\Hypertarget{structflow_1_1_dispatch_access_3_01_dispatch_3_01_stamp_t_00_01_value_t_01_4_01_4_af50ba9de76aea596bbd557dcdfcd00dc}\label{structflow_1_1_dispatch_access_3_01_dispatch_3_01_stamp_t_00_01_value_t_01_4_01_4_af50ba9de76aea596bbd557dcdfcd00dc}} 
+static constexpr \hyperlink{structflow_1_1_dispatch_access_3_01_dispatch_3_01_stamp_t_00_01_value_t_01_4_01_4_a36d7ab14d5fde88b9d255944db634f47}{return\+\_\+t}$<$ ValueT $>$ {\bfseries value} (const \hyperlink{classflow_1_1_dispatch}{Dispatch}$<$ StampT, ValueT $>$ \&dispatch)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename StampT, typename ValueT$>$\newline
+struct flow\+::\+Dispatch\+Access$<$ Dispatch$<$ Stamp\+T, Value\+T $>$ $>$}
+
+\hyperlink{classflow_1_1_dispatch}{Dispatch} access helper. 
+
+\begin{DoxyNote}{Note}
+partial specialization for \hyperlink{classflow_1_1_dispatch}{Dispatch} 
+\end{DoxyNote}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+flow/include/\hyperlink{dispatch_8h}{dispatch.\+h}\end{DoxyCompactItemize}

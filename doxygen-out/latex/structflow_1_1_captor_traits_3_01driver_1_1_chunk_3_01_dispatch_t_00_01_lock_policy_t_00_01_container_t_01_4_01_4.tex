@@ -1,0 +1,75 @@
+\hypertarget{structflow_1_1_captor_traits_3_01driver_1_1_chunk_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4}{}\section{flow\+:\+:Captor\+Traits$<$ driver\+:\+:Chunk$<$ DispatchT, Lock\+PolicyT, ContainerT $>$ $>$ Struct Template Reference}
+\label{structflow_1_1_captor_traits_3_01driver_1_1_chunk_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4}\index{flow\+::\+Captor\+Traits$<$ driver\+::\+Chunk$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T $>$ $>$@{flow\+::\+Captor\+Traits$<$ driver\+::\+Chunk$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T $>$ $>$}}
+
+
+Traits struct for captor types.  
+
+
+
+
+{\ttfamily \#include $<$chunk.\+h$>$}
+
+
+
+Inheritance diagram for flow\+:\+:Captor\+Traits$<$ driver\+:\+:Chunk$<$ DispatchT, Lock\+PolicyT, ContainerT $>$ $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{structflow_1_1_captor_traits_3_01driver_1_1_chunk_3_01_dispatch_t_00_01_lock_policy_t_00_01_cont2a133d89595bff68b930592e0989775c}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for flow\+:\+:Captor\+Traits$<$ driver\+:\+:Chunk$<$ DispatchT, Lock\+PolicyT, ContainerT $>$ $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{structflow_1_1_captor_traits_3_01driver_1_1_chunk_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structflow_1_1_captor_traits_3_01driver_1_1_chunk_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4_a527163b458da2f4f3c644128d1aeb819}\label{structflow_1_1_captor_traits_3_01driver_1_1_chunk_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4_a527163b458da2f4f3c644128d1aeb819}} 
+using \hyperlink{structflow_1_1_captor_traits_3_01driver_1_1_chunk_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4_a527163b458da2f4f3c644128d1aeb819}{Dispatch\+Container\+Type} = ContainerT
+\begin{DoxyCompactList}\small\item\em Underlying dispatch container type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structflow_1_1_captor_traits_3_01driver_1_1_chunk_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4_ae0fd66188ae32dd82d9b03de36747845}\label{structflow_1_1_captor_traits_3_01driver_1_1_chunk_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4_ae0fd66188ae32dd82d9b03de36747845}} 
+using \hyperlink{structflow_1_1_captor_traits_3_01driver_1_1_chunk_3_01_dispatch_t_00_01_lock_policy_t_00_01_container_t_01_4_01_4_ae0fd66188ae32dd82d9b03de36747845}{Lock\+Policy\+Type} = Lock\+PolicyT
+\begin{DoxyCompactList}\small\item\em Thread locking policy type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename DispatchT, typename Lock\+PolicyT, typename ContainerT$>$\newline
+struct flow\+::\+Captor\+Traits$<$ driver\+::\+Chunk$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T $>$ $>$}
+
+Traits struct for captor types. 
+
+Requires\+:
+\begin{DoxyItemize}
+\item {\ttfamily Dispatch\+Type} \+: data dispatch object type
+\item {\ttfamily Dispatch\+Container\+Type} \+: container for {\ttfamily Dispatch\+Type}
+\item {\ttfamily value\+\_\+type} \+: data value type
+\item {\ttfamily stamp\+\_\+type} \+: sequence stamp type
+\item {\ttfamily size\+\_\+type} \+: integer sizing type
+\end{DoxyItemize}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em CaptorT} & captor type with C\+R\+TP base {\ttfamily \hyperlink{classflow_1_1_captor}{Captor}}\\
+\hline
+{\em DispatchT} & data dispatch type \\
+\hline
+{\em Lock\+PolicyT} & a Basic\+Lockable (\href{https://en.cppreference.com/w/cpp/named_req/BasicLockable}{\tt https\+://en.\+cppreference.\+com/w/cpp/named\+\_\+req/\+Basic\+Lockable}) object or \hyperlink{structflow_1_1_no_lock}{No\+Lock} or \hyperlink{structflow_1_1_polling_lock}{Polling\+Lock} \\
+\hline
+{\em ContainerT} & underlying {\ttfamily DispatchT} container type \\
+\hline
+{\em Capture\+OutputT} & output capture container type \\
+\hline
+\end{DoxyTemplParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+flow/include/driver/chunk.\+h\end{DoxyCompactItemize}

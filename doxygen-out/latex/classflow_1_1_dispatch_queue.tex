@@ -1,0 +1,322 @@
+\hypertarget{classflow_1_1_dispatch_queue}{}\section{flow\+:\+:Dispatch\+Queue$<$ DispatchT, ContainerT $>$ Class Template Reference}
+\label{classflow_1_1_dispatch_queue}\index{flow\+::\+Dispatch\+Queue$<$ Dispatch\+T, Container\+T $>$@{flow\+::\+Dispatch\+Queue$<$ Dispatch\+T, Container\+T $>$}}
+
+
+\hyperlink{classflow_1_1_dispatch}{Dispatch} queuing data structure.  
+
+
+
+
+{\ttfamily \#include $<$dispatch\+\_\+queue.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a7908f3d78b7f1767462244b94434d748}\label{classflow_1_1_dispatch_queue_a7908f3d78b7f1767462244b94434d748}} 
+using \hyperlink{classflow_1_1_dispatch_queue_a7908f3d78b7f1767462244b94434d748}{stamp\+\_\+type} = typename \hyperlink{structflow_1_1_dispatch_traits}{Dispatch\+Traits}$<$ DispatchT $>$\+::\hyperlink{classflow_1_1_dispatch_queue_a7908f3d78b7f1767462244b94434d748}{stamp\+\_\+type}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classflow_1_1_dispatch}{Dispatch} stamp type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_affc83531dc53ee147899a33e82a6cbf0}\label{classflow_1_1_dispatch_queue_affc83531dc53ee147899a33e82a6cbf0}} 
+using \hyperlink{classflow_1_1_dispatch_queue_affc83531dc53ee147899a33e82a6cbf0}{stamp\+\_\+const\+\_\+arg\+\_\+type} = std\+::conditional\+\_\+t$<$ sizeof(\hyperlink{classflow_1_1_dispatch_queue_a7908f3d78b7f1767462244b94434d748}{stamp\+\_\+type})$<$=sizeof(\hyperlink{classflow_1_1_dispatch_queue_a7908f3d78b7f1767462244b94434d748}{stamp\+\_\+type} \&), const \hyperlink{classflow_1_1_dispatch_queue_a7908f3d78b7f1767462244b94434d748}{stamp\+\_\+type}, const \hyperlink{classflow_1_1_dispatch_queue_a7908f3d78b7f1767462244b94434d748}{stamp\+\_\+type} \& $>$
+\begin{DoxyCompactList}\small\item\em Stamp argument type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a2414c7db207bbc3bab885aded66cff08}\label{classflow_1_1_dispatch_queue_a2414c7db207bbc3bab885aded66cff08}} 
+using \hyperlink{classflow_1_1_dispatch_queue_a2414c7db207bbc3bab885aded66cff08}{value\+\_\+type} = typename \hyperlink{structflow_1_1_dispatch_traits}{Dispatch\+Traits}$<$ DispatchT $>$\+::\hyperlink{classflow_1_1_dispatch_queue_a2414c7db207bbc3bab885aded66cff08}{value\+\_\+type}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classflow_1_1_dispatch}{Dispatch} data value type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_afdc67058e3461410fdd6170046df55bc}\label{classflow_1_1_dispatch_queue_afdc67058e3461410fdd6170046df55bc}} 
+using \hyperlink{classflow_1_1_dispatch_queue_afdc67058e3461410fdd6170046df55bc}{size\+\_\+type} = typename Container\+T\+::size\+\_\+type
+\begin{DoxyCompactList}\small\item\em Sizing type alias. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a307496fdc34a2d59e11114dabf85dc8a}\label{classflow_1_1_dispatch_queue_a307496fdc34a2d59e11114dabf85dc8a}} 
+using \hyperlink{classflow_1_1_dispatch_queue_a307496fdc34a2d59e11114dabf85dc8a}{const\+\_\+iterator} = typename Container\+T\+::const\+\_\+iterator
+\begin{DoxyCompactList}\small\item\em Iterator type for container \hyperlink{classflow_1_1_dispatch}{Dispatch} elements. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_ac74f1a9a8d77b06e9576492df2a50e4f}\label{classflow_1_1_dispatch_queue_ac74f1a9a8d77b06e9576492df2a50e4f}} 
+using \hyperlink{classflow_1_1_dispatch_queue_ac74f1a9a8d77b06e9576492df2a50e4f}{const\+\_\+reverse\+\_\+iterator} = typename Container\+T\+::const\+\_\+reverse\+\_\+iterator
+\begin{DoxyCompactList}\small\item\em Iterator type for container \hyperlink{classflow_1_1_dispatch}{Dispatch} elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_aa1002dcf3731bcdc31fe44760f6ba033}\label{classflow_1_1_dispatch_queue_aa1002dcf3731bcdc31fe44760f6ba033}} 
+\hyperlink{classflow_1_1_dispatch_queue_aa1002dcf3731bcdc31fe44760f6ba033}{Dispatch\+Queue} ()=default
+\begin{DoxyCompactList}\small\item\em Default construtor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a5819de0ca2707479ac8a90234109427c}\label{classflow_1_1_dispatch_queue_a5819de0ca2707479ac8a90234109427c}} 
+\hyperlink{classflow_1_1_dispatch_queue_a5819de0ca2707479ac8a90234109427c}{Dispatch\+Queue} (const ContainerT \&container)
+\begin{DoxyCompactList}\small\item\em Allocator construtor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a68f00b308869df4c313ad3ef7676ae44}\label{classflow_1_1_dispatch_queue_a68f00b308869df4c313ad3ef7676ae44}} 
+\hyperlink{classflow_1_1_dispatch_queue_afdc67058e3461410fdd6170046df55bc}{size\+\_\+type} \hyperlink{classflow_1_1_dispatch_queue_a68f00b308869df4c313ad3ef7676ae44}{size} () const
+\begin{DoxyCompactList}\small\item\em Returns the number queued elements. \end{DoxyCompactList}\item 
+bool \hyperlink{classflow_1_1_dispatch_queue_a447412abd83540a6c595dd7a17116c6c}{empty} () const
+\begin{DoxyCompactList}\small\item\em Checks if queue is empty. \end{DoxyCompactList}\item 
+\hyperlink{classflow_1_1_dispatch_queue_a307496fdc34a2d59e11114dabf85dc8a}{const\+\_\+iterator} \hyperlink{classflow_1_1_dispatch_queue_a0d73fa057b183d363c7da2871c34e0ba}{before} (\hyperlink{classflow_1_1_dispatch_queue_affc83531dc53ee147899a33e82a6cbf0}{stamp\+\_\+const\+\_\+arg\+\_\+type} stamp) const
+\begin{DoxyCompactList}\small\item\em Returns first iterator to element before stamp. \end{DoxyCompactList}\item 
+\hyperlink{classflow_1_1_dispatch_queue_a307496fdc34a2d59e11114dabf85dc8a}{const\+\_\+iterator} \hyperlink{classflow_1_1_dispatch_queue_a19612c628308b97497ffca62c9b2b420}{begin} () const
+\begin{DoxyCompactList}\small\item\em Returns first iterator to underlying ordered data structure. \end{DoxyCompactList}\item 
+\hyperlink{classflow_1_1_dispatch_queue_a307496fdc34a2d59e11114dabf85dc8a}{const\+\_\+iterator} \hyperlink{classflow_1_1_dispatch_queue_a359b294ce203e10ee9fafc147f6638ff}{end} () const
+\begin{DoxyCompactList}\small\item\em Returns last iterator to underlying ordered data structure. \end{DoxyCompactList}\item 
+\hyperlink{classflow_1_1_dispatch_queue_ac74f1a9a8d77b06e9576492df2a50e4f}{const\+\_\+reverse\+\_\+iterator} \hyperlink{classflow_1_1_dispatch_queue_a39b906c46d56d32cda2bc1b61f6dcc32}{rbefore} (\hyperlink{classflow_1_1_dispatch_queue_affc83531dc53ee147899a33e82a6cbf0}{stamp\+\_\+const\+\_\+arg\+\_\+type} stamp) const
+\begin{DoxyCompactList}\small\item\em Returns first reverse-\/iterator to element before stamp. \end{DoxyCompactList}\item 
+\hyperlink{classflow_1_1_dispatch_queue_ac74f1a9a8d77b06e9576492df2a50e4f}{const\+\_\+reverse\+\_\+iterator} \hyperlink{classflow_1_1_dispatch_queue_a969fdabec571725b903056d69ea2a31b}{rbegin} () const
+\begin{DoxyCompactList}\small\item\em Returns first iterator to reversed underlying ordered data structure. \end{DoxyCompactList}\item 
+\hyperlink{classflow_1_1_dispatch_queue_ac74f1a9a8d77b06e9576492df2a50e4f}{const\+\_\+reverse\+\_\+iterator} \hyperlink{classflow_1_1_dispatch_queue_a5fee6900da4ddd095b78608081b1873d}{rend} () const
+\begin{DoxyCompactList}\small\item\em Returns last iterator to reversed underlying ordered data structure. \end{DoxyCompactList}\item 
+\hyperlink{classflow_1_1_dispatch_queue_a7908f3d78b7f1767462244b94434d748}{stamp\+\_\+type} \hyperlink{classflow_1_1_dispatch_queue_a6411ccf159a54568dc00072b35593189}{oldest\+\_\+stamp} () const
+\begin{DoxyCompactList}\small\item\em Sequencing stamp associated with the oldest data. \end{DoxyCompactList}\item 
+\hyperlink{classflow_1_1_dispatch_queue_a7908f3d78b7f1767462244b94434d748}{stamp\+\_\+type} \hyperlink{classflow_1_1_dispatch_queue_a5ced281bc5c221a79bf88a6169429252}{newest\+\_\+stamp} () const
+\begin{DoxyCompactList}\small\item\em Sequencing stamp associated with the newest data. \end{DoxyCompactList}\item 
+DispatchT \hyperlink{classflow_1_1_dispatch_queue_a10607f6122683a4e24b44daaf8bf51fe}{pop} ()
+\begin{DoxyCompactList}\small\item\em Removes the oldest element and returns associated \hyperlink{classflow_1_1_dispatch}{Dispatch}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a184d59ca79ec916af7c2866eb1d3fa6e}\label{classflow_1_1_dispatch_queue_a184d59ca79ec916af7c2866eb1d3fa6e}} 
+void \hyperlink{classflow_1_1_dispatch_queue_a184d59ca79ec916af7c2866eb1d3fa6e}{clear} ()
+\begin{DoxyCompactList}\small\item\em Removes all data from queue. \end{DoxyCompactList}\item 
+void \hyperlink{classflow_1_1_dispatch_queue_aabb451448562a4084506fc5c3289e0b0}{remove\+\_\+before} (\hyperlink{classflow_1_1_dispatch_queue_affc83531dc53ee147899a33e82a6cbf0}{stamp\+\_\+const\+\_\+arg\+\_\+type} t)
+\begin{DoxyCompactList}\small\item\em Removes data with stamp older than reference sequence stamp. \end{DoxyCompactList}\item 
+void \hyperlink{classflow_1_1_dispatch_queue_a44bbaa95fa99125929edb0dbd511a73a}{remove\+\_\+at\+\_\+before} (\hyperlink{classflow_1_1_dispatch_queue_affc83531dc53ee147899a33e82a6cbf0}{stamp\+\_\+const\+\_\+arg\+\_\+type} t)
+\begin{DoxyCompactList}\small\item\em Removes data with stamp older than or equal to some reference sequence stamp. \end{DoxyCompactList}\item 
+void \hyperlink{classflow_1_1_dispatch_queue_a66f89e3d5c95709662227ce275f00607}{shrink\+\_\+to\+\_\+fit} (const \hyperlink{classflow_1_1_dispatch_queue_afdc67058e3461410fdd6170046df55bc}{size\+\_\+type} n)
+\begin{DoxyCompactList}\small\item\em Removes oldest data until queue has less than or equal to N-\/elements. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Dispatch\+Constructor\+Arg\+Ts$>$ }\\void \hyperlink{classflow_1_1_dispatch_queue_a5221c73d3790e6795c48229a2bcd7c0e}{insert} (Dispatch\+Constructor\+Arg\+Ts \&\&... dispatch\+\_\+args)
+\begin{DoxyCompactList}\small\item\em Inserts data in sequence stamp order as \hyperlink{classflow_1_1_dispatch}{Dispatch}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a392c5f0f8ba079784188dd946684fade}\label{classflow_1_1_dispatch_queue_a392c5f0f8ba079784188dd946684fade}} 
+const ContainerT \& \hyperlink{classflow_1_1_dispatch_queue_a392c5f0f8ba079784188dd946684fade}{get\+\_\+container} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the underlying storage container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename DispatchT, typename ContainerT = std\+::deque$<$\+Dispatch\+T$>$$>$\newline
+class flow\+::\+Dispatch\+Queue$<$ Dispatch\+T, Container\+T $>$}
+
+\hyperlink{classflow_1_1_dispatch}{Dispatch} queuing data structure. 
+
+F\+I\+L\+O-\/type queue which orders data by sequence stamp, from oldest to newest. Provides useful methods for extracting data within stamped/counted ranges ~\newline
+ This template provides an interface wrapper around a specifiable container implementation.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em DispatchT} & data dipatch type \\
+\hline
+{\em ContainerT} & underlying {\ttfamily DispatchT} container timplementation \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a0d73fa057b183d363c7da2871c34e0ba}\label{classflow_1_1_dispatch_queue_a0d73fa057b183d363c7da2871c34e0ba}} 
+\index{flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}!before@{before}}
+\index{before@{before}!flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}}
+\subsubsection{\texorpdfstring{before()}{before()}}
+{\footnotesize\ttfamily template$<$typename DispatchT, typename ContainerT = std\+::deque$<$\+Dispatch\+T$>$$>$ \\
+\hyperlink{classflow_1_1_dispatch_queue_a307496fdc34a2d59e11114dabf85dc8a}{const\+\_\+iterator} \hyperlink{classflow_1_1_dispatch_queue}{flow\+::\+Dispatch\+Queue}$<$ DispatchT, ContainerT $>$\+::before (\begin{DoxyParamCaption}\item[{\hyperlink{classflow_1_1_dispatch_queue_affc83531dc53ee147899a33e82a6cbf0}{stamp\+\_\+const\+\_\+arg\+\_\+type}}]{stamp }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns first iterator to element before stamp. 
+
+Returns {\ttfamily \hyperlink{classflow_1_1_dispatch_queue_a359b294ce203e10ee9fafc147f6638ff}{end()}} iterator if \begin{DoxyReturn}{Returns}
+{\ttfamily const\+\_\+iterator} to first \hyperlink{classflow_1_1_dispatch}{Dispatch} resource 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a19612c628308b97497ffca62c9b2b420}\label{classflow_1_1_dispatch_queue_a19612c628308b97497ffca62c9b2b420}} 
+\index{flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}!begin@{begin}}
+\index{begin@{begin}!flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$typename DispatchT, typename ContainerT = std\+::deque$<$\+Dispatch\+T$>$$>$ \\
+\hyperlink{classflow_1_1_dispatch_queue_a307496fdc34a2d59e11114dabf85dc8a}{const\+\_\+iterator} \hyperlink{classflow_1_1_dispatch_queue}{flow\+::\+Dispatch\+Queue}$<$ DispatchT, ContainerT $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns first iterator to underlying ordered data structure. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily const\+\_\+iterator} to first \hyperlink{classflow_1_1_dispatch}{Dispatch} resource 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a447412abd83540a6c595dd7a17116c6c}\label{classflow_1_1_dispatch_queue_a447412abd83540a6c595dd7a17116c6c}} 
+\index{flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}!empty@{empty}}
+\index{empty@{empty}!flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename DispatchT, typename ContainerT = std\+::deque$<$\+Dispatch\+T$>$$>$ \\
+bool \hyperlink{classflow_1_1_dispatch_queue}{flow\+::\+Dispatch\+Queue}$<$ DispatchT, ContainerT $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if queue is empty. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & if not elements remain in queue \\
+\hline
+{\em false} & otherwise \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a359b294ce203e10ee9fafc147f6638ff}\label{classflow_1_1_dispatch_queue_a359b294ce203e10ee9fafc147f6638ff}} 
+\index{flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}!end@{end}}
+\index{end@{end}!flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$typename DispatchT, typename ContainerT = std\+::deque$<$\+Dispatch\+T$>$$>$ \\
+\hyperlink{classflow_1_1_dispatch_queue_a307496fdc34a2d59e11114dabf85dc8a}{const\+\_\+iterator} \hyperlink{classflow_1_1_dispatch_queue}{flow\+::\+Dispatch\+Queue}$<$ DispatchT, ContainerT $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns last iterator to underlying ordered data structure. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily const\+\_\+iterator} to one element past \hyperlink{classflow_1_1_dispatch}{Dispatch} resource 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a5221c73d3790e6795c48229a2bcd7c0e}\label{classflow_1_1_dispatch_queue_a5221c73d3790e6795c48229a2bcd7c0e}} 
+\index{flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}!insert@{insert}}
+\index{insert@{insert}!flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename DispatchT, typename ContainerT = std\+::deque$<$\+Dispatch\+T$>$$>$ \\
+template$<$typename... Dispatch\+Constructor\+Arg\+Ts$>$ \\
+void \hyperlink{classflow_1_1_dispatch_queue}{flow\+::\+Dispatch\+Queue}$<$ DispatchT, ContainerT $>$\+::insert (\begin{DoxyParamCaption}\item[{Dispatch\+Constructor\+Arg\+Ts \&\&...}]{dispatch\+\_\+args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts data in sequence stamp order as \hyperlink{classflow_1_1_dispatch}{Dispatch}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dispatch\+\_\+args} & dispatch constructor args\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+elements with stamps identical to existing element stamps are not added 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a5ced281bc5c221a79bf88a6169429252}\label{classflow_1_1_dispatch_queue_a5ced281bc5c221a79bf88a6169429252}} 
+\index{flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}!newest\+\_\+stamp@{newest\+\_\+stamp}}
+\index{newest\+\_\+stamp@{newest\+\_\+stamp}!flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}}
+\subsubsection{\texorpdfstring{newest\+\_\+stamp()}{newest\_stamp()}}
+{\footnotesize\ttfamily template$<$typename DispatchT, typename ContainerT = std\+::deque$<$\+Dispatch\+T$>$$>$ \\
+\hyperlink{classflow_1_1_dispatch_queue_a7908f3d78b7f1767462244b94434d748}{stamp\+\_\+type} \hyperlink{classflow_1_1_dispatch_queue}{flow\+::\+Dispatch\+Queue}$<$ DispatchT, ContainerT $>$\+::newest\+\_\+stamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sequencing stamp associated with the newest data. 
+
+\begin{DoxyReturn}{Returns}
+sequencing stamp of last-\/queued \hyperlink{classflow_1_1_dispatch}{Dispatch}
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Undefined behavior when {\ttfamily \hyperlink{classflow_1_1_dispatch_queue_a447412abd83540a6c595dd7a17116c6c}{empty()} == true} 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a6411ccf159a54568dc00072b35593189}\label{classflow_1_1_dispatch_queue_a6411ccf159a54568dc00072b35593189}} 
+\index{flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}!oldest\+\_\+stamp@{oldest\+\_\+stamp}}
+\index{oldest\+\_\+stamp@{oldest\+\_\+stamp}!flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}}
+\subsubsection{\texorpdfstring{oldest\+\_\+stamp()}{oldest\_stamp()}}
+{\footnotesize\ttfamily template$<$typename DispatchT, typename ContainerT = std\+::deque$<$\+Dispatch\+T$>$$>$ \\
+\hyperlink{classflow_1_1_dispatch_queue_a7908f3d78b7f1767462244b94434d748}{stamp\+\_\+type} \hyperlink{classflow_1_1_dispatch_queue}{flow\+::\+Dispatch\+Queue}$<$ DispatchT, ContainerT $>$\+::oldest\+\_\+stamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sequencing stamp associated with the oldest data. 
+
+\begin{DoxyReturn}{Returns}
+sequencing stamp of first-\/queued \hyperlink{classflow_1_1_dispatch}{Dispatch}
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Undefined behavior when {\ttfamily \hyperlink{classflow_1_1_dispatch_queue_a447412abd83540a6c595dd7a17116c6c}{empty()} == true} 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a10607f6122683a4e24b44daaf8bf51fe}\label{classflow_1_1_dispatch_queue_a10607f6122683a4e24b44daaf8bf51fe}} 
+\index{flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}!pop@{pop}}
+\index{pop@{pop}!flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}}
+\subsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily template$<$typename DispatchT, typename ContainerT = std\+::deque$<$\+Dispatch\+T$>$$>$ \\
+DispatchT \hyperlink{classflow_1_1_dispatch_queue}{flow\+::\+Dispatch\+Queue}$<$ DispatchT, ContainerT $>$\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the oldest element and returns associated \hyperlink{classflow_1_1_dispatch}{Dispatch}. 
+
+\begin{DoxyReturn}{Returns}
+oldest element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a39b906c46d56d32cda2bc1b61f6dcc32}\label{classflow_1_1_dispatch_queue_a39b906c46d56d32cda2bc1b61f6dcc32}} 
+\index{flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}!rbefore@{rbefore}}
+\index{rbefore@{rbefore}!flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}}
+\subsubsection{\texorpdfstring{rbefore()}{rbefore()}}
+{\footnotesize\ttfamily template$<$typename DispatchT, typename ContainerT = std\+::deque$<$\+Dispatch\+T$>$$>$ \\
+\hyperlink{classflow_1_1_dispatch_queue_ac74f1a9a8d77b06e9576492df2a50e4f}{const\+\_\+reverse\+\_\+iterator} \hyperlink{classflow_1_1_dispatch_queue}{flow\+::\+Dispatch\+Queue}$<$ DispatchT, ContainerT $>$\+::rbefore (\begin{DoxyParamCaption}\item[{\hyperlink{classflow_1_1_dispatch_queue_affc83531dc53ee147899a33e82a6cbf0}{stamp\+\_\+const\+\_\+arg\+\_\+type}}]{stamp }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns first reverse-\/iterator to element before stamp. 
+
+Returns {\ttfamily \hyperlink{classflow_1_1_dispatch_queue_a5fee6900da4ddd095b78608081b1873d}{rend()}} iterator if \begin{DoxyReturn}{Returns}
+{\ttfamily const\+\_\+reverse\+\_\+iterator} to first \hyperlink{classflow_1_1_dispatch}{Dispatch} resource 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a969fdabec571725b903056d69ea2a31b}\label{classflow_1_1_dispatch_queue_a969fdabec571725b903056d69ea2a31b}} 
+\index{flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}}
+\subsubsection{\texorpdfstring{rbegin()}{rbegin()}}
+{\footnotesize\ttfamily template$<$typename DispatchT, typename ContainerT = std\+::deque$<$\+Dispatch\+T$>$$>$ \\
+\hyperlink{classflow_1_1_dispatch_queue_ac74f1a9a8d77b06e9576492df2a50e4f}{const\+\_\+reverse\+\_\+iterator} \hyperlink{classflow_1_1_dispatch_queue}{flow\+::\+Dispatch\+Queue}$<$ DispatchT, ContainerT $>$\+::rbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns first iterator to reversed underlying ordered data structure. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily const\+\_\+reverse\+\_\+iterator} to first \hyperlink{classflow_1_1_dispatch}{Dispatch} resource 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a44bbaa95fa99125929edb0dbd511a73a}\label{classflow_1_1_dispatch_queue_a44bbaa95fa99125929edb0dbd511a73a}} 
+\index{flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}!remove\+\_\+at\+\_\+before@{remove\+\_\+at\+\_\+before}}
+\index{remove\+\_\+at\+\_\+before@{remove\+\_\+at\+\_\+before}!flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}}
+\subsubsection{\texorpdfstring{remove\+\_\+at\+\_\+before()}{remove\_at\_before()}}
+{\footnotesize\ttfamily template$<$typename DispatchT, typename ContainerT = std\+::deque$<$\+Dispatch\+T$>$$>$ \\
+void \hyperlink{classflow_1_1_dispatch_queue}{flow\+::\+Dispatch\+Queue}$<$ DispatchT, ContainerT $>$\+::remove\+\_\+at\+\_\+before (\begin{DoxyParamCaption}\item[{\hyperlink{classflow_1_1_dispatch_queue_affc83531dc53ee147899a33e82a6cbf0}{stamp\+\_\+const\+\_\+arg\+\_\+type}}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes data with stamp older than or equal to some reference sequence stamp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stamp} & lower bound on container sequence stamp \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_aabb451448562a4084506fc5c3289e0b0}\label{classflow_1_1_dispatch_queue_aabb451448562a4084506fc5c3289e0b0}} 
+\index{flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}!remove\+\_\+before@{remove\+\_\+before}}
+\index{remove\+\_\+before@{remove\+\_\+before}!flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}}
+\subsubsection{\texorpdfstring{remove\+\_\+before()}{remove\_before()}}
+{\footnotesize\ttfamily template$<$typename DispatchT, typename ContainerT = std\+::deque$<$\+Dispatch\+T$>$$>$ \\
+void \hyperlink{classflow_1_1_dispatch_queue}{flow\+::\+Dispatch\+Queue}$<$ DispatchT, ContainerT $>$\+::remove\+\_\+before (\begin{DoxyParamCaption}\item[{\hyperlink{classflow_1_1_dispatch_queue_affc83531dc53ee147899a33e82a6cbf0}{stamp\+\_\+const\+\_\+arg\+\_\+type}}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes data with stamp older than reference sequence stamp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stamp} & lower bound on container sequence stamp \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a5fee6900da4ddd095b78608081b1873d}\label{classflow_1_1_dispatch_queue_a5fee6900da4ddd095b78608081b1873d}} 
+\index{flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}!rend@{rend}}
+\index{rend@{rend}!flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}}
+\subsubsection{\texorpdfstring{rend()}{rend()}}
+{\footnotesize\ttfamily template$<$typename DispatchT, typename ContainerT = std\+::deque$<$\+Dispatch\+T$>$$>$ \\
+\hyperlink{classflow_1_1_dispatch_queue_ac74f1a9a8d77b06e9576492df2a50e4f}{const\+\_\+reverse\+\_\+iterator} \hyperlink{classflow_1_1_dispatch_queue}{flow\+::\+Dispatch\+Queue}$<$ DispatchT, ContainerT $>$\+::rend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns last iterator to reversed underlying ordered data structure. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily const\+\_\+reverse\+\_\+iterator} to one element past \hyperlink{classflow_1_1_dispatch}{Dispatch} resource 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classflow_1_1_dispatch_queue_a66f89e3d5c95709662227ce275f00607}\label{classflow_1_1_dispatch_queue_a66f89e3d5c95709662227ce275f00607}} 
+\index{flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}!shrink\+\_\+to\+\_\+fit@{shrink\+\_\+to\+\_\+fit}}
+\index{shrink\+\_\+to\+\_\+fit@{shrink\+\_\+to\+\_\+fit}!flow\+::\+Dispatch\+Queue@{flow\+::\+Dispatch\+Queue}}
+\subsubsection{\texorpdfstring{shrink\+\_\+to\+\_\+fit()}{shrink\_to\_fit()}}
+{\footnotesize\ttfamily template$<$typename DispatchT, typename ContainerT = std\+::deque$<$\+Dispatch\+T$>$$>$ \\
+void \hyperlink{classflow_1_1_dispatch_queue}{flow\+::\+Dispatch\+Queue}$<$ DispatchT, ContainerT $>$\+::shrink\+\_\+to\+\_\+fit (\begin{DoxyParamCaption}\item[{const \hyperlink{classflow_1_1_dispatch_queue_afdc67058e3461410fdd6170046df55bc}{size\+\_\+type}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes oldest data until queue has less than or equal to N-\/elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & lower bound on total container size \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+flow/include/\hyperlink{dispatch__queue_8h}{dispatch\+\_\+queue.\+h}\end{DoxyCompactItemize}

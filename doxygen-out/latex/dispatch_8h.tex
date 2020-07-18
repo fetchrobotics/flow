@@ -1,0 +1,57 @@
+\hypertarget{dispatch_8h}{}\section{flow/include/dispatch.h File Reference}
+\label{dispatch_8h}\index{flow/include/dispatch.\+h@{flow/include/dispatch.\+h}}
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$flow/impl/static\+\_\+assert.\+hpp$>$}\newline
+Include dependency graph for dispatch.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dispatch_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structflow_1_1_stamp_traits}{flow\+::\+Stamp\+Traits$<$ Stamp\+T $>$}
+\begin{DoxyCompactList}\small\item\em Helper struct used to specify stamp attributes. \end{DoxyCompactList}\item 
+class \hyperlink{classflow_1_1_dispatch}{flow\+::\+Dispatch$<$ Stamp\+T, Value\+T $>$}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classflow_1_1_dispatch}{Dispatch} data wrapper. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_dispatch_traits}{flow\+::\+Dispatch\+Traits$<$ Dispatch\+T $>$}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classflow_1_1_dispatch}{Dispatch} type traits struct. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_dispatch_traits_3_01_dispatch_3_01_stamp_t_00_01_value_t_01_4_01_4}{flow\+::\+Dispatch\+Traits$<$ Dispatch$<$ Stamp\+T, Value\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classflow_1_1_dispatch}{Dispatch} type traits struct. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_dispatch_access}{flow\+::\+Dispatch\+Access$<$ Dispatch\+T $>$}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classflow_1_1_dispatch}{Dispatch} access helper. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_dispatch_access_3_01_dispatch_3_01_stamp_t_00_01_value_t_01_4_01_4}{flow\+::\+Dispatch\+Access$<$ Dispatch$<$ Stamp\+T, Value\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classflow_1_1_dispatch}{Dispatch} access helper. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_capture_range}{flow\+::\+Capture\+Range$<$ Stamp\+T $>$}
+\begin{DoxyCompactList}\small\item\em Data capture/sequencing information. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1is__capture__range}{flow\+::is\+\_\+capture\+\_\+range$<$ Range\+T $>$}
+\begin{DoxyCompactList}\small\item\em Checks if object type is an instance of \hyperlink{structflow_1_1_capture_range}{Capture\+Range}. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1is__capture__range_3_01_capture_range_3_01_stamp_t_01_4_01_4}{flow\+::is\+\_\+capture\+\_\+range$<$ Capture\+Range$<$ Stamp\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em Checks if object type is an instance of \hyperlink{structflow_1_1_capture_range}{Capture\+Range}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceflow}{flow}
+\begin{DoxyCompactList}\small\item\em Flow input synchronization library components. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceflow_a7e74f2c2aa617c702eb0b184658b3e2e}\label{namespaceflow_a7e74f2c2aa617c702eb0b184658b3e2e}} 
+{\footnotesize template$<$typename DispatchT $>$ }\\constexpr auto \hyperlink{namespaceflow_a7e74f2c2aa617c702eb0b184658b3e2e}{flow\+::get\+\_\+stamp} (DispatchT \&\&dispatch)
+\begin{DoxyCompactList}\small\item\em Accesses \hyperlink{classflow_1_1_dispatch}{Dispatch} stamp through appropriate accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceflow_ae6b46b0890787880f9cb14596a3c3be5}\label{namespaceflow_ae6b46b0890787880f9cb14596a3c3be5}} 
+{\footnotesize template$<$typename DispatchT $>$ }\\constexpr auto \hyperlink{namespaceflow_ae6b46b0890787880f9cb14596a3c3be5}{flow\+::get\+\_\+value} (DispatchT \&\&dispatch)
+\begin{DoxyCompactList}\small\item\em Accesses \hyperlink{classflow_1_1_dispatch}{Dispatch} value through appropriate accessors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+2020 Fetch Robotics Inc. 
+\end{DoxyCopyright}
+\begin{DoxyAuthor}{Author}
+Brian Cairl 
+\end{DoxyAuthor}

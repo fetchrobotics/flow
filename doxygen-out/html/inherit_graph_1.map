@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classflow_1_1_captor_interface.html" title="flow::CaptorInterface\l\&lt; Captor\&lt; Driver\&lt; Batch\l\&lt; DispatchT, LockPolicyT,\l ContainerT, QueueMonitorT\l \&gt; \&gt;, CaptorTraits\&lt; Batch\&lt;\l DispatchT, LockPolicyT, ContainerT,\l QueueMonitorT \&gt; \&gt;::LockPolicyType,\l DefaultDispatchQueueMonitor \&gt; \&gt;" alt="" coords="5,5,249,135"/>
+<area shape="rect" id="node2" href="$classflow_1_1_captor.html" title="flow::Captor\&lt; Driver\l\&lt; Batch\&lt; DispatchT, LockPolicy\lT, ContainerT, QueueMonitorT\l \&gt; \&gt;, CaptorTraits\&lt; Batch\&lt; DispatchT,\l LockPolicyT, ContainerT, QueueMonitorT\l \&gt; \&gt;::LockPolicyType, DefaultDispatchQueueMonitor \&gt;" alt="" coords="297,20,640,120"/>
+<area shape="rect" id="node3" href="$classflow_1_1_driver.html" title="flow::Driver\&lt; Batch\l\&lt; DispatchT, LockPolicyT,\l ContainerT, QueueMonitorT \&gt; \&gt;" alt="" coords="688,42,899,98"/>
+<area shape="rect" id="node4" href="$classflow_1_1driver_1_1_batch.html" title="Captures the N oldest data elements. " alt="" coords="947,42,1145,98"/>
+</map>

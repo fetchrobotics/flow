@@ -1,0 +1,280 @@
+\hypertarget{namespaceflow}{}\section{flow Namespace Reference}
+\label{namespaceflow}\index{flow@{flow}}
+
+
+Flow input synchronization library components.  
+
+
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceflow_1_1driver}{driver}
+\begin{DoxyCompactList}\small\item\em Synchronizations buffer with policies which produce sequencing ranges. \end{DoxyCompactList}\item 
+ \hyperlink{namespaceflow_1_1follower}{follower}
+\begin{DoxyCompactList}\small\item\em Synchronization buffers with sequencing range-\/dependent policies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classflow_1_1_captor}{Captor}
+\begin{DoxyCompactList}\small\item\em C\+R\+T\+P-\/base for input capture buffers with a specific data lock policy. \end{DoxyCompactList}\item 
+class \hyperlink{classflow_1_1_captor_interface}{Captor\+Interface}
+\begin{DoxyCompactList}\small\item\em C\+R\+T\+P-\/base which defines basic captor interface. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_captor_traits}{Captor\+Traits}
+\begin{DoxyCompactList}\small\item\em Traits struct for captor types. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_captor_traits_3_01_captor_3_01_captor_t_00_01_lockable_t_00_01_queue_monitor_t_01_4_01_4}{Captor\+Traits$<$ Captor$<$ Captor\+T, Lockable\+T, Queue\+Monitor\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em Traits struct for captor types. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_captor_traits_3_01driver_1_1_batch_3_01_dispatch_t_00_01_lock_policy_t_00_01_contfc7418d386a7a1cb1fa7e6bb1299634a}{Captor\+Traits$<$ driver\+::\+Batch$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em Traits struct for captor types. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_captor_traits_3_01driver_1_1_chunk_3_01_dispatch_t_00_01_lock_policy_t_00_01_contf25136d799b84e6e744301cf371fdfc2}{Captor\+Traits$<$ driver\+::\+Chunk$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em Traits struct for captor types. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_captor_traits_3_01driver_1_1_next_3_01_dispatch_t_00_01_lock_policy_t_00_01_contacacf8f9584444cf22afe31e8b706b576}{Captor\+Traits$<$ driver\+::\+Next$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em Traits struct for captor types. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_captor_traits_3_01driver_1_1_throttled_3_01_dispatch_t_00_01_lock_policy_t_00_01_a55b272e8914e815b1e61540d6e370f1}{Captor\+Traits$<$ driver\+::\+Throttled$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em Traits struct for captor types. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_captor_traits_3_01_driver_3_01_policy_t_01_4_01_4}{Captor\+Traits$<$ Driver$<$ Policy\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em Traits struct for captor types. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_captor_traits_3_01follower_1_1_any_before_3_01_dispatch_t_00_01_lock_policy_t_00_55050b2eb17fc5bc754f0ec7f3a869fd}{Captor\+Traits$<$ follower\+::\+Any\+Before$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em Traits struct for captor types. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_captor_traits_3_01follower_1_1_before_3_01_dispatch_t_00_01_lock_policy_t_00_01_c62c65191d3908e10afd70708af893571}{Captor\+Traits$<$ follower\+::\+Before$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em Traits struct for captor types. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_captor_traits_3_01follower_1_1_closest_before_3_01_dispatch_t_00_01_lock_policy_t8b834bc2517b16c76af22e1a13353500}{Captor\+Traits$<$ follower\+::\+Closest\+Before$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em Traits struct for captor types. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_captor_traits_3_01follower_1_1_count_before_3_01_dispatch_t_00_01_lock_policy_t_0d08c28482191f4a9fdac77c50d53921d}{Captor\+Traits$<$ follower\+::\+Count\+Before$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em Traits struct for captor types. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_captor_traits_3_01follower_1_1_latched_3_01_dispatch_t_00_01_lock_policy_t_00_01_7069ffe3c5f41ae454dc415b835f945a}{Captor\+Traits$<$ follower\+::\+Latched$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em Traits struct for captor types. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_captor_traits_3_01follower_1_1_matched_stamp_3_01_dispatch_t_00_01_lock_policy_t_98530359aca39d952e431eb90b81d0f7}{Captor\+Traits$<$ follower\+::\+Matched\+Stamp$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em Traits struct for captor types. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_captor_traits_3_01follower_1_1_ranged_3_01_dispatch_t_00_01_lock_policy_t_00_01_c08104af94995091b5ab7569e730f476c}{Captor\+Traits$<$ follower\+::\+Ranged$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T, Queue\+Monitor\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em Traits struct for captor types. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_captor_traits_3_01_follower_3_01_policy_t_01_4_01_4}{Captor\+Traits$<$ Follower$<$ Policy\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em Traits struct for captor types. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_captor_traits_from_dispatch}{Captor\+Traits\+From\+Dispatch}
+\begin{DoxyCompactList}\small\item\em Basic captor traits struct with common type information from data dispatch object. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_capture_range}{Capture\+Range}
+\begin{DoxyCompactList}\small\item\em Data capture/sequencing information. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_default_dispatch_queue_monitor}{Default\+Dispatch\+Queue\+Monitor}
+\begin{DoxyCompactList}\small\item\em Stand-\/in type used to replace queue monitor. \end{DoxyCompactList}\item 
+class \hyperlink{classflow_1_1_dispatch}{Dispatch}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classflow_1_1_dispatch}{Dispatch} data wrapper. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_dispatch_access}{Dispatch\+Access}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classflow_1_1_dispatch}{Dispatch} access helper. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_dispatch_access_3_01_dispatch_3_01_stamp_t_00_01_value_t_01_4_01_4}{Dispatch\+Access$<$ Dispatch$<$ Stamp\+T, Value\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classflow_1_1_dispatch}{Dispatch} access helper. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_dispatch_access_3_1_1std_1_1pair_3_01_stamp_t_00_01_value_t_01_4_01_4}{Dispatch\+Access$<$\+::std\+::pair$<$ Stamp\+T, Value\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classflow_1_1_dispatch}{Dispatch} access helper. \end{DoxyCompactList}\item 
+class \hyperlink{classflow_1_1_dispatch_queue}{Dispatch\+Queue}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classflow_1_1_dispatch}{Dispatch} queuing data structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_dispatch_traits}{Dispatch\+Traits}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classflow_1_1_dispatch}{Dispatch} type traits struct. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_dispatch_traits_3_01_dispatch_3_01_stamp_t_00_01_value_t_01_4_01_4}{Dispatch\+Traits$<$ Dispatch$<$ Stamp\+T, Value\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classflow_1_1_dispatch}{Dispatch} type traits struct. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_dispatch_traits_3_1_1std_1_1pair_3_01_stamp_t_00_01_value_t_01_4_01_4}{Dispatch\+Traits$<$\+::std\+::pair$<$ Stamp\+T, Value\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classflow_1_1_dispatch}{Dispatch} type traits struct. \end{DoxyCompactList}\item 
+class \hyperlink{classflow_1_1_driver}{Driver}
+\begin{DoxyCompactList}\small\item\em C\+R\+T\+P-\/base for \hyperlink{classflow_1_1_driver}{Driver} input-\/capture policies. \end{DoxyCompactList}\item 
+class \hyperlink{classflow_1_1_follower}{Follower}
+\begin{DoxyCompactList}\small\item\em C\+R\+T\+P-\/base for \hyperlink{classflow_1_1_follower}{Follower} input-\/capture policies. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1is__capture__range}{is\+\_\+capture\+\_\+range}
+\begin{DoxyCompactList}\small\item\em Checks if object type is an instance of \hyperlink{structflow_1_1_capture_range}{Capture\+Range}. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1is__capture__range_3_01_capture_range_3_01_stamp_t_01_4_01_4}{is\+\_\+capture\+\_\+range$<$ Capture\+Range$<$ Stamp\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em Checks if object type is an instance of \hyperlink{structflow_1_1_capture_range}{Capture\+Range}. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1is__driver}{is\+\_\+driver}
+\begin{DoxyCompactList}\small\item\em Checks if captor object derived from a \hyperlink{classflow_1_1_driver}{Driver} base. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1is__follower}{is\+\_\+follower}
+\begin{DoxyCompactList}\small\item\em Checks if captor object derived from a \hyperlink{classflow_1_1_follower}{Follower} base. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1is__no__lock}{is\+\_\+no\+\_\+lock}
+\begin{DoxyCompactList}\small\item\em Checks if {\ttfamily LockableT} is of type \hyperlink{structflow_1_1_no_lock}{No\+Lock}. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1is__polling}{is\+\_\+polling}
+\begin{DoxyCompactList}\small\item\em Checks if captor is serviced by polling capture. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1is__polling__lock}{is\+\_\+polling\+\_\+lock}
+\begin{DoxyCompactList}\small\item\em Checks if {\ttfamily LockableT} is instance of \hyperlink{structflow_1_1_polling_lock}{Polling\+Lock}. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1is__polling__lock_3_01_polling_lock_3_01_lockable_t_01_4_01_4}{is\+\_\+polling\+\_\+lock$<$ Polling\+Lock$<$ Lockable\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em Checks if {\ttfamily LockableT} is instance of \hyperlink{structflow_1_1_polling_lock}{Polling\+Lock}. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_no_capture}{No\+Capture}
+\begin{DoxyCompactList}\small\item\em Object used in place of output iterator as a placeholder with no data capture effects. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_no_lock}{No\+Lock}
+\begin{DoxyCompactList}\small\item\em Stand-\/in type used to signify that captors will be used in a single-\/threaded context. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_polling_lock}{Polling\+Lock}
+\begin{DoxyCompactList}\small\item\em Stand-\/in type used to signify that captors will be used in a threaded context, but will not wait for data. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_result}{Result}
+\begin{DoxyCompactList}\small\item\em Event synchronization result summary. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_sequence_stamp_type}{Sequence\+Stamp\+Type}
+\begin{DoxyCompactList}\small\item\em Resolves stamp type used by a captor. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_sequence_stamp_type_3_01_capture_range_3_01_stamp_t_01_4_01_4}{Sequence\+Stamp\+Type$<$ Capture\+Range$<$ Stamp\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em Resolves stamp type used by a captor. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_stamp_traits}{Stamp\+Traits}
+\begin{DoxyCompactList}\small\item\em Helper struct used to specify stamp attributes. \end{DoxyCompactList}\item 
+struct \hyperlink{structflow_1_1_stamp_traits_3_01std_1_1chrono_1_1time__point_3_01_clock_t_00_01_duration_t_01_4_01_4}{Stamp\+Traits$<$ std\+::chrono\+::time\+\_\+point$<$ Clock\+T, Duration\+T $>$ $>$}
+\begin{DoxyCompactList}\small\item\em Helper struct used to specify stamp attributes for $<$chrono$>$ time types. \end{DoxyCompactList}\item 
+class \hyperlink{classflow_1_1_synchronizer}{Synchronizer}
+\begin{DoxyCompactList}\small\item\em Provides facilities to synchronize data across several Captors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceflow_ae5be95d6aaac2a27a1504e60657ad00d}\label{namespaceflow_ae5be95d6aaac2a27a1504e60657ad00d}} 
+{\footnotesize template$<$typename DispatchT $>$ }\\using \hyperlink{namespaceflow_ae5be95d6aaac2a27a1504e60657ad00d}{Default\+Container} = std\+::deque$<$ DispatchT $>$
+\begin{DoxyCompactList}\small\item\em Default dispatch container template. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceflow_adefe9726e597eb50c46f0f6a202018e9}{State} \+: int \{ \newline
+\hyperlink{namespaceflow_adefe9726e597eb50c46f0f6a202018e9ac0cc02c3b3d55abb7bfb49ddbb4866c8}{State\+::\+R\+E\+T\+RY}, 
+\hyperlink{namespaceflow_adefe9726e597eb50c46f0f6a202018e9a6eed4968877959d0209d9b75fdd16b52}{State\+::\+P\+R\+I\+M\+ED}, 
+\hyperlink{namespaceflow_adefe9726e597eb50c46f0f6a202018e9a8d12a2ca7e5a64036d7251a3eda51a38}{State\+::\+A\+B\+O\+RT}, 
+\hyperlink{namespaceflow_adefe9726e597eb50c46f0f6a202018e9a070a0fb40f6c308ab544b227660aadff}{State\+::\+T\+I\+M\+E\+O\+UT}, 
+\newline
+\hyperlink{namespaceflow_adefe9726e597eb50c46f0f6a202018e9a5fb9cb06b1db824c6527795c8d73925d}{State\+::\+E\+R\+R\+O\+R\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+L\+O\+W\+E\+R\+\_\+\+B\+O\+U\+N\+D\+\_\+\+E\+X\+C\+E\+E\+D\+ED}, 
+\hyperlink{namespaceflow_adefe9726e597eb50c46f0f6a202018e9a553bb3189571a5b09c1d53c315abd8f8}{State\+::\+S\+K\+I\+P\+\_\+\+F\+R\+A\+M\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+P\+R\+E\+C\+O\+N\+D\+I\+T\+I\+ON}, 
+\hyperlink{namespaceflow_adefe9726e597eb50c46f0f6a202018e9a63b87258ef5b5f3ccdfd68f9e673d66d}{State\+::\+\_\+\+N\+\_\+\+S\+T\+A\+T\+ES}
+ \}\begin{DoxyCompactList}\small\item\em Evaluated Captor state. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{namespaceflow_add94bf5b887f5f969dd2988fdf0673d9}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{namespaceflow_adefe9726e597eb50c46f0f6a202018e9}{State} state)
+\begin{DoxyCompactList}\small\item\em Output stream overload for {\ttfamily State} codes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceflow_a7e74f2c2aa617c702eb0b184658b3e2e}\label{namespaceflow_a7e74f2c2aa617c702eb0b184658b3e2e}} 
+{\footnotesize template$<$typename DispatchT $>$ }\\constexpr auto \hyperlink{namespaceflow_a7e74f2c2aa617c702eb0b184658b3e2e}{get\+\_\+stamp} (DispatchT \&\&dispatch)
+\begin{DoxyCompactList}\small\item\em Accesses \hyperlink{classflow_1_1_dispatch}{Dispatch} stamp through appropriate accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceflow_ae6b46b0890787880f9cb14596a3c3be5}\label{namespaceflow_ae6b46b0890787880f9cb14596a3c3be5}} 
+{\footnotesize template$<$typename DispatchT $>$ }\\constexpr auto \hyperlink{namespaceflow_ae6b46b0890787880f9cb14596a3c3be5}{get\+\_\+value} (DispatchT \&\&dispatch)
+\begin{DoxyCompactList}\small\item\em Accesses \hyperlink{classflow_1_1_dispatch}{Dispatch} value through appropriate accessors. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename StampT , typename ValueT $>$ }\\std\+::ostream \& \hyperlink{namespaceflow_ae7e587a04ccd87fa5982d609473c6f96}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classflow_1_1_dispatch}{Dispatch}$<$ StampT, ValueT $>$ \&dispatch)
+\begin{DoxyCompactList}\small\item\em Output stream overload for {\ttfamily \hyperlink{classflow_1_1_dispatch}{Dispatch}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename StampT $>$ }\\std\+::ostream \& \hyperlink{namespaceflow_a8423b9d75e853c9c36724474ba20d63a}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{structflow_1_1_capture_range}{Capture\+Range}$<$ StampT $>$ \&range)
+\begin{DoxyCompactList}\small\item\em Output stream overload for {\ttfamily \hyperlink{structflow_1_1_capture_range}{Capture\+Range}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename StampT $>$ }\\std\+::ostream \& \hyperlink{namespaceflow_a7ca1e3a34fdc4e532e45869d9141c53a}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{structflow_1_1_result}{Result}$<$ StampT $>$ \&result)
+\begin{DoxyCompactList}\small\item\em Output stream overload for {\ttfamily \hyperlink{structflow_1_1_result}{Result}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Flow input synchronization library components. 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespaceflow_adefe9726e597eb50c46f0f6a202018e9}\label{namespaceflow_adefe9726e597eb50c46f0f6a202018e9}} 
+\index{flow@{flow}!State@{State}}
+\index{State@{State}!flow@{flow}}
+\subsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \hyperlink{namespaceflow_adefe9726e597eb50c46f0f6a202018e9}{flow\+::\+State} \+: int\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Evaluated \hyperlink{classflow_1_1_captor}{Captor} state. 
+
+These are used by captors to direct internal data capture behavior \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+E\+T\+RY@{R\+E\+T\+RY}!flow@{flow}}\index{flow@{flow}!R\+E\+T\+RY@{R\+E\+T\+RY}}}\mbox{\Hypertarget{namespaceflow_adefe9726e597eb50c46f0f6a202018e9ac0cc02c3b3d55abb7bfb49ddbb4866c8}\label{namespaceflow_adefe9726e597eb50c46f0f6a202018e9ac0cc02c3b3d55abb7bfb49ddbb4866c8}} 
+R\+E\+T\+RY&\hyperlink{classflow_1_1_captor}{Captor} should continue waiting for data after prime attempt. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+R\+I\+M\+ED@{P\+R\+I\+M\+ED}!flow@{flow}}\index{flow@{flow}!P\+R\+I\+M\+ED@{P\+R\+I\+M\+ED}}}\mbox{\Hypertarget{namespaceflow_adefe9726e597eb50c46f0f6a202018e9a6eed4968877959d0209d9b75fdd16b52}\label{namespaceflow_adefe9726e597eb50c46f0f6a202018e9a6eed4968877959d0209d9b75fdd16b52}} 
+P\+R\+I\+M\+ED&\hyperlink{classflow_1_1_captor}{Captor} has captured data and its ready. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+B\+O\+RT@{A\+B\+O\+RT}!flow@{flow}}\index{flow@{flow}!A\+B\+O\+RT@{A\+B\+O\+RT}}}\mbox{\Hypertarget{namespaceflow_adefe9726e597eb50c46f0f6a202018e9a8d12a2ca7e5a64036d7251a3eda51a38}\label{namespaceflow_adefe9726e597eb50c46f0f6a202018e9a8d12a2ca7e5a64036d7251a3eda51a38}} 
+A\+B\+O\+RT&\hyperlink{classflow_1_1_captor}{Captor} has requested to abort current capture attempt. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+M\+E\+O\+UT@{T\+I\+M\+E\+O\+UT}!flow@{flow}}\index{flow@{flow}!T\+I\+M\+E\+O\+UT@{T\+I\+M\+E\+O\+UT}}}\mbox{\Hypertarget{namespaceflow_adefe9726e597eb50c46f0f6a202018e9a070a0fb40f6c308ab544b227660aadff}\label{namespaceflow_adefe9726e597eb50c46f0f6a202018e9a070a0fb40f6c308ab544b227660aadff}} 
+T\+I\+M\+E\+O\+UT&\hyperlink{classflow_1_1_captor}{Captor} has hit a data-\/wait timeout. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+O\+R\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+L\+O\+W\+E\+R\+\_\+\+B\+O\+U\+N\+D\+\_\+\+E\+X\+C\+E\+E\+D\+ED@{E\+R\+R\+O\+R\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+L\+O\+W\+E\+R\+\_\+\+B\+O\+U\+N\+D\+\_\+\+E\+X\+C\+E\+E\+D\+ED}!flow@{flow}}\index{flow@{flow}!E\+R\+R\+O\+R\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+L\+O\+W\+E\+R\+\_\+\+B\+O\+U\+N\+D\+\_\+\+E\+X\+C\+E\+E\+D\+ED@{E\+R\+R\+O\+R\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+L\+O\+W\+E\+R\+\_\+\+B\+O\+U\+N\+D\+\_\+\+E\+X\+C\+E\+E\+D\+ED}}}\mbox{\Hypertarget{namespaceflow_adefe9726e597eb50c46f0f6a202018e9a5fb9cb06b1db824c6527795c8d73925d}\label{namespaceflow_adefe9726e597eb50c46f0f6a202018e9a5fb9cb06b1db824c6527795c8d73925d}} 
+E\+R\+R\+O\+R\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+L\+O\+W\+E\+R\+\_\+\+B\+O\+U\+N\+D\+\_\+\+E\+X\+C\+E\+E\+D\+ED&Error code used to indicate that driving violated external lower bound. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+K\+I\+P\+\_\+\+F\+R\+A\+M\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+P\+R\+E\+C\+O\+N\+D\+I\+T\+I\+ON@{S\+K\+I\+P\+\_\+\+F\+R\+A\+M\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+P\+R\+E\+C\+O\+N\+D\+I\+T\+I\+ON}!flow@{flow}}\index{flow@{flow}!S\+K\+I\+P\+\_\+\+F\+R\+A\+M\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+P\+R\+E\+C\+O\+N\+D\+I\+T\+I\+ON@{S\+K\+I\+P\+\_\+\+F\+R\+A\+M\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+P\+R\+E\+C\+O\+N\+D\+I\+T\+I\+ON}}}\mbox{\Hypertarget{namespaceflow_adefe9726e597eb50c46f0f6a202018e9a553bb3189571a5b09c1d53c315abd8f8}\label{namespaceflow_adefe9726e597eb50c46f0f6a202018e9a553bb3189571a5b09c1d53c315abd8f8}} 
+S\+K\+I\+P\+\_\+\+F\+R\+A\+M\+E\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+P\+R\+E\+C\+O\+N\+D\+I\+T\+I\+ON&Code use to indicate that the current sync frame is to be skipped, namely when when a queue monitor object is used to precondition capture \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\+\_\+\+N\+\_\+\+S\+T\+A\+T\+ES@{\+\_\+\+N\+\_\+\+S\+T\+A\+T\+ES}!flow@{flow}}\index{flow@{flow}!\+\_\+\+N\+\_\+\+S\+T\+A\+T\+ES@{\+\_\+\+N\+\_\+\+S\+T\+A\+T\+ES}}}\mbox{\Hypertarget{namespaceflow_adefe9726e597eb50c46f0f6a202018e9a63b87258ef5b5f3ccdfd68f9e673d66d}\label{namespaceflow_adefe9726e597eb50c46f0f6a202018e9a63b87258ef5b5f3ccdfd68f9e673d66d}} 
+\+\_\+\+N\+\_\+\+S\+T\+A\+T\+ES&Total number of captor states. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespaceflow_add94bf5b887f5f969dd2988fdf0673d9}\label{namespaceflow_add94bf5b887f5f969dd2988fdf0673d9}} 
+\index{flow@{flow}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!flow@{flow}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily std\+::ostream\& flow\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{namespaceflow_adefe9726e597eb50c46f0f6a202018e9}{State}}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Output stream overload for {\ttfamily State} codes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em os} & output stream \\
+\hline
+ & {\em state} & state code \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+os 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceflow_ae7e587a04ccd87fa5982d609473c6f96}\label{namespaceflow_ae7e587a04ccd87fa5982d609473c6f96}} 
+\index{flow@{flow}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!flow@{flow}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename StampT , typename ValueT $>$ \\
+std\+::ostream\& flow\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{classflow_1_1_dispatch}{Dispatch}$<$ StampT, ValueT $>$ \&}]{dispatch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Output stream overload for {\ttfamily \hyperlink{classflow_1_1_dispatch}{Dispatch}} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em os} & output stream \\
+\hline
+ & {\em dispatch} & dispatch object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+os 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceflow_a7ca1e3a34fdc4e532e45869d9141c53a}\label{namespaceflow_a7ca1e3a34fdc4e532e45869d9141c53a}} 
+\index{flow@{flow}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!flow@{flow}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename StampT $>$ \\
+std\+::ostream\& flow\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{structflow_1_1_result}{Result}$<$ StampT $>$ \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Output stream overload for {\ttfamily \hyperlink{structflow_1_1_result}{Result}} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em os} & output stream \\
+\hline
+ & {\em result} & \hyperlink{classflow_1_1_synchronizer}{Synchronizer} result object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+os 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceflow_a8423b9d75e853c9c36724474ba20d63a}\label{namespaceflow_a8423b9d75e853c9c36724474ba20d63a}} 
+\index{flow@{flow}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!flow@{flow}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename StampT $>$ \\
+std\+::ostream\& flow\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{structflow_1_1_capture_range}{Capture\+Range}$<$ StampT $>$ \&}]{range }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Output stream overload for {\ttfamily \hyperlink{structflow_1_1_capture_range}{Capture\+Range}} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em os} & output stream \\
+\hline
+ & {\em range} & capture stamp range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+os 
+\end{DoxyReturn}
