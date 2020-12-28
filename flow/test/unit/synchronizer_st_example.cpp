@@ -16,6 +16,7 @@
 #include <gtest/gtest.h>
 
 // Flow
+#include <flow/captor/nolock.h>
 #include <flow/drivers.h>
 #include <flow/followers.h>
 #include <flow/synchronizer.h>

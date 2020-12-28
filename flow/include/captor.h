@@ -9,11 +9,8 @@
 
 // C++ Standard Library
 #include <chrono>
-#include <condition_variable>
 #include <cstdint>
 #include <deque>
-#include <mutex>
-#include <thread>
 #include <type_traits>
 #include <utility>
 
@@ -41,22 +38,6 @@ template <typename DispatchT> using DefaultContainer = std::deque<DispatchT>;
  */
 struct NoLock
 {};
-
-
-/**
- * @brief Stand-in type used to signify that captors will be used in a threaded context, but will not wait for data
- *
- *        Captors use <code>BasicLockableT</code> to protect data input/output from the capture queue, but
- *        do not wait on a condition variable for new inputs before attempting to run a synchronization policy.
- *        This allows for polling with the <code>Captor::capture</code> method
- * \n
- *        See https://en.cppreference.com/w/cpp/named_req/TimedLockable for more information on
- * <code>BasicLockableT</code> criteria
- */
-template <typename BasicLockableT = std::lock_guard<std::mutex>> struct PollingLock
-{
-  using type = BasicLockableT;
-};
 
 
 /**
@@ -365,7 +346,12 @@ protected:
 
 
 /**
- * @brief CRTP-base for input capture buffers with a specific data lock policy
+ * @brief CRTP-base for input capture buffers
+ *
+ *        User may include any of the following for various capture implementations
+ *        - <code>#include <flow/captor/lockable.h></code>
+ *        - <code>#include <flow/captor/nolock.h></code>
+ *        - <code>#include <flow/captor/polling.h></code>
  *
  * @tparam CaptorT  CRTP-derived Captor type
  * @tparam LockableT  a TimedLockable (https://en.cppreference.com/w/cpp/named_req/TimedLockable) object;
@@ -373,140 +359,7 @@ protected:
  *                    <code>PollingLock</code>
  * @tparam QueueMonitorT  object used to monitor queue state on each insertion; used to precondition capture
  */
-template <typename CaptorT, typename LockableT, typename QueueMonitorT>
-class Captor : public CaptorInterface<Captor<CaptorT, LockableT, QueueMonitorT>>
-{
-public:
-  /// Data dispatch type
-  using DispatchType = typename CaptorTraits<CaptorT>::DispatchType;
-
-  /// Data dispatch container type
-  using DispatchContainerType = typename CaptorTraits<CaptorT>::DispatchContainerType;
-
-  /// Data stamp type
-  using stamp_type = typename CaptorTraits<CaptorT>::stamp_type;
-
-  /// Integer size type
-  using size_type = typename CaptorTraits<CaptorT>::size_type;
-
-  /**
-   * @brief Default constructor
-   */
-  Captor();
-
-  /**
-   * @brief Dispatch container constructor
-   *
-   * @param container  container object with some initial state
-   * @param queue_monitor  queue monitor with some initial state
-   */
-  Captor(const DispatchContainerType& container, const QueueMonitorT& queue_monitor);
-
-  /**
-   * @brief Destructor
-   * @note Releases data waits
-   */
-  ~Captor();
-
-private:
-  /**
-   * @copydoc CaptorInterface::reset
-   */
-  inline void reset_impl();
-
-  /**
-   * @copydoc CaptorInterface::size
-   */
-  inline size_type size_impl() const;
-
-  /**
-   * @copydoc CaptorInterface::inject
-   */
-  template <typename... DispatchConstructorArgTs> inline void inject_impl(DispatchConstructorArgTs&&... dispatch_args);
-
-  /**
-   * @copydoc CaptorInterface::insert
-   */
-  template <typename FirstForwardDispatchIteratorT, typename LastForwardDispatchIteratorT>
-  inline void insert_impl(FirstForwardDispatchIteratorT first, LastForwardDispatchIteratorT last);
-
-  /**
-   * @copydoc CaptorInterface::remove
-   */
-  inline void remove_impl(const stamp_type& t_remove);
-
-  /**
-   * @copydoc CaptorInterface::abort
-   */
-  inline void abort_impl(const stamp_type& t_abort);
-
-  /**
-   * @copydoc CaptorInterface::capture
-   */
-  template <typename OutputDispatchIteratorT, typename CaptureRangeT, typename ClockT, typename DurationT>
-  inline State capture_impl(
-    OutputDispatchIteratorT&& output,
-    CaptureRangeT&& range,
-    const std::chrono::time_point<ClockT, DurationT> timeout);
-
-  /**
-   * @copydoc CaptorInterface::dry_capture_impl
-   */
-  template <typename CaptureRangeT> inline State dry_capture_impl(CaptureRangeT&& range);
-
-  /**
-   * @copydoc CaptorInterface::inspect
-   */
-  template <typename InpectCallbackT> inline void inspect_impl(InpectCallbackT&& inspect_dispatch_cb) const;
-
-  /**
-   * @copydoc CaptorInterface::update_queue_monitor
-   */
-  template <typename CaptureRangeT> void update_queue_monitor_impl(CaptureRangeT&& range, const State sync_state);
-
-  /**
-   * @copydoc CaptorInterface::set_capacity
-   */
-  inline void set_capacity_impl(const size_type capacity);
-
-  /**
-   * @copydoc CaptorInterface::get_capacity
-   */
-  inline size_type get_capacity_impl() const;
-
-  /**
-   * @copydoc CaptorInterface::get_available_stamp_range
-   */
-  inline CaptureRange<stamp_type> get_available_stamp_range_impl() const;
-
-  /// Mutex to protect queue and captures
-  mutable std::mutex capture_mutex_;
-
-  /// Flag used to indicate that capture loop should continue
-  volatile bool capturing_ = true;
-
-  /**
-   * @brief Condition variable used to wait for data
-   *
-   *        Uses <code>std::condition_variable</code> when <code>LockableT == std::unqiue_lock</code>
-   *        as is may be more performant than <code>std::condition_variable_any</code> according to
-   *        https://en.cppreference.com/w/cpp/thread/condition_variable_any
-   */
-  mutable typename std::conditional<
-    std::is_same<std::unique_lock<std::mutex>, LockableT>::value,
-    std::condition_variable,
-    std::condition_variable_any>::type capture_cv_;
-
-  using CaptorInterfaceType = CaptorInterface<Captor<CaptorT, LockableT, QueueMonitorT>>;
-  friend CaptorInterfaceType;
-
-  FLOW_IMPLEMENT_CRTP_BASE(CaptorT);
-
-protected:
-  using CaptorInterfaceType::queue_;
-  using CaptorInterfaceType::queue_monitor_;
-};
-
+template <typename CaptorT, typename LockableT, typename QueueMonitorT> class Captor;
 
 /**
  * @copydoc CaptorTraits
@@ -553,13 +406,6 @@ template <typename LockableT> struct is_polling_lock : std::integral_constant<bo
 
 
 /**
- * @copydoc is_polling_lock
- */
-template <typename LockableT> struct is_polling_lock<PollingLock<LockableT>> : std::integral_constant<bool, true>
-{};
-
-
-/**
  * @brief Checks if captor is serviced by polling capture
  *
  * @tparam CaptorT  object to test
@@ -575,8 +421,5 @@ struct is_polling : std::integral_constant<
 
 // Flow (implementation)
 #include <flow/impl/captor_interface.hpp>
-#include <flow/impl/captor_lockable.hpp>
-#include <flow/impl/captor_nolock.hpp>
-#include <flow/impl/captor_polling.hpp>
 
 #endif  // FLOW_CAPTOR_H

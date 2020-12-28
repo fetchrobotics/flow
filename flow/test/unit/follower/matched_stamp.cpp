@@ -13,6 +13,7 @@
 #include <gtest/gtest.h>
 
 // Flow
+#include <flow/captor/nolock.h>
 #include <flow/follower/matched_stamp.h>
 
 using namespace flow;

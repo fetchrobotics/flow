@@ -1,21 +1,37 @@
 /**
  * @copyright 2020 Fetch Robotics Inc.
  * @author Brian Cairl
- *
- * @warning IMPLEMENTATION ONLY: THIS FILE SHOULD NEVER BE INCLUDED DIRECTLY!
  */
-#ifndef FLOW_CAPTURE_IMPL_CAPTOR_POLLING_HPP
-#define FLOW_CAPTURE_IMPL_CAPTOR_POLLING_HPP
+#ifndef FLOW_CAPTURE_CAPTOR_POLLING_H
+#define FLOW_CAPTURE_CAPTOR_POLLING_H
 
 // C++ Standard Library
 #include <algorithm>
 #include <iterator>
-#include <memory>
 #include <mutex>
 #include <type_traits>
 
+// Flow
+#include <flow/captor.h>
+
 namespace flow
 {
+
+/**
+ * @brief Stand-in type used to signify that captors will be used in a threaded context, but will not wait for data
+ *
+ *        Captors use <code>BasicLockableT</code> to protect data input/output from the capture queue, but
+ *        do not wait on a condition variable for new inputs before attempting to run a synchronization policy.
+ *        This allows for polling with the <code>Captor::capture</code> method
+ * \n
+ *        See https://en.cppreference.com/w/cpp/named_req/TimedLockable for more information on
+ * <code>BasicLockableT</code> criteria
+ */
+template <typename BasicLockableT = std::lock_guard<std::mutex>> struct PollingLock
+{
+  using type = BasicLockableT;
+};
+
 
 /**
  * @copydoc Captor
@@ -205,6 +221,15 @@ protected:
   using CaptorInterfaceType::queue_;
 };
 
+
+/**
+ * @copydoc is_polling_lock
+ *
+ * @note true case
+ */
+template <typename LockableT> struct is_polling_lock<PollingLock<LockableT>> : std::integral_constant<bool, true>
+{};
+
 }  // namespace flow
 
-#endif  // FLOW_CAPTURE_IMPL_CAPTOR_POLLING_HPP
+#endif  // FLOW_CAPTURE_CAPTOR_POLLING_H

@@ -1,11 +1,9 @@
 /**
  * @copyright 2020 Fetch Robotics Inc.
  * @author Brian Cairl
- *
- * @warning IMPLEMENTATION ONLY: THIS FILE SHOULD NEVER BE INCLUDED DIRECTLY!
  */
-#ifndef FLOW_CAPTURE_IMPL_CAPTOR_NOLOCK_HPP
-#define FLOW_CAPTURE_IMPL_CAPTOR_NOLOCK_HPP
+#ifndef FLOW_CAPTURE_CAPTOR_NOLOCK_H
+#define FLOW_CAPTURE_CAPTOR_NOLOCK_H
 
 // C++ Standard Library
 #include <algorithm>
@@ -14,12 +12,15 @@
 #include <mutex>
 #include <type_traits>
 
+// Flow
+#include <flow/captor.h>
+
 namespace flow
 {
 
 /**
  * @copydoc Captor
- * @note No-lock captor implementation meant for polling with <code>Captor::capture</code>.
+ * @note No-lock captor implementation meant for polling with <code>Captor::capture</code> in single-threaded code.
  */
 template <typename CaptorT, typename QueueMonitorT>
 class Captor<CaptorT, NoLock, QueueMonitorT> : public CaptorInterface<Captor<CaptorT, NoLock, QueueMonitorT>>
@@ -177,4 +178,4 @@ protected:
 
 }  // namespace flow
 
-#endif  // FLOW_CAPTURE_IMPL_CAPTOR_NOLOCK_HPP
+#endif  // FLOW_CAPTURE_CAPTOR_NOLOCK_H

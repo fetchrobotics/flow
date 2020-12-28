@@ -15,6 +15,7 @@
 
 // Flow
 #include <flow/captor.h>
+#include <flow/captor/nolock.h>
 #include <flow/captor_state.h>
 #include <flow/captor_state_ostream.h>
 #include <flow/driver/next.h>

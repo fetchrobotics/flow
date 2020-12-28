@@ -13,6 +13,7 @@
 #include <gtest/gtest.h>
 
 // Flow
+#include <flow/captor/nolock.h>
 #include <flow/driver/next.h>
 
 using namespace flow;

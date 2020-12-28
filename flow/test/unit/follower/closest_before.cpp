@@ -13,6 +13,7 @@
 #include <gtest/gtest.h>
 
 // Flow
+#include <flow/captor/nolock.h>
 #include <flow/follower/closest_before.h>
 
 using namespace flow;

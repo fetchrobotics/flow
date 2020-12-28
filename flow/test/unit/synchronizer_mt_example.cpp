@@ -20,6 +20,8 @@
 #include <gtest/gtest.h>
 
 // Flow
+#include <flow/captor/lockable.h>
+#include <flow/captor/polling.h>
 #include <flow/drivers.h>
 #include <flow/followers.h>
 #include <flow/synchronizer.h>
