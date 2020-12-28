@@ -9,7 +9,7 @@
 
 // Flow
 #include <flow/follower/follower.h>
-#include <flow/impl/optional.hpp>
+#include <flow/utility/optional.hpp>
 
 namespace flow
 {

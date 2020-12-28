@@ -13,8 +13,8 @@
 #include <utility>
 
 // Flow
-#include <flow/impl/apply.hpp>
-#include <flow/impl/static_assert.hpp>
+#include <flow/utility/apply.hpp>
+#include <flow/utility/static_assert.hpp>
 
 namespace flow
 {

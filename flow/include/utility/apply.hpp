@@ -7,9 +7,8 @@
  *        For reference, see
  *        <a href="http://en.cppreference.com/w/cpp/utility/apply">here</a>
  */
-#ifndef FLOW_IMPL_APPLY_HPP
-#define FLOW_IMPL_APPLY_HPP
-#ifndef DOXYGEN_SKIP
+#ifndef FLOW_UTILITY_APPLY_HPP
+#define FLOW_UTILITY_APPLY_HPP
 
 // C++ Standard Library
 #include <cstdint>
@@ -17,10 +16,11 @@
 #include <utility>
 
 // Flow
-#include <flow/impl/integer_sequence.hpp>
+#include <flow/utility/integer_sequence.hpp>
 
 namespace flow
 {
+#ifndef DOXYGEN_SKIP
 namespace detail
 {
 
@@ -53,7 +53,6 @@ template <typename UnaryInvocableT, typename ArgTupleT, std::size_t... IntPack>
 constexpr void apply_every(UnaryInvocableT&& fn, ArgTupleT&& targs, index_sequence<IntPack...>)
 {
   std::initializer_list<int>{0, (fn(std::get<IntPack>(std::forward<ArgTupleT>(targs))), 0)...};
-  ;
 }
 
 /**
@@ -79,6 +78,7 @@ constexpr void apply_each(UnaryInvocableTupleT&& fns, ArgTupleT&& targs, index_s
 }
 
 }  // namespace detail
+#endif  // DOXYGEN_SKIP
 
 /**
  * @brief Calls function with with tuple (e.g <code>std::tuple</code>) as argument list
@@ -182,5 +182,4 @@ constexpr void apply_each(UnaryInvocableTupleT&& fns, ArgTupleT&& targs)
 
 }  // namespace flow
 
-#endif  // DOXYGEN_SKIP
-#endif  // FLOW_IMPL_APPLY_HPP
+#endif  // FLOW_UTILITY_APPLY_HPP

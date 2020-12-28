@@ -5,10 +5,11 @@
  * @file optional.hpp
  */
 
-#ifndef FLOW_IMP_OPTIONAL_HPP
-#define FLOW_IMP_OPTIONAL_HPP
+#ifndef FLOW_UTILITY_OPTIONAL_HPP
+#define FLOW_UTILITY_OPTIONAL_HPP
 
 // C++ Standard Library
+#include <type_traits>
 #include <utility>
 
 namespace flow
@@ -204,4 +205,4 @@ private:
 
 }  // namespace flow
 
-#endif  // FLOW_IMP_OPTIONAL_HPP
+#endif  // FLOW_UTILITY_OPTIONAL_HPP

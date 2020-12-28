@@ -8,16 +8,15 @@
  *        For reference on how this works, see
  *        <a href="https://blog.galowicz.de/2016/06/24/integer_sequences_at_compile_time/</a>.
  */
-#ifndef FLOW_IMPL_INTEGER_SEQUENCE_HPP
-#define FLOW_IMPL_INTEGER_SEQUENCE_HPP
-#ifndef DOXYGEN_SKIP
+#ifndef FLOW_UTILITY_INTEGER_SEQUENCE_HPP
+#define FLOW_UTILITY_INTEGER_SEQUENCE_HPP
 
 // C++ Standard Library
 #include <type_traits>
 #include <utility>
 
 // Flow
-#include <flow/impl/static_assert.hpp>
+#include <flow/utility/static_assert.hpp>
 
 namespace flow
 {
@@ -37,6 +36,7 @@ template <typename IntT, IntT... Ns> struct integer_sequence
   static constexpr size_t size() noexcept { return sizeof...(Ns); }
 };
 
+#ifndef DOXYGEN_SKIP
 namespace detail
 {
 /**
@@ -61,6 +61,7 @@ template <typename IntT, size_t... Ns> struct make_sequence<IntT, 0, Ns...>
 };
 
 }  // namespace detail
+#endif  // DOXYGEN_SKIP
 
 /**
  * @brief Integer sequence where the integer type is <code>std::size_t</code>
@@ -89,5 +90,4 @@ template <class... TPack> using index_sequence_for = make_integer_sequence<size_
 
 }  // namespace flow
 
-#endif  // DOXYGEN_SKIP
-#endif  // FLOW_IMPL_INTEGER_SEQUENCE_HPP
+#endif  // FLOW_UTILITY_INTEGER_SEQUENCE_HPP

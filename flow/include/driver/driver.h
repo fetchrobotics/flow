@@ -12,7 +12,7 @@
 
 // Flow
 #include <flow/captor.h>
-#include <flow/impl/implement_crtp_base.hpp>
+#include <flow/utility/implement_crtp_base.hpp>
 
 namespace flow
 {

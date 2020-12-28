@@ -4,8 +4,8 @@
  *
  * @file static_assert.hpp
  */
-#ifndef FLOW_IMPL_STATIC_ASSERT_HPP
-#define FLOW_IMPL_STATIC_ASSERT_HPP
+#ifndef FLOW_UTILITY_STATIC_ASSERT_HPP
+#define FLOW_UTILITY_STATIC_ASSERT_HPP
 
 /**
  * @brief Macro which wrapper static_assert with extra formatting
@@ -15,4 +15,4 @@
  */
 #define FLOW_STATIC_ASSERT(condition, message) static_assert(condition, "\n\n--->\n\n" message "\n\n<---\n\n")
 
-#endif  // FLOW_IMPL_STATIC_ASSERT_HPP
+#endif  // FLOW_UTILITY_STATIC_ASSERT_HPP

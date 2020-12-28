@@ -18,8 +18,8 @@
 #include <flow/captor_state.h>
 #include <flow/dispatch.h>
 #include <flow/dispatch_queue.h>
-#include <flow/impl/implement_crtp_base.hpp>
-#include <flow/impl/static_assert.hpp>
+#include <flow/utility/implement_crtp_base.hpp>
+#include <flow/utility/static_assert.hpp>
 
 namespace flow
 {
