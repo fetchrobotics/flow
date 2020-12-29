@@ -1,4 +1,4 @@
-load("@flow//:flow_rules.bzl", "flow_cc_library")
+load("@flow//:bazel/flow_rules.bzl", "flow_cc_library")
 
 flow_cc_library(
     name="utility",

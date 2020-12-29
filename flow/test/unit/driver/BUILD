@@ -1,4 +1,4 @@
-load("@flow//:flow_rules.bzl", "flow_cc_gtest")
+load("@flow//:bazel/flow_rules.bzl", "flow_cc_gtest")
 
 
 flow_cc_gtest(
