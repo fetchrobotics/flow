@@ -1,0 +1,4 @@
+Name: ${PROJECT_NAME}
+Description: C++14 library for multi-stream data synchronization
+Version: ${PROJECT_VERSION}
+Cflags: -I${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_INCLUDEDIR}

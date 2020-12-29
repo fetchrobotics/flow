@@ -20,5 +20,9 @@ bazel-genfiles
 bazel-out
 bazel-flow
 
+# CMake Buld Artifacts
+build*
+
 # Doxygen
 doxygen
+
