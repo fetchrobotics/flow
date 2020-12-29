@@ -2,8 +2,8 @@
  * @copyright 2020 Fetch Robotics Inc.
  * @author Brian Cairl
  */
-#ifndef FLOW_CAPTURE_CAPTOR_LOCKABLE_H
-#define FLOW_CAPTURE_CAPTOR_LOCKABLE_H
+#ifndef FLOW_CAPTURE_CAPTOR_LOCKABLE_HPP
+#define FLOW_CAPTURE_CAPTOR_LOCKABLE_HPP
 
 // C++ Standard Library
 #include <algorithm>
@@ -15,7 +15,7 @@
 #include <type_traits>
 
 // Flow
-#include <flow/captor.h>
+#include <flow/captor.hpp>
 
 namespace flow
 {
@@ -301,4 +301,4 @@ protected:
 
 }  // namespace flow
 
-#endif  // FLOW_CAPTURE_CAPTOR_LOCKABLE_H
+#endif  // FLOW_CAPTURE_CAPTOR_LOCKABLE_HPP

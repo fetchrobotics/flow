@@ -13,8 +13,8 @@
 #include <gtest/gtest.h>
 
 // Flow
-#include <flow/captor/nolock.h>
-#include <flow/driver/chunk.h>
+#include <flow/captor/nolock.hpp>
+#include <flow/driver/chunk.hpp>
 
 using namespace flow;
 using namespace flow::driver;

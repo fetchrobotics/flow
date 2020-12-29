@@ -1,14 +1,12 @@
 /**
  * @copyright 2020 Fetch Robotics Inc.
  * @author Brian Cairl
- *
- * @file latched.h
  */
-#ifndef FLOW_FOLLOWER_LATCHED_H
-#define FLOW_FOLLOWER_LATCHED_H
+#ifndef FLOW_FOLLOWER_LATCHED_HPP
+#define FLOW_FOLLOWER_LATCHED_HPP
 
 // Flow
-#include <flow/follower/follower.h>
+#include <flow/follower/follower.hpp>
 #include <flow/utility/optional.hpp>
 
 namespace flow
@@ -142,4 +140,4 @@ struct CaptorTraits<follower::Latched<DispatchT, LockPolicyT, ContainerT, QueueM
 // Flow (implementation)
 #include "flow/src/follower/latched.hpp"
 
-#endif  // FLOW_FOLLOWER_LATCHED_H
+#endif  // FLOW_FOLLOWER_LATCHED_HPP

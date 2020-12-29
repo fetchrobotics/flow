@@ -1,8 +1,6 @@
 /**
  * @copyright 2020 Fetch Robotics Inc.
  * @author Brian Cairl
- *
- * @file static_assert.hpp
  */
 #ifndef FLOW_UTILITY_STATIC_ASSERT_HPP
 #define FLOW_UTILITY_STATIC_ASSERT_HPP

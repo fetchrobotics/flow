@@ -1,18 +1,16 @@
 /**
  * @copyright 2020 Fetch Robotics Inc.
  * @author Brian Cairl
- *
- * @file dispatch_queue.h
  */
-#ifndef FLOW_DISPATCH_QUEUE_H
-#define FLOW_DISPATCH_QUEUE_H
+#ifndef FLOW_DISPATCH_QUEUE_HPP
+#define FLOW_DISPATCH_QUEUE_HPP
 
 // C++ Standard Library
 #include <type_traits>
 #include <utility>
 
 // Flow
-#include <flow/dispatch.h>
+#include <flow/dispatch.hpp>
 
 namespace flow
 {
@@ -185,4 +183,4 @@ private:
 // Flow (implementation)
 #include "flow/src/dispatch_queue.hpp"
 
-#endif  // FLOW_DISPATCH_QUEUE_H
+#endif  // FLOW_DISPATCH_QUEUE_HPP

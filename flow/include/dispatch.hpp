@@ -1,11 +1,9 @@
 /**
  * @copyright 2020 Fetch Robotics Inc.
  * @author Brian Cairl
- *
- * @file dispatch.h
  */
-#ifndef FLOW_CAPTOR_DISPATCH_H
-#define FLOW_CAPTOR_DISPATCH_H
+#ifndef FLOW_CAPTOR_DISPATCH_HPP
+#define FLOW_CAPTOR_DISPATCH_HPP
 
 // C++ Standard Library
 #include <limits>
@@ -204,4 +202,4 @@ template <typename StampT> struct is_capture_range<CaptureRange<StampT>> : std::
 
 }  // namespace flow
 
-#endif  // FLOW_CAPTOR_DISPATCH_H
+#endif  // FLOW_CAPTOR_DISPATCH_HPP

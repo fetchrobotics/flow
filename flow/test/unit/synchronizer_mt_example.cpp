@@ -20,11 +20,11 @@
 #include <gtest/gtest.h>
 
 // Flow
-#include <flow/captor/lockable.h>
-#include <flow/captor/polling.h>
-#include <flow/drivers.h>
-#include <flow/followers.h>
-#include <flow/synchronizer.h>
+#include <flow/captor/lockable.hpp>
+#include <flow/captor/polling.hpp>
+#include <flow/drivers.hpp>
+#include <flow/followers.hpp>
+#include <flow/synchronizer.hpp>
 
 using namespace flow;
 

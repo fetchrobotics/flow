@@ -1,11 +1,9 @@
 /**
  * @copyright 2020 Fetch Robotics Inc.
  * @author Brian Cairl
- *
- * @file captor_state.h
  */
-#ifndef FLOW_CAPTOR_STATE_H
-#define FLOW_CAPTOR_STATE_H
+#ifndef FLOW_CAPTOR_STATE_HPP
+#define FLOW_CAPTOR_STATE_HPP
 
 namespace flow
 {
@@ -32,4 +30,4 @@ enum class State : int
 
 }  // namespace flow
 
-#endif  // FLOW_CAPTOR_STATE_H
+#endif  // FLOW_CAPTOR_STATE_HPP

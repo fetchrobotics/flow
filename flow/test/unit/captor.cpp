@@ -14,12 +14,12 @@
 #include <gtest/gtest.h>
 
 // Flow
-#include <flow/captor.h>
-#include <flow/captor/nolock.h>
-#include <flow/captor_state.h>
-#include <flow/captor_state_ostream.h>
-#include <flow/driver/next.h>
-#include <flow/follower/before.h>
+#include <flow/captor.hpp>
+#include <flow/captor/nolock.hpp>
+#include <flow/captor_state.hpp>
+#include <flow/captor_state_ostream.hpp>
+#include <flow/driver/next.hpp>
+#include <flow/follower/before.hpp>
 
 
 using namespace flow;

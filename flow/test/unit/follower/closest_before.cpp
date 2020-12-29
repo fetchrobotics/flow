@@ -13,8 +13,8 @@
 #include <gtest/gtest.h>
 
 // Flow
-#include <flow/captor/nolock.h>
-#include <flow/follower/closest_before.h>
+#include <flow/captor/nolock.hpp>
+#include <flow/follower/closest_before.hpp>
 
 using namespace flow;
 using namespace flow::follower;

@@ -1,16 +1,14 @@
 /**
  * @copyright 2020 Fetch Robotics Inc.
  * @author Brian Cairl
- *
- * @file throttle.h
  */
-#ifndef FLOW_DRIVER_THROTTLED_H
-#define FLOW_DRIVER_THROTTLED_H
+#ifndef FLOW_DRIVER_CHUNK_HPP
+#define FLOW_DRIVER_CHUNK_HPP
 
 // Flow
-#include <flow/captor.h>
-#include <flow/dispatch.h>
-#include <flow/driver/driver.h>
+#include <flow/captor.hpp>
+#include <flow/dispatch.hpp>
+#include <flow/driver/driver.hpp>
 
 namespace flow
 {
@@ -18,13 +16,11 @@ namespace driver
 {
 
 /**
- * @brief Throttled next element driving capture object
+ * @brief Captures the next oldest data element
  *
- *        Captures the next oldest data element, limited to a max expected period. This means that some elements
- *        are skipped if the input rate indicated by data sequence stamps is higher than the throttled rate.
- * \n
- *        Establishes a sequencing range with <code>range.lower_stamp == range.upper_stamp</code> equal to
- *        the captured element stamp. Removes captured element from buffer.
+ *        Establishes a sequencing range with where <code>range.lower_stamp</code> is the stamp of
+ *        the oldest captured element, and <code>range.upper_stamp</code> is the stamp of the newest.
+ *        Removes all captured elements from buffer.
  *
  * @tparam DispatchT  data dispatch type
  * @tparam LockPolicyT  a BasicLockable (https://en.cppreference.com/w/cpp/named_req/BasicLockable) object or NoLock or
@@ -37,28 +33,31 @@ template <
   typename LockPolicyT = NoLock,
   typename ContainerT = DefaultContainer<DispatchT>,
   typename QueueMonitorT = DefaultDispatchQueueMonitor>
-class Throttled : public Driver<Throttled<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>
+class Chunk : public Driver<Chunk<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>
 {
 public:
-  /// Data stamp type
-  using stamp_type = typename CaptorTraits<Throttled>::stamp_type;
+  /// Integer size type
+  using size_type = typename CaptorTraits<Chunk>::size_type;
 
-  /// Data stamp duration type
-  using offset_type = typename CaptorTraits<Throttled>::offset_type;
+  /// Data stamp type
+  using stamp_type = typename CaptorTraits<Chunk>::stamp_type;
 
   /**
    * @brief Configuration constructor
    *
-   * @param throttle_period  capture throttling period
+   * @param size  number of elements to batch before becoming ready
    * @param container  container object with some initial state
+   *
+   * @throws <code>std::invalid_argument</code> if <code>size == 0</code>
+   * @throws <code>std::invalid_argument</code> if <code>CaptureOutputT</code> cannot hold \p size
    */
-  explicit Throttled(
-    const offset_type throttle_period,
+  explicit Chunk(
+    const size_type size,
     const ContainerT& container = ContainerT{},
-    const QueueMonitorT& queue_monitor = QueueMonitorT{});
+    const QueueMonitorT& queue_monitor = QueueMonitorT{}) noexcept(false);
 
 private:
-  using PolicyType = Driver<Throttled<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>;
+  using PolicyType = Driver<Chunk<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>;
   friend PolicyType;
 
   /**
@@ -67,7 +66,7 @@ private:
    * @param[out] output  output data iterator
    * @param[in,out] range  data capture/sequencing range
    *
-   * @retval State::PRIMED  next element has been captured
+   * @retval State::PRIMED    N-elements have been captured
    * @retval State::RETRY  Captor should continue waiting for messages after prime attempt
    */
   template <typename OutputDispatchIteratorT>
@@ -86,13 +85,15 @@ private:
   /**
    * @copydoc Driver::reset_policy_impl
    */
-  inline void reset_driver_impl();
+  inline void reset_driver_impl() noexcept(true) {}
 
-  /// Capture throttling period
-  offset_type throttle_period_;
+  /**
+   * @brief Validates captor configuration
+   */
+  inline void validate() const noexcept(false);
 
-  /// Previous captured element stamp
-  stamp_type previous_stamp_;
+  /// Number of elements to batch
+  size_type chunk_size_;
 };
 
 }  // namespace driver
@@ -108,14 +109,14 @@ private:
  * @tparam QueueMonitorT  object used to monitor queue state on each insertion
  */
 template <typename DispatchT, typename LockPolicyT, typename ContainerT, typename QueueMonitorT>
-struct CaptorTraits<driver::Throttled<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>
+struct CaptorTraits<driver::Chunk<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>
     : CaptorTraitsFromDispatch<DispatchT>
 {
   /// Underlying dispatch container type
   using DispatchContainerType = ContainerT;
 
   /// Queue monitor type
-  using DispatchQueueMonitorType = QueueMonitorT;
+  using DispatchQueueMonitorType = DefaultDispatchQueueMonitor;
 
   /// Thread locking policy type
   using LockPolicyType = LockPolicyT;
@@ -128,6 +129,6 @@ struct CaptorTraits<driver::Throttled<DispatchT, LockPolicyT, ContainerT, QueueM
 }  // namespace flow
 
 // Flow (implementation)
-#include "flow/src/driver/throttled.hpp"
+#include "flow/src/driver/chunk.hpp"
 
-#endif  // FLOW_DRIVER_THROTTLED_H
+#endif  // FLOW_DRIVER_CHUNK_HPP

@@ -1,14 +1,12 @@
 /**
  * @copyright 2020 Fetch Robotics Inc.
  * @author Brian Cairl
- *
- * @file matched_stamp.h
  */
-#ifndef FLOW_FOLLOWER_MATCHED_STAMP_H
-#define FLOW_FOLLOWER_MATCHED_STAMP_H
+#ifndef FLOW_FOLLOWER_MATCHED_STAMP_HPP
+#define FLOW_FOLLOWER_MATCHED_STAMP_HPP
 
 // Flow
-#include <flow/follower/follower.h>
+#include <flow/follower/follower.hpp>
 
 namespace flow
 {
@@ -118,4 +116,4 @@ struct CaptorTraits<follower::MatchedStamp<DispatchT, LockPolicyT, ContainerT, Q
 // Flow (implementation)
 #include "flow/src/follower/matched_stamp.hpp"
 
-#endif  // FLOW_FOLLOWER_MATCHED_STAMP_H
+#endif  // FLOW_FOLLOWER_MATCHED_STAMP_HPP

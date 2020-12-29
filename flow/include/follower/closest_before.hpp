@@ -1,14 +1,12 @@
 /**
  * @copyright 2020 Fetch Robotics Inc.
- * @author Brian Cairl
- *
- * @file ranged.h
+ * @author Brian Cairl, Derek King
  */
-#ifndef FLOW_FOLLOWER_RANGED_H
-#define FLOW_FOLLOWER_RANGED_H
+#ifndef FLOW_FOLLOWER_CLOSEST_BEFORE_HPP
+#define FLOW_FOLLOWER_CLOSEST_BEFORE_HPP
 
 // Flow
-#include <flow/follower/follower.h>
+#include <flow/follower/follower.hpp>
 
 namespace flow
 {
@@ -16,48 +14,51 @@ namespace follower
 {
 
 /**
- * @brief Captures one one element before the capture range lower bound; one element after the capture range upper
- * bound.
+ * @brief Captures one element before the capture range lower bound, minus a delay period, within an expected period.
  *
- *        All elements in between are also captured. All older elements are removed.
+ *        All older elements are removed.
  *
  * @tparam DispatchT  data dispatch type
  * @tparam LockPolicyT  a BasicLockable (https://en.cppreference.com/w/cpp/named_req/BasicLockable) object or NoLock or
  * PollingLock
  * @tparam ContainerT  underlying <code>DispatchT</code> container type
  * @tparam QueueMonitorT  object used to monitor queue state on each insertion; used to precondition capture
+ *
+ * @warn ClosestBefore will behave non-deterministically if actual input period (difference between successive
+ *       dispatch stamps) does not match the <code>period</code> argument specified on construction. For example,
+ *       if <code>period</code> is too large, than multiple inputs could appear before the driving range, causing
+ *       for different data on two or more iterations where the "latest" data was assumed to have been the same
  */
 template <
   typename DispatchT,
   typename LockPolicyT = NoLock,
   typename ContainerT = DefaultContainer<DispatchT>,
   typename QueueMonitorT = DefaultDispatchQueueMonitor>
-class Ranged : public Follower<Ranged<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>
+class ClosestBefore : public Follower<ClosestBefore<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>
 {
 public:
   /// Data stamp type
-  using stamp_type = typename CaptorTraits<Ranged>::stamp_type;
-
-  /// Integer size type
-  using size_type = typename CaptorTraits<Ranged>::size_type;
+  using stamp_type = typename CaptorTraits<ClosestBefore>::stamp_type;
 
   /// Data stamp duration type
-  using offset_type = typename CaptorTraits<Ranged>::offset_type;
+  using offset_type = typename CaptorTraits<ClosestBefore>::offset_type;
 
   /**
    * @brief Setup constructor
    *
+   * @param period  expected half-period between successive data elements
    * @param delay  the delay with which to capture
    * @param container  container object with some initial state
    * @param queue_monitor  queue monitor with some initial state
    */
-  explicit Ranged(
+  ClosestBefore(
+    const offset_type& period,
     const offset_type& delay,
     const ContainerT& container = ContainerT{},
     const QueueMonitorT& queue_monitor = QueueMonitorT{});
 
 private:
-  using PolicyType = Follower<Ranged<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>;
+  using PolicyType = Follower<ClosestBefore<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>;
   friend PolicyType;
 
   /**
@@ -66,14 +67,14 @@ private:
    * @param[out] output  output data iterator
    * @param[in] range  data capture/sequencing range
    *
-   * @retval ABORT   If N-elements do not exist before <code>range.lower_stamp</code>
-   * @retval PRIMED  If N-elements exist before <code>range.lower_stamp</code> and
-   *                 M-elements exist after <code>range.upper_stamp</code>
-   * @retval RETRY   If N-elements exist before <code>range.lower_stamp</code> but
-   *                 M-elements do not exist after <code>range.upper_stamp</code>
+   * @retval ABORT   If next closest element has a sequencing stamp greater than <code>range.upper_stamp</code>
+   * @retval PRIMED  If next closest element to is available
+   * @retval RETRY   Element with sequence stamp greater than <code>range.upper_stamp</code> exists, and
+   *                 there is a data element within the expected duration window before
+   *                 <code>range.upper_stamp</code>
    */
   template <typename OutputDispatchIteratorT>
-  inline State capture_follower_impl(OutputDispatchIteratorT&& output, const CaptureRange<stamp_type>& range);
+  inline State capture_follower_impl(OutputDispatchIteratorT output, const CaptureRange<stamp_type>& range);
 
   /**
    * @copydoc Follower::dry_capture_policy_impl
@@ -90,20 +91,8 @@ private:
    */
   inline void reset_follower_impl() noexcept(true) {}
 
-  /**
-   * @brief Finds iterator after first in capture sequence
-   *
-   * @param range  data capture/sequencing range
-   */
-  inline auto find_after_first(const CaptureRange<stamp_type>& range) const;
-
-  /**
-   * @brief Finds iterator before last in capture sequence
-   *
-   * @param range  data capture/sequencing range
-   */
-  template <typename QueueIteratorT>
-  inline auto find_before_last(const CaptureRange<stamp_type>& range, const QueueIteratorT after_first) const;
+  /// Expected update period
+  offset_type period_;
 
   /// Capture delay
   offset_type delay_;
@@ -122,7 +111,7 @@ private:
  * @tparam QueueMonitorT queue monitor/capture preconditioning type
  */
 template <typename DispatchT, typename LockPolicyT, typename ContainerT, typename QueueMonitorT>
-struct CaptorTraits<follower::Ranged<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>
+struct CaptorTraits<follower::ClosestBefore<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>
     : CaptorTraitsFromDispatch<DispatchT>
 {
   /// Underlying dispatch container type
@@ -142,6 +131,6 @@ struct CaptorTraits<follower::Ranged<DispatchT, LockPolicyT, ContainerT, QueueMo
 }  // namespace flow
 
 // Flow (implementation)
-#include "flow/src/follower/ranged.hpp"
+#include "flow/src/follower/closest_before.hpp"
 
-#endif  // FLOW_FOLLOWER_RANGED_H
+#endif  // FLOW_FOLLOWER_CLOSEST_BEFORE_HPP

@@ -1,16 +1,14 @@
 /**
  * @copyright 2020 Fetch Robotics Inc.
  * @author Brian Cairl
- *
- * @file batch.h
  */
-#ifndef FLOW_DRIVER_BATCH_H
-#define FLOW_DRIVER_BATCH_H
+#ifndef FLOW_DRIVER_BATCH_HPP
+#define FLOW_DRIVER_BATCH_HPP
 
 // Flow
-#include <flow/captor.h>
-#include <flow/dispatch.h>
-#include <flow/driver/driver.h>
+#include <flow/captor.hpp>
+#include <flow/dispatch.hpp>
+#include <flow/driver/driver.hpp>
 
 namespace flow
 {
@@ -133,4 +131,4 @@ struct CaptorTraits<driver::Batch<DispatchT, LockPolicyT, ContainerT, QueueMonit
 // Flow (implementation)
 #include "flow/src/driver/batch.hpp"
 
-#endif  // FLOW_DRIVER_BATCH_H
+#endif  // FLOW_DRIVER_BATCH_HPP

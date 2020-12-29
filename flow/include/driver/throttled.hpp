@@ -1,16 +1,14 @@
 /**
  * @copyright 2020 Fetch Robotics Inc.
  * @author Brian Cairl
- *
- * @file next.h
  */
-#ifndef FLOW_DRIVER_NEXT_H
-#define FLOW_DRIVER_NEXT_H
+#ifndef FLOW_DRIVER_THROTTLED_HPP
+#define FLOW_DRIVER_THROTTLED_HPP
 
 // Flow
-#include <flow/captor.h>
-#include <flow/dispatch.h>
-#include <flow/driver/driver.h>
+#include <flow/captor.hpp>
+#include <flow/dispatch.hpp>
+#include <flow/driver/driver.hpp>
 
 namespace flow
 {
@@ -18,8 +16,11 @@ namespace driver
 {
 
 /**
- * @brief Captures the next oldest data element
+ * @brief Throttled next element driving capture object
  *
+ *        Captures the next oldest data element, limited to a max expected period. This means that some elements
+ *        are skipped if the input rate indicated by data sequence stamps is higher than the throttled rate.
+ * \n
  *        Establishes a sequencing range with <code>range.lower_stamp == range.upper_stamp</code> equal to
  *        the captured element stamp. Removes captured element from buffer.
  *
@@ -34,24 +35,28 @@ template <
   typename LockPolicyT = NoLock,
   typename ContainerT = DefaultContainer<DispatchT>,
   typename QueueMonitorT = DefaultDispatchQueueMonitor>
-class Next : public Driver<Next<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>
+class Throttled : public Driver<Throttled<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>
 {
 public:
-  /// Integer size type
-  using size_type = typename CaptorTraits<Next>::size_type;
-
   /// Data stamp type
-  using stamp_type = typename CaptorTraits<Next>::stamp_type;
+  using stamp_type = typename CaptorTraits<Throttled>::stamp_type;
+
+  /// Data stamp duration type
+  using offset_type = typename CaptorTraits<Throttled>::offset_type;
 
   /**
    * @brief Configuration constructor
    *
+   * @param throttle_period  capture throttling period
    * @param container  container object with some initial state
    */
-  explicit Next(const ContainerT& container = ContainerT{}, const QueueMonitorT& queue_monitor = QueueMonitorT{});
+  explicit Throttled(
+    const offset_type throttle_period,
+    const ContainerT& container = ContainerT{},
+    const QueueMonitorT& queue_monitor = QueueMonitorT{});
 
 private:
-  using PolicyType = Driver<Next<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>;
+  using PolicyType = Driver<Throttled<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>;
   friend PolicyType;
 
   /**
@@ -60,7 +65,7 @@ private:
    * @param[out] output  output data iterator
    * @param[in,out] range  data capture/sequencing range
    *
-   * @retval State::PRIMED    next element has been captured
+   * @retval State::PRIMED  next element has been captured
    * @retval State::RETRY  Captor should continue waiting for messages after prime attempt
    */
   template <typename OutputDispatchIteratorT>
@@ -79,7 +84,13 @@ private:
   /**
    * @copydoc Driver::reset_policy_impl
    */
-  inline void reset_driver_impl() noexcept(true) {}
+  inline void reset_driver_impl();
+
+  /// Capture throttling period
+  offset_type throttle_period_;
+
+  /// Previous captured element stamp
+  stamp_type previous_stamp_;
 };
 
 }  // namespace driver
@@ -95,7 +106,7 @@ private:
  * @tparam QueueMonitorT  object used to monitor queue state on each insertion
  */
 template <typename DispatchT, typename LockPolicyT, typename ContainerT, typename QueueMonitorT>
-struct CaptorTraits<driver::Next<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>
+struct CaptorTraits<driver::Throttled<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>
     : CaptorTraitsFromDispatch<DispatchT>
 {
   /// Underlying dispatch container type
@@ -115,6 +126,6 @@ struct CaptorTraits<driver::Next<DispatchT, LockPolicyT, ContainerT, QueueMonito
 }  // namespace flow
 
 // Flow (implementation)
-#include "flow/src/driver/next.hpp"
+#include "flow/src/driver/throttled.hpp"
 
-#endif  // FLOW_DRIVER_NEXT_H
+#endif  // FLOW_DRIVER_THROTTLED_HPP

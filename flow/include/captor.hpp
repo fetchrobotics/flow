@@ -1,11 +1,9 @@
 /**
  * @copyright 2020 Fetch Robotics Inc.
  * @author Brian Cairl
- *
- * @file captor.h
  */
-#ifndef FLOW_CAPTOR_H
-#define FLOW_CAPTOR_H
+#ifndef FLOW_CAPTOR_HPP
+#define FLOW_CAPTOR_HPP
 
 // C++ Standard Library
 #include <chrono>
@@ -15,9 +13,9 @@
 #include <utility>
 
 // Flow
-#include <flow/captor_state.h>
-#include <flow/dispatch.h>
-#include <flow/dispatch_queue.h>
+#include <flow/captor_state.hpp>
+#include <flow/dispatch.hpp>
+#include <flow/dispatch_queue.hpp>
 #include <flow/utility/implement_crtp_base.hpp>
 #include <flow/utility/static_assert.hpp>
 
@@ -349,9 +347,9 @@ protected:
  * @brief CRTP-base for input capture buffers
  *
  *        User may include any of the following for various capture implementations
- *        - <code>#include <flow/captor/lockable.h></code>
- *        - <code>#include <flow/captor/nolock.h></code>
- *        - <code>#include <flow/captor/polling.h></code>
+ *        - <code>#include <flow/captor/lockable.hpp></code>
+ *        - <code>#include <flow/captor/nolock.hpp></code>
+ *        - <code>#include <flow/captor/polling.hpp></code>
  *
  * @tparam CaptorT  CRTP-derived Captor type
  * @tparam LockableT  a TimedLockable (https://en.cppreference.com/w/cpp/named_req/TimedLockable) object;
@@ -422,4 +420,4 @@ struct is_polling : std::integral_constant<
 // Flow (implementation)
 #include "flow/src/captor_interface.hpp"
 
-#endif  // FLOW_CAPTOR_H
+#endif  // FLOW_CAPTOR_HPP

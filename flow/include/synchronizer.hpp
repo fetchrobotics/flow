@@ -1,20 +1,18 @@
 /**
  * @copyright 2020 Fetch Robotics Inc.
  * @author Brian Cairl
- *
- * @file synchronizer.h
  */
-#ifndef FLOW_SYNCHRONIZER_H
-#define FLOW_SYNCHRONIZER_H
+#ifndef FLOW_SYNCHRONIZER_HPP
+#define FLOW_SYNCHRONIZER_HPP
 
 // C++ Standard Library
 #include <chrono>
 #include <tuple>
 
 // Flow
-#include <flow/captor.h>
-#include <flow/drivers.h>
-#include <flow/followers.h>
+#include <flow/captor.hpp>
+#include <flow/drivers.hpp>
+#include <flow/followers.hpp>
 
 namespace flow
 {
@@ -219,4 +217,4 @@ public:
 // Flow (implementation)
 #include "flow/src/synchronizer.hpp"
 
-#endif  // FLOW_SYNCHRONIZER_H
+#endif  // FLOW_SYNCHRONIZER_HPP

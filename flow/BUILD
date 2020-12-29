@@ -21,11 +21,11 @@ flow_cc_library(
 flow_cc_library(
     name="flow",
     hdrs=glob([
-        "include/*.h",
-        "include/captor/*.h",
-        "include/dispatch/*.h",
-        "include/driver/*.h",
-        "include/follower/*.h",
+        "include/*.hpp",
+        "include/captor/*.hpp",
+        "include/dispatch/*.hpp",
+        "include/driver/*.hpp",
+        "include/follower/*.hpp",
     ]),
     include_prefix="flow",
     includes=["include"],

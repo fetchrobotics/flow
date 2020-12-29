@@ -11,7 +11,7 @@
 #include <chrono>
 
 // Flow
-#include <flow/dispatch.h>
+#include <flow/dispatch.hpp>
 
 namespace flow
 {

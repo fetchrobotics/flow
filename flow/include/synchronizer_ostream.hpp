@@ -1,19 +1,17 @@
 /**
  * @copyright 2020 Fetch Robotics Inc.
  * @author Brian Cairl
- *
- * @file synchronizer_ostream.h
  */
-#ifndef FLOW_SYNCHRONIZER_OSTREAM_H
-#define FLOW_SYNCHRONIZER_OSTREAM_H
+#ifndef FLOW_SYNCHRONIZER_OSTREAM_HPP
+#define FLOW_SYNCHRONIZER_OSTREAM_HPP
 
 // C++ Standard Library
 #include <ostream>
 
 // Flow
-#include <flow/captor_state_ostream.h>
-#include <flow/dispatch_ostream.h>
-#include <flow/synchronizer.h>
+#include <flow/captor_state_ostream.hpp>
+#include <flow/dispatch_ostream.hpp>
+#include <flow/synchronizer.hpp>
 
 namespace flow
 {
@@ -31,4 +29,4 @@ template <typename StampT> inline std::ostream& operator<<(std::ostream& os, con
 
 }  // namespace flow
 
-#endif  // FLOW_SYNCHRONIZER_OSTREAM_H
+#endif  // FLOW_SYNCHRONIZER_OSTREAM_HPP

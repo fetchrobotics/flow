@@ -1,10 +1,7 @@
 /**
  * @copyright 2020 Fetch Robotics Inc.
  * @author Brian Cairl
- *
- * @file optional.hpp
  */
-
 #ifndef FLOW_UTILITY_OPTIONAL_HPP
 #define FLOW_UTILITY_OPTIONAL_HPP
 

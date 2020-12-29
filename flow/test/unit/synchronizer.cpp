@@ -16,11 +16,11 @@
 #include <gtest/gtest.h>
 
 // Flow
-#include <flow/captor/nolock.h>
-#include <flow/captor_state_ostream.h>
-#include <flow/drivers.h>
-#include <flow/followers.h>
-#include <flow/synchronizer.h>
+#include <flow/captor/nolock.hpp>
+#include <flow/captor_state_ostream.hpp>
+#include <flow/drivers.hpp>
+#include <flow/followers.hpp>
+#include <flow/synchronizer.hpp>
 
 using namespace flow;
 

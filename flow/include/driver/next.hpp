@@ -1,16 +1,14 @@
 /**
  * @copyright 2020 Fetch Robotics Inc.
  * @author Brian Cairl
- *
- * @file chuck.h
  */
-#ifndef FLOW_DRIVER_CHUNK_H
-#define FLOW_DRIVER_CHUNK_H
+#ifndef FLOW_DRIVER_NEXT_HPP
+#define FLOW_DRIVER_NEXT_HPP
 
 // Flow
-#include <flow/captor.h>
-#include <flow/dispatch.h>
-#include <flow/driver/driver.h>
+#include <flow/captor.hpp>
+#include <flow/dispatch.hpp>
+#include <flow/driver/driver.hpp>
 
 namespace flow
 {
@@ -20,9 +18,8 @@ namespace driver
 /**
  * @brief Captures the next oldest data element
  *
- *        Establishes a sequencing range with where <code>range.lower_stamp</code> is the stamp of
- *        the oldest captured element, and <code>range.upper_stamp</code> is the stamp of the newest.
- *        Removes all captured elements from buffer.
+ *        Establishes a sequencing range with <code>range.lower_stamp == range.upper_stamp</code> equal to
+ *        the captured element stamp. Removes captured element from buffer.
  *
  * @tparam DispatchT  data dispatch type
  * @tparam LockPolicyT  a BasicLockable (https://en.cppreference.com/w/cpp/named_req/BasicLockable) object or NoLock or
@@ -35,31 +32,24 @@ template <
   typename LockPolicyT = NoLock,
   typename ContainerT = DefaultContainer<DispatchT>,
   typename QueueMonitorT = DefaultDispatchQueueMonitor>
-class Chunk : public Driver<Chunk<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>
+class Next : public Driver<Next<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>
 {
 public:
   /// Integer size type
-  using size_type = typename CaptorTraits<Chunk>::size_type;
+  using size_type = typename CaptorTraits<Next>::size_type;
 
   /// Data stamp type
-  using stamp_type = typename CaptorTraits<Chunk>::stamp_type;
+  using stamp_type = typename CaptorTraits<Next>::stamp_type;
 
   /**
    * @brief Configuration constructor
    *
-   * @param size  number of elements to batch before becoming ready
    * @param container  container object with some initial state
-   *
-   * @throws <code>std::invalid_argument</code> if <code>size == 0</code>
-   * @throws <code>std::invalid_argument</code> if <code>CaptureOutputT</code> cannot hold \p size
    */
-  explicit Chunk(
-    const size_type size,
-    const ContainerT& container = ContainerT{},
-    const QueueMonitorT& queue_monitor = QueueMonitorT{}) noexcept(false);
+  explicit Next(const ContainerT& container = ContainerT{}, const QueueMonitorT& queue_monitor = QueueMonitorT{});
 
 private:
-  using PolicyType = Driver<Chunk<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>;
+  using PolicyType = Driver<Next<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>;
   friend PolicyType;
 
   /**
@@ -68,7 +58,7 @@ private:
    * @param[out] output  output data iterator
    * @param[in,out] range  data capture/sequencing range
    *
-   * @retval State::PRIMED    N-elements have been captured
+   * @retval State::PRIMED    next element has been captured
    * @retval State::RETRY  Captor should continue waiting for messages after prime attempt
    */
   template <typename OutputDispatchIteratorT>
@@ -88,14 +78,6 @@ private:
    * @copydoc Driver::reset_policy_impl
    */
   inline void reset_driver_impl() noexcept(true) {}
-
-  /**
-   * @brief Validates captor configuration
-   */
-  inline void validate() const noexcept(false);
-
-  /// Number of elements to batch
-  size_type chunk_size_;
 };
 
 }  // namespace driver
@@ -111,14 +93,14 @@ private:
  * @tparam QueueMonitorT  object used to monitor queue state on each insertion
  */
 template <typename DispatchT, typename LockPolicyT, typename ContainerT, typename QueueMonitorT>
-struct CaptorTraits<driver::Chunk<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>
+struct CaptorTraits<driver::Next<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>>
     : CaptorTraitsFromDispatch<DispatchT>
 {
   /// Underlying dispatch container type
   using DispatchContainerType = ContainerT;
 
   /// Queue monitor type
-  using DispatchQueueMonitorType = DefaultDispatchQueueMonitor;
+  using DispatchQueueMonitorType = QueueMonitorT;
 
   /// Thread locking policy type
   using LockPolicyType = LockPolicyT;
@@ -131,6 +113,6 @@ struct CaptorTraits<driver::Chunk<DispatchT, LockPolicyT, ContainerT, QueueMonit
 }  // namespace flow
 
 // Flow (implementation)
-#include "flow/src/driver/chunk.hpp"
+#include "flow/src/driver/next.hpp"
 
-#endif  // FLOW_DRIVER_CHUNK_H
+#endif  // FLOW_DRIVER_NEXT_HPP

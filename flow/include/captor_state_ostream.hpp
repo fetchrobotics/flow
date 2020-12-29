@@ -1,17 +1,15 @@
 /**
  * @copyright 2020 Fetch Robotics Inc.
  * @author Brian Cairl
- *
- * @file captor_state.h
  */
-#ifndef FLOW_CAPTOR_STATE_OSTREAM_H
-#define FLOW_CAPTOR_STATE_OSTREAM_H
+#ifndef FLOW_CAPTOR_STATE_OSTREAM_HPP
+#define FLOW_CAPTOR_STATE_OSTREAM_HPP
 
 // C++ Standard Library
 #include <ostream>
 
 // Flow
-#include <flow/captor_state.h>
+#include <flow/captor_state.hpp>
 
 namespace flow
 {
@@ -45,4 +43,4 @@ inline std::ostream& operator<<(std::ostream& os, const State state)
 
 }  // namespace flow
 
-#endif  // FLOW_CAPTOR_STATE_OSTREAM_H
+#endif  // FLOW_CAPTOR_STATE_OSTREAM_HPP

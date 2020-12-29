@@ -11,7 +11,7 @@
 #include <gtest/gtest.h>
 
 // Flow
-#include <flow/dispatch.h>
+#include <flow/dispatch.hpp>
 
 using namespace flow;
 
