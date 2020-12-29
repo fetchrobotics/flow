@@ -4,8 +4,8 @@
  *
  * @warning IMPLEMENTATION ONLY: THIS FILE SHOULD NEVER BE INCLUDED DIRECTLY!
  */
-#ifndef FLOW_DRIVER_IMPL_CHUNK_HPP
-#define FLOW_DRIVER_IMPL_CHUNK_HPP
+#ifndef FLOW_SRC_DRIVER_CHUNK_HPP
+#define FLOW_SRC_DRIVER_CHUNK_HPP
 
 // C++ Standard Library
 #include <algorithm>
@@ -91,4 +91,4 @@ void Chunk<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>::validate() const 
 }  // namespace flow
 
 
-#endif  // FLOW_DRIVER_IMPL_CHUNK_HPP
+#endif  // FLOW_SRC_DRIVER_CHUNK_HPP

@@ -128,6 +128,6 @@ struct CaptorTraits<driver::Throttled<DispatchT, LockPolicyT, ContainerT, QueueM
 }  // namespace flow
 
 // Flow (implementation)
-#include <flow/driver/impl/throttled.hpp>
+#include "flow/src/driver/throttled.hpp"
 
 #endif  // FLOW_DRIVER_THROTTLED_H

@@ -115,6 +115,6 @@ struct CaptorTraits<driver::Next<DispatchT, LockPolicyT, ContainerT, QueueMonito
 }  // namespace flow
 
 // Flow (implementation)
-#include <flow/driver/impl/next.hpp>
+#include "flow/src/driver/next.hpp"
 
 #endif  // FLOW_DRIVER_NEXT_H

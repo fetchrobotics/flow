@@ -132,6 +132,6 @@ struct CaptorTraits<follower::CountBefore<DispatchT, LockPolicyT, ContainerT, Qu
 }  // namespace flow
 
 // Flow (implementation)
-#include <flow/follower/impl/count_before.hpp>
+#include "flow/src/follower/count_before.hpp"
 
 #endif  // FLOW_FOLLOWER_COUNT_BEFORE_H

@@ -4,8 +4,8 @@
  *
  * @warning IMPLEMENTATION ONLY: THIS FILE SHOULD NEVER BE INCLUDED DIRECTLY!
  */
-#ifndef FLOW_DRIVER_IMPL_NEXT_HPP
-#define FLOW_DRIVER_IMPL_NEXT_HPP
+#ifndef FLOW_SRC_DRIVER_NEXT_HPP
+#define FLOW_SRC_DRIVER_NEXT_HPP
 
 namespace flow
 {
@@ -65,4 +65,4 @@ void Next<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>::abort_driver_impl(
 }  // namespace driver
 }  // namespace flow
 
-#endif  // FLOW_DRIVER_IMPL_NEXT_HPP
+#endif  // FLOW_SRC_DRIVER_NEXT_HPP

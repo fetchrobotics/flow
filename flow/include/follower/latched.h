@@ -140,6 +140,6 @@ struct CaptorTraits<follower::Latched<DispatchT, LockPolicyT, ContainerT, QueueM
 }  // namespace flow
 
 // Flow (implementation)
-#include <flow/follower/impl/latched.hpp>
+#include "flow/src/follower/latched.hpp"
 
 #endif  // FLOW_FOLLOWER_LATCHED_H

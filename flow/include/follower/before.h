@@ -122,6 +122,6 @@ struct CaptorTraits<follower::Before<DispatchT, LockPolicyT, ContainerT, QueueMo
 }  // namespace flow
 
 // Flow (implementation)
-#include <flow/follower/impl/before.hpp>
+#include "flow/src/follower/before.hpp"
 
 #endif  // FLOW_FOLLOWER_BEFORE_H

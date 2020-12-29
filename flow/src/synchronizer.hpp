@@ -4,8 +4,8 @@
  *
  * @warning IMPLEMENTATION ONLY: THIS FILE SHOULD NEVER BE INCLUDED DIRECTLY!
  */
-#ifndef FLOW_IMPL_SYNCHRONIZER_HPP
-#define FLOW_IMPL_SYNCHRONIZER_HPP
+#ifndef FLOW_SRC_SYNCHRONIZER_HPP
+#define FLOW_SRC_SYNCHRONIZER_HPP
 
 // C++ Standard Library
 #include <tuple>
@@ -414,4 +414,4 @@ template <typename CaptorTupleT> void Synchronizer::reset(CaptorTupleT&& captors
 
 }  // namespace flow
 
-#endif  // FLOW_IMPL_SYNCHRONIZER_HPP
+#endif  // FLOW_SRC_SYNCHRONIZER_HPP

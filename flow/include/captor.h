@@ -420,6 +420,6 @@ struct is_polling : std::integral_constant<
 }  // namespace flow
 
 // Flow (implementation)
-#include <flow/impl/captor_interface.hpp>
+#include "flow/src/captor_interface.hpp"
 
 #endif  // FLOW_CAPTOR_H

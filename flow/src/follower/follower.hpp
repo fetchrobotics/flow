@@ -4,14 +4,11 @@
  *
  * @warning IMPLEMENTATION ONLY: THIS FILE SHOULD NEVER BE INCLUDED DIRECTLY!
  */
-#ifndef FLOW_FOLLOWER_IMPL_FOLLOWER_HPP
-#define FLOW_FOLLOWER_IMPL_FOLLOWER_HPP
+#ifndef FLOW_SRC_FOLLOWER_FOLLOWER_HPP
+#define FLOW_SRC_FOLLOWER_FOLLOWER_HPP
 
 // C++ Standard Library
 #include <utility>
-
-// Flow
-#include <flow/captor_state.h>
 
 namespace flow
 {
@@ -53,4 +50,4 @@ template <typename PolicyT> void Follower<PolicyT>::reset_policy_impl() { derive
 
 }  // namespace flow
 
-#endif  // FLOW_FOLLOWER_IMPL_FOLLOWER_HPP
+#endif  // FLOW_SRC_FOLLOWER_FOLLOWER_HPP

@@ -4,8 +4,8 @@
  *
  * @warning IMPLEMENTATION ONLY: THIS FILE SHOULD NEVER BE INCLUDED DIRECTLY!
  */
-#ifndef FLOW_FOLLOWER_IMPL_CLOSEST_BEFORE_HPP
-#define FLOW_FOLLOWER_IMPL_CLOSEST_BEFORE_HPP
+#ifndef FLOW_SRC_FOLLOWER_CLOSEST_BEFORE_HPP
+#define FLOW_SRC_FOLLOWER_CLOSEST_BEFORE_HPP
 
 namespace flow
 {
@@ -89,4 +89,4 @@ void ClosestBefore<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>::abort_fol
 }  // namespace follower
 }  // namespace flow
 
-#endif  // FLOW_FOLLOWER_IMPL_CLOSEST_BEFORE_HPP
+#endif  // FLOW_SRC_FOLLOWER_CLOSEST_BEFORE_HPP

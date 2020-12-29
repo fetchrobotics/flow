@@ -4,8 +4,8 @@
  *
  * @warning IMPLEMENTATION ONLY: THIS FILE SHOULD NEVER BE INCLUDED DIRECTLY!
  */
-#ifndef FLOW_CAPTURE_IMPL_CAPTOR_INTERFACE_HPP
-#define FLOW_CAPTURE_IMPL_CAPTOR_INTERFACE_HPP
+#ifndef FLOW_SRC_CAPTOR_INTERFACE_HPP
+#define FLOW_SRC_CAPTOR_INTERFACE_HPP
 
 // C++ Standard Library
 #include <iterator>
@@ -42,4 +42,4 @@ void CaptorInterface<CaptorT>::insert_and_limit(InsertArgTs&&... args)
 
 }  // namespace flow
 
-#endif  // FLOW_CAPTURE_IMPL_CAPTOR_INTERFACE_HPP
+#endif  // FLOW_SRC_CAPTOR_INTERFACE_HPP

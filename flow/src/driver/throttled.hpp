@@ -4,8 +4,8 @@
  *
  * @warning IMPLEMENTATION ONLY: THIS FILE SHOULD NEVER BE INCLUDED DIRECTLY!
  */
-#ifndef FLOW_DRIVER_IMPL_TRHOTTLED_HPP
-#define FLOW_DRIVER_IMPL_TRHOTTLED_HPP
+#ifndef FLOW_SRC_DRIVER_TRHOTTLED_HPP
+#define FLOW_SRC_DRIVER_TRHOTTLED_HPP
 
 // C++ Standard Library
 #include <iterator>
@@ -85,4 +85,4 @@ void Throttled<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>::reset_driver_
 }  // namespace driver
 }  // namespace flow
 
-#endif  // FLOW_DRIVER_IMPL_TRHOTTLED_HPP
+#endif  // FLOW_SRC_DRIVER_TRHOTTLED_HPP

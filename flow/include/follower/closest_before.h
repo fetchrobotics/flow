@@ -133,6 +133,6 @@ struct CaptorTraits<follower::ClosestBefore<DispatchT, LockPolicyT, ContainerT, 
 }  // namespace flow
 
 // Flow (implementation)
-#include <flow/follower/impl/closest_before.hpp>
+#include "flow/src/follower/closest_before.hpp"
 
 #endif  // FLOW_FOLLOWER_CLOSEST_BEFORE_H

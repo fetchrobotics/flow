@@ -4,8 +4,8 @@
  *
  * @warning IMPLEMENTATION ONLY: THIS FILE SHOULD NEVER BE INCLUDED DIRECTLY!
  */
-#ifndef FLOW_FOLLOWER_IMPL_ANY_BEFORE_HPP
-#define FLOW_FOLLOWER_IMPL_ANY_BEFORE_HPP
+#ifndef FLOW_SRC_FOLLOWER_ANY_BEFORE_HPP
+#define FLOW_SRC_FOLLOWER_ANY_BEFORE_HPP
 
 // C++ Standard Library
 #include <cstdint>
@@ -67,4 +67,4 @@ void AnyBefore<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>::abort_followe
 }  // namespace follower
 }  // namespace flow
 
-#endif  // FLOW_FOLLOWER_IMPL_ANY_BEFORE_HPP
+#endif  // FLOW_SRC_FOLLOWER_ANY_BEFORE_HPP

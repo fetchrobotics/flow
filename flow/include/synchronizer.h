@@ -217,6 +217,6 @@ public:
 }  // namespace flow
 
 // Flow (implementation)
-#include <flow/impl/synchronizer.hpp>
+#include "flow/src/synchronizer.hpp"
 
 #endif  // FLOW_SYNCHRONIZER_H

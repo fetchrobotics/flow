@@ -4,8 +4,8 @@
  *
  * @warning IMPLEMENTATION ONLY: THIS FILE SHOULD NEVER BE INCLUDED DIRECTLY!
  */
-#ifndef FLOW_DRIVER_IMPL_BATCH_HPP
-#define FLOW_DRIVER_IMPL_BATCH_HPP
+#ifndef FLOW_SRC_DRIVER_BATCH_HPP
+#define FLOW_SRC_DRIVER_BATCH_HPP
 
 // C++ Standard Library
 #include <algorithm>
@@ -88,4 +88,4 @@ void Batch<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>::validate() const 
 }  // namespace driver
 }  // namespace flow
 
-#endif  // FLOW_DRIVER_IMPL_BATCH_HPP
+#endif  // FLOW_SRC_DRIVER_BATCH_HPP

@@ -4,8 +4,8 @@
  *
  * @warning IMPLEMENTATION ONLY: THIS FILE SHOULD NEVER BE INCLUDED DIRECTLY!
  */
-#ifndef FLOW_FOLLOWER_IMPL_COUNT_BEFORE_HPP
-#define FLOW_FOLLOWER_IMPL_COUNT_BEFORE_HPP
+#ifndef FLOW_SRC_FOLLOWER_COUNT_BEFORE_HPP
+#define FLOW_SRC_FOLLOWER_COUNT_BEFORE_HPP
 
 // C++ Standard Library
 #include <algorithm>
@@ -96,4 +96,4 @@ State CountBefore<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>::dry_captur
 }  // namespace follower
 }  // namespace flow
 
-#endif  // FLOW_FOLLOWER_IMPL_COUNT_BEFORE_HPP
+#endif  // FLOW_SRC_FOLLOWER_COUNT_BEFORE_HPP

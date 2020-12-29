@@ -4,8 +4,8 @@
  *
  * @warning IMPLEMENTATION ONLY: THIS FILE SHOULD NEVER BE INCLUDED DIRECTLY!
  */
-#ifndef FLOW_FOLLOWER_IMPL_MATCHED_STAMP_HPP
-#define FLOW_FOLLOWER_IMPL_MATCHED_STAMP_HPP
+#ifndef FLOW_SRC_FOLLOWER_MATCHED_STAMP_HPP
+#define FLOW_SRC_FOLLOWER_MATCHED_STAMP_HPP
 
 // C++ Standard Library
 #include <iterator>
@@ -71,4 +71,4 @@ void MatchedStamp<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>::abort_foll
 }  // namespace follower
 }  // namespace flow
 
-#endif  // FLOW_FOLLOWER_IMPL_MATCHED_STAMP_HPP
+#endif  // FLOW_SRC_FOLLOWER_MATCHED_STAMP_HPP

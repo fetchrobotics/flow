@@ -142,6 +142,6 @@ struct CaptorTraits<follower::Ranged<DispatchT, LockPolicyT, ContainerT, QueueMo
 }  // namespace flow
 
 // Flow (implementation)
-#include <flow/follower/impl/ranged.hpp>
+#include "flow/src/follower/ranged.hpp"
 
 #endif  // FLOW_FOLLOWER_RANGED_H

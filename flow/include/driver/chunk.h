@@ -131,6 +131,6 @@ struct CaptorTraits<driver::Chunk<DispatchT, LockPolicyT, ContainerT, QueueMonit
 }  // namespace flow
 
 // Flow (implementation)
-#include <flow/driver/impl/chunk.hpp>
+#include "flow/src/driver/chunk.hpp"
 
 #endif  // FLOW_DRIVER_CHUNK_H

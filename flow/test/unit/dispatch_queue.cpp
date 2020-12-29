@@ -4,6 +4,9 @@
  */
 #ifndef DOXYGEN_SKIP
 
+// C++ Standard Library
+#include <deque>
+
 // GTest
 #include <gtest/gtest.h>
 
@@ -17,17 +20,16 @@ TEST(DispatchQueue, DefaultIsEmpty)
 {
   using DispatchType = Dispatch<int, int>;
 
-  DispatchQueue<DispatchType> queue;
+  DispatchQueue<DispatchType, std::deque<DispatchType>> queue;
 
   EXPECT_TRUE(queue.empty());
 }
-
 
 TEST(DispatchQueue, DefaultIteratorsEqual)
 {
   using DispatchType = Dispatch<int, int>;
 
-  DispatchQueue<DispatchType> queue;
+  DispatchQueue<DispatchType, std::deque<DispatchType>> queue;
 
   ASSERT_TRUE(queue.empty());
   EXPECT_TRUE(queue.begin() == queue.end());
@@ -38,7 +40,7 @@ TEST(DispatchQueue, Insert)
 {
   using DispatchType = Dispatch<int, int>;
 
-  DispatchQueue<DispatchType> queue;
+  DispatchQueue<DispatchType, std::deque<DispatchType>> queue;
 
   const int t0 = 0;
 
@@ -53,7 +55,7 @@ TEST(DispatchQueue, InsertDispatchType)
 {
   using DispatchType = Dispatch<int, int>;
 
-  DispatchQueue<DispatchType> queue;
+  DispatchQueue<DispatchType, std::deque<DispatchType>> queue;
 
   const int t0 = 0;
 
@@ -68,7 +70,7 @@ TEST(DispatchQueue, OldestStamp)
 {
   using DispatchType = Dispatch<int, int>;
 
-  DispatchQueue<DispatchType> queue;
+  DispatchQueue<DispatchType, std::deque<DispatchType>> queue;
 
   const int t_oldest{0};
 
@@ -85,7 +87,7 @@ TEST(DispatchQueue, NewestStamp)
 {
   using DispatchType = Dispatch<int, int>;
 
-  DispatchQueue<DispatchType> queue;
+  DispatchQueue<DispatchType, std::deque<DispatchType>> queue;
 
   const int t_oldest{0};
 
@@ -102,7 +104,7 @@ TEST(DispatchQueue, ShrinkToFitSmallerThanOriginal)
 {
   using DispatchType = Dispatch<int, int>;
 
-  DispatchQueue<DispatchType> queue;
+  DispatchQueue<DispatchType, std::deque<DispatchType>> queue;
 
   const int t0 = 0;
   const int t1 = t0 + 1;
@@ -122,7 +124,7 @@ TEST(DispatchQueue, ShrinkToFitLargerThanOriginal)
 {
   using DispatchType = Dispatch<int, int>;
 
-  DispatchQueue<DispatchType> queue;
+  DispatchQueue<DispatchType, std::deque<DispatchType>> queue;
 
   const int t0 = 0;
   const int t1 = t0 + 1;
@@ -142,7 +144,7 @@ TEST(DispatchQueue, RemoveNone)
 {
   using DispatchType = Dispatch<int, int>;
 
-  DispatchQueue<DispatchType> queue;
+  DispatchQueue<DispatchType, std::deque<DispatchType>> queue;
 
   const int t0 = 0;
   const int t1 = t0 + 1;
@@ -162,7 +164,7 @@ TEST(DispatchQueue, RemoveAll)
 {
   using DispatchType = Dispatch<int, int>;
 
-  DispatchQueue<DispatchType> queue;
+  DispatchQueue<DispatchType, std::deque<DispatchType>> queue;
 
   const int t0 = 0;
   const int t1 = t0 + 1;
@@ -182,7 +184,7 @@ TEST(DispatchQueue, InsertDuplicateTimeBehavior)
 {
   using DispatchType = Dispatch<int, int>;
 
-  DispatchQueue<DispatchType> queue;
+  DispatchQueue<DispatchType, std::deque<DispatchType>> queue;
 
   const int t0 = 0;
 
@@ -203,7 +205,7 @@ TEST(DispatchQueue, InsertOrdered)
 {
   using DispatchType = Dispatch<int, int>;
 
-  DispatchQueue<DispatchType> queue;
+  DispatchQueue<DispatchType, std::deque<DispatchType>> queue;
 
   const int t0 = 0;
   const int t1 = t0 + 1;
@@ -228,7 +230,7 @@ TEST(DispatchQueue, InsertUnordered)
 {
   using DispatchType = Dispatch<int, int>;
 
-  DispatchQueue<DispatchType> queue;
+  DispatchQueue<DispatchType, std::deque<DispatchType>> queue;
 
   const int t0 = 0;
   const int t1 = t0 + 1;
@@ -253,7 +255,7 @@ TEST(DispatchQueue, BeforeItrEmpty)
 {
   using DispatchType = Dispatch<int, int>;
 
-  DispatchQueue<DispatchType> queue;
+  DispatchQueue<DispatchType, std::deque<DispatchType>> queue;
 
   ASSERT_EQ(queue.before(6), queue.end());
 }
@@ -263,7 +265,7 @@ TEST(DispatchQueue, BeforeItr)
 {
   using DispatchType = Dispatch<int, int>;
 
-  DispatchQueue<DispatchType> queue;
+  DispatchQueue<DispatchType, std::deque<DispatchType>> queue;
 
   queue.insert(DispatchType{5, 8});
   queue.insert(DispatchType{6, 9});
@@ -278,7 +280,7 @@ TEST(DispatchQueue, ReverseBeforeItrEmpty)
 {
   using DispatchType = Dispatch<int, int>;
 
-  DispatchQueue<DispatchType> queue;
+  DispatchQueue<DispatchType, std::deque<DispatchType>> queue;
 
   ASSERT_EQ(queue.rbefore(6), queue.rend());
 }
@@ -288,7 +290,7 @@ TEST(DispatchQueue, ReverseBeforeItr)
 {
   using DispatchType = Dispatch<int, int>;
 
-  DispatchQueue<DispatchType> queue;
+  DispatchQueue<DispatchType, std::deque<DispatchType>> queue;
 
   queue.insert(DispatchType{5, 8});
   queue.insert(DispatchType{6, 9});

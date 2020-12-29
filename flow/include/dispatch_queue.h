@@ -8,7 +8,7 @@
 #define FLOW_DISPATCH_QUEUE_H
 
 // C++ Standard Library
-#include <deque>
+#include <type_traits>
 #include <utility>
 
 // Flow
@@ -28,7 +28,7 @@ namespace flow
  * @tparam DispatchT  data dipatch type
  * @tparam ContainerT  underlying <code>DispatchT</code> container timplementation
  */
-template <typename DispatchT, typename ContainerT = std::deque<DispatchT>> class DispatchQueue
+template <typename DispatchT, typename ContainerT> class DispatchQueue
 {
 public:
   /// Dispatch stamp type
@@ -183,6 +183,6 @@ private:
 }  // namespace flow
 
 // Flow (implementation)
-#include <flow/impl/dispatch_queue.hpp>
+#include "flow/src/dispatch_queue.hpp"
 
 #endif  // FLOW_DISPATCH_QUEUE_H

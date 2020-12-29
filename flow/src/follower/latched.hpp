@@ -4,8 +4,8 @@
  *
  * @warning IMPLEMENTATION ONLY: THIS FILE SHOULD NEVER BE INCLUDED DIRECTLY!
  */
-#ifndef FLOW_FOLLOWER_IMPL_LATCHED_HPP
-#define FLOW_FOLLOWER_IMPL_LATCHED_HPP
+#ifndef FLOW_SRC_FOLLOWER_LATCHED_HPP
+#define FLOW_SRC_FOLLOWER_LATCHED_HPP
 
 // C++ Standard Library
 #include <chrono>
@@ -114,4 +114,4 @@ void Latched<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>::reset_follower_
 }  // namespace follower
 }  // namespace flow
 
-#endif  // FLOW_FOLLOWER_IMPL_LATCHED_HPP
+#endif  // FLOW_SRC_FOLLOWER_LATCHED_HPP

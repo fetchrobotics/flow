@@ -4,14 +4,11 @@
  *
  * @warning IMPLEMENTATION ONLY: THIS FILE SHOULD NEVER BE INCLUDED DIRECTLY!
  */
-#ifndef FLOW_DRIVER_IMPL_DRIVER_HPP
-#define FLOW_DRIVER_IMPL_DRIVER_HPP
+#ifndef FLOW_SRC_DRIVER_DRIVER_HPP
+#define FLOW_SRC_DRIVER_DRIVER_HPP
 
 // C++ Standard Library
 #include <utility>
-
-// Flow
-#include <flow/captor_state.h>
 
 namespace flow
 {
@@ -46,4 +43,4 @@ template <typename PolicyT> void Driver<PolicyT>::reset_policy_impl() { derived(
 
 }  // namespace flow
 
-#endif  // FLOW_DRIVER_IMPL_DRIVER_HPP
+#endif  // FLOW_SRC_DRIVER_DRIVER_HPP

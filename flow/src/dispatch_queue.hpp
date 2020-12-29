@@ -1,16 +1,15 @@
 /**
  * @copyright 2020 Fetch Robotics Inc.
  * @author Brian Cairl
+ *
+ * @warning IMPLEMENTATION ONLY: THIS FILE SHOULD NEVER BE INCLUDED DIRECTLY!
  */
-#ifndef FLOW_CAPTURE_IMPL_DISPATCH_QUEUE_HPP
-#define FLOW_CAPTURE_IMPL_DISPATCH_QUEUE_HPP
+#ifndef FLOW_SRC_DISPATCH_QUEUE_HPP
+#define FLOW_SRC_DISPATCH_QUEUE_HPP
 
 // C++ Standard Library
 #include <algorithm>
 #include <iterator>
-
-// Flow
-#include <flow/dispatch.h>
 
 namespace flow
 {
@@ -136,4 +135,4 @@ const ContainerT& DispatchQueue<DispatchT, ContainerT>::get_container() const no
 
 }  // namespace flow
 
-#endif  // FLOW_CAPTURE_IMPL_DISPATCH_QUEUE_HPP
+#endif  // FLOW_SRC_DISPATCH_QUEUE_HPP

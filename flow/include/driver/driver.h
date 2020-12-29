@@ -12,6 +12,7 @@
 
 // Flow
 #include <flow/captor.h>
+#include <flow/captor_state.h>
 #include <flow/utility/implement_crtp_base.hpp>
 
 namespace flow
@@ -113,6 +114,6 @@ struct is_driver : std::integral_constant<bool, std::is_base_of<Driver<CaptorT>,
 }  // namespace flow
 
 // Flow (implementation)
-#include <flow/driver/impl/driver.hpp>
+#include "flow/src/driver/driver.hpp"
 
 #endif  // FLOW_DRIVER_DRIVER_H

@@ -116,6 +116,6 @@ struct CaptorTraits<follower::MatchedStamp<DispatchT, LockPolicyT, ContainerT, Q
 }  // namespace flow
 
 // Flow (implementation)
-#include <flow/follower/impl/matched_stamp.hpp>
+#include "flow/src/follower/matched_stamp.hpp"
 
 #endif  // FLOW_FOLLOWER_MATCHED_STAMP_H

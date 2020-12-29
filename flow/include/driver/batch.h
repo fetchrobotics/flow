@@ -131,6 +131,6 @@ struct CaptorTraits<driver::Batch<DispatchT, LockPolicyT, ContainerT, QueueMonit
 }  // namespace flow
 
 // Flow (implementation)
-#include <flow/driver/impl/batch.hpp>
+#include "flow/src/driver/batch.hpp"
 
 #endif  // FLOW_DRIVER_BATCH_H

@@ -4,8 +4,8 @@
  *
  * @warning IMPLEMENTATION ONLY: THIS FILE SHOULD NEVER BE INCLUDED DIRECTLY!
  */
-#ifndef FLOW_FOLLOWER_IMPL_RANGED_HPP
-#define FLOW_FOLLOWER_IMPL_RANGED_HPP
+#ifndef FLOW_SRC_FOLLOWER_RANGED_HPP
+#define FLOW_SRC_FOLLOWER_RANGED_HPP
 
 // C++ Standard Library
 #include <algorithm>
@@ -136,4 +136,4 @@ void Ranged<DispatchT, LockPolicyT, ContainerT, QueueMonitorT>::abort_follower_i
 }  // namespace follower
 }  // namespace flow
 
-#endif  // FLOW_FOLLOWER_IMPL_RANGED_HPP
+#endif  // FLOW_SRC_FOLLOWER_RANGED_HPP
