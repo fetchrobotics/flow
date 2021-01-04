@@ -370,8 +370,16 @@ flow::follower::Before<DispatchType, flow::NoLock, std::deque<DispatchType>, MyQ
 
 ## Running Tests
 
+### Bazel
 ```
-bazel test ... --test_output=all
+bazel test test/... --test_output=all
 ```
 
-Bazel isn't everyone's cup of tea. _cmake build to come later_; earlier contribution welcome.
+### CMake
+```
+mkdir build
+cd build
+cmake .. -DBUILD_TESTS=true
+make
+ctest
+```
