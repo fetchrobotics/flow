@@ -122,3 +122,19 @@ def flow_cc_gtest(name, copts=[], linkopts=[], deps=[], sanitize=False, debug_bu
                  sanitize=sanitize,
                  debug_build=debug_build,
                  **kwargs)
+
+
+def create_all_flow_cc_gtests(main, testcase_file_patterns):
+    """
+    Automatically creates gtests from a lists of files, located with glob
+    """
+    unit_test_files = native.glob(testcase_file_patterns)
+    for file in unit_test_files:
+        no_ext = file.split('.')[0]
+        testcase = no_ext.split('/')[-1]
+        flow_cc_gtest(
+            name=testcase,
+            srcs=[file, main],
+            deps=["//:flow"],
+            timeout="short",
+        )
